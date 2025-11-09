@@ -512,8 +512,6 @@ class PrivacyPreservingValidator:
             else:
                 print("[INFO] No improvement this iteration.")
 
-
-            print(self.compliance_check(profile_for_check=self.metadata))
             # If improvement is satisfactory, break early
             if improvement >= improvement_threshold:
                 print(f"[INFO] Satisfactory improvement achieved (>= {improvement_threshold}). Stopping iterations.")

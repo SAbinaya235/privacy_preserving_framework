@@ -73783,6 +73783,513 @@
                 "initial_utility": 1.0,
                 "final_utility": 0.7592410256418574
             }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T20:21:06.745194",
+            "data": {
+                "path": "datasets/iot_usage.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T20:21:06.833239",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 6.034,
+                "mutual_info": 2.146,
+                "kl_divergence": 14.475,
+                "outlier_index": 0.0,
+                "dimensionality": 8
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T20:21:06.884831",
+            "data": {
+                "PES": 0.795,
+                "risk_level": "High"
+            }
+        },
+        {
+            "step": "initial_decision",
+            "timestamp": "2025-11-09T20:21:06.937561",
+            "data": [
+                {
+                    "technique": "k_anonymity",
+                    "reason": "global_high_uniqueness",
+                    "params": {
+                        "k": 5
+                    }
+                },
+                {
+                    "technique": "l_diversity",
+                    "reason": "augment_k_with_l_diversity",
+                    "params": {
+                        "l": 2
+                    }
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "numeric_noise_for_numericals_detected",
+                    "params": {
+                        "scale": 0.3017
+                    }
+                },
+                {
+                    "technique": "differential_privacy",
+                    "reason": "numeric_dp_for_numericals_detected",
+                    "params": {
+                        "epsilon": 0.682
+                    }
+                }
+            ]
+        },
+        {
+            "step": "initial_utility",
+            "timestamp": "2025-11-09T20:21:06.992622",
+            "data": {
+                "initial_utility": 1.0
+            }
+        },
+        {
+            "step": "numeric_permutation_after_dp",
+            "timestamp": "2025-11-09T20:21:07.053850",
+            "data": {
+                "columns": [
+                    "Age",
+                    "Household_Size",
+                    "Avg_Energy_Usage_kWh",
+                    "Peak_Load_kW",
+                    "Water_Usage_L_per_day",
+                    "Occupancy_Hours",
+                    "Smart_Device_Count",
+                    "Energy_Cost"
+                ]
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T20:21:07.107235",
+            "data": [
+                "k_anonymity (global_high_uniqueness)",
+                "l_diversity (augment_k_with_l_diversity)",
+                "noise_addition (numeric_noise_for_numericals_detected)",
+                "differential_privacy (numeric_dp_for_numericals_detected)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T20:21:07.159558",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 6.034,
+                    "mutual_info": 2.146,
+                    "kl_divergence": 14.475,
+                    "outlier_index": 0.0,
+                    "dimensionality": 8
+                },
+                "pes_data": {
+                    "PES": 0.795,
+                    "risk_level": "High"
+                },
+                "techniques_applied": [
+                    "k_anonymity",
+                    "l_diversity",
+                    "noise_addition",
+                    "differential_privacy"
+                ],
+                "technique_config": [
+                    {
+                        "k": 6
+                    },
+                    {
+                        "l": 2
+                    },
+                    {
+                        "scale": 0.377125
+                    },
+                    {
+                        "epsilon": 0.593
+                    }
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T20:21:07.238846",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.229,
+                "mutual_info": 3.207,
+                "kl_divergence": 15.019
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T20:21:07.291388",
+            "data": {
+                "PES": 0.799,
+                "risk_level": "High"
+            }
+        },
+        {
+            "step": "numeric_permutation_after_dp",
+            "timestamp": "2025-11-09T20:21:07.349261",
+            "data": {
+                "columns": [
+                    "Age",
+                    "Household_Size",
+                    "Avg_Energy_Usage_kWh",
+                    "Peak_Load_kW",
+                    "Water_Usage_L_per_day",
+                    "Occupancy_Hours",
+                    "Smart_Device_Count",
+                    "Energy_Cost"
+                ]
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T20:21:07.402119",
+            "data": [
+                "k_anonymity (global_high_uniqueness)",
+                "l_diversity (augment_k_with_l_diversity)",
+                "noise_addition (numeric_noise_for_numericals_detected)",
+                "differential_privacy (numeric_dp_for_numericals_detected)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T20:21:07.453876",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 6.034,
+                    "mutual_info": 2.146,
+                    "kl_divergence": 14.475,
+                    "outlier_index": 0.0,
+                    "dimensionality": 8
+                },
+                "pes_data": {
+                    "PES": 0.795,
+                    "risk_level": "High"
+                },
+                "techniques_applied": [
+                    "k_anonymity",
+                    "l_diversity",
+                    "noise_addition",
+                    "differential_privacy"
+                ],
+                "technique_config": [
+                    {
+                        "k": 4
+                    },
+                    {
+                        "l": 2
+                    },
+                    {
+                        "scale": 0.201133
+                    },
+                    {
+                        "epsilon": 0.8866
+                    }
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T20:21:07.532012",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.229,
+                "mutual_info": 3.207,
+                "kl_divergence": 15.019
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T20:21:07.584286",
+            "data": {
+                "PES": 0.799,
+                "risk_level": "High"
+            }
+        },
+        {
+            "step": "numeric_permutation_after_dp",
+            "timestamp": "2025-11-09T20:21:07.646926",
+            "data": {
+                "columns": [
+                    "Age",
+                    "Household_Size",
+                    "Avg_Energy_Usage_kWh",
+                    "Peak_Load_kW",
+                    "Water_Usage_L_per_day",
+                    "Occupancy_Hours",
+                    "Smart_Device_Count",
+                    "Energy_Cost"
+                ]
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T20:21:07.699768",
+            "data": [
+                "k_anonymity (global_high_uniqueness)",
+                "l_diversity (augment_k_with_l_diversity)",
+                "noise_addition (numeric_noise_for_numericals_detected)",
+                "differential_privacy (numeric_dp_for_numericals_detected)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T20:21:07.751973",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 6.034,
+                    "mutual_info": 2.146,
+                    "kl_divergence": 14.475,
+                    "outlier_index": 0.0,
+                    "dimensionality": 8
+                },
+                "pes_data": {
+                    "PES": 0.795,
+                    "risk_level": "High"
+                },
+                "techniques_applied": [
+                    "k_anonymity",
+                    "l_diversity",
+                    "noise_addition",
+                    "differential_privacy"
+                ],
+                "technique_config": [
+                    {
+                        "k": 8
+                    },
+                    {
+                        "l": 2
+                    },
+                    {
+                        "scale": 0.527975
+                    },
+                    {
+                        "epsilon": 0.4703
+                    }
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T20:21:07.830732",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.229,
+                "mutual_info": 3.207,
+                "kl_divergence": 15.019
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T20:21:07.883478",
+            "data": {
+                "PES": 0.799,
+                "risk_level": "High"
+            }
+        },
+        {
+            "step": "alternative_decisions",
+            "timestamp": "2025-11-09T20:21:07.936488",
+            "data": {
+                "attempt": 1,
+                "decisions": [
+                    {
+                        "technique": "k_anonymity",
+                        "reason": "high_uniqueness",
+                        "params": {
+                            "k": 10
+                        }
+                    },
+                    {
+                        "technique": "suppression",
+                        "reason": "reduce_identifiers",
+                        "params": {}
+                    },
+                    {
+                        "technique": "differential_privacy",
+                        "reason": "high_entropy",
+                        "params": {
+                            "epsilon": 0.9
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "step": "numeric_permutation_after_dp",
+            "timestamp": "2025-11-09T20:21:08.002368",
+            "data": {
+                "columns": [
+                    "Age",
+                    "Household_Size",
+                    "Avg_Energy_Usage_kWh",
+                    "Peak_Load_kW",
+                    "Water_Usage_L_per_day",
+                    "Occupancy_Hours",
+                    "Smart_Device_Count",
+                    "Energy_Cost"
+                ]
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T20:21:08.056754",
+            "data": [
+                "k_anonymity (high_uniqueness)",
+                "suppression (reduce_identifiers)",
+                "differential_privacy (high_entropy)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T20:21:08.110480",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 6.034,
+                    "mutual_info": 2.146,
+                    "kl_divergence": 14.475,
+                    "outlier_index": 0.0,
+                    "dimensionality": 8
+                },
+                "pes_data": {
+                    "PES": 0.795,
+                    "risk_level": "High"
+                },
+                "techniques_applied": [
+                    "k_anonymity",
+                    "suppression",
+                    "differential_privacy"
+                ],
+                "technique_config": [
+                    {
+                        "k": 10
+                    },
+                    {},
+                    {
+                        "epsilon": 0.9
+                    }
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T20:21:08.186125",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.229,
+                "mutual_info": 1.543,
+                "kl_divergence": 15.019
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T20:21:08.239272",
+            "data": {
+                "PES": 0.783,
+                "risk_level": "High"
+            }
+        },
+        {
+            "step": "utility_metrics",
+            "timestamp": "2025-11-09T20:21:08.293660",
+            "data": {
+                "initial_utility": 1.0,
+                "final_utility": 0.7428013438303173
+            }
+        },
+        {
+            "step": "saved_transformed",
+            "timestamp": "2025-11-09T20:21:08.348845",
+            "data": {
+                "path": "datasets/iot_usage_privacy_enforced.csv"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T20:21:08.402324",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as pseudonymization/encryption."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "final_report",
+            "timestamp": "2025-11-09T20:21:08.456259",
+            "data": {
+                "timestamp": "2025-11-09T14:51:08.455640Z",
+                "before_pes": {
+                    "PES": 0.795,
+                    "risk_level": "High"
+                },
+                "after_pes": {
+                    "PES": 0.783,
+                    "risk_level": "High"
+                },
+                "initial_utility": 1.0,
+                "final_utility": 0.7428013438303173
+            }
         }
     ]
 }
