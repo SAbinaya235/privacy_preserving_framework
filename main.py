@@ -111,13 +111,13 @@ class PrivacyFramework:
 if __name__ == "__main__":
     # Example usage
     framework = PrivacyFramework()
-    transformed_data = framework.process("path/to/dataset.csv", "path/to/metadata.json")
+    transformed_data = framework.process("medical_records.csv", "sample_metadata.json")
 
     print("\n✅ Privacy-Preserving Validation Pipeline Completed.")
 
 
 if __name__ == "__main__":
     # Example placeholders — you’ll replace with actual test dataset paths later
-    dataset_path = "datasets/sample_dataset.csv"
-    metadata_path = "datasets/sample_metadata.json"
+    dataset_path = "medical_records.csv"
+    metadata_path = "sample_metadata.json"
 
