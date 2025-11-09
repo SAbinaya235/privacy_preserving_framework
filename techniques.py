@@ -88,6 +88,7 @@ def permutation(dataset: pd.DataFrame):
     return df
 
 
+
 # ------------------------- Statistical Methods -------------------------
 
 def k_anonymity(dataset: pd.DataFrame, k=None):
@@ -252,3 +253,48 @@ def t_closeness_adjustment(dataset: pd.DataFrame):
     Wrapper for t-closeness with default parameters.
     """
     return t_closeness(dataset, t=0.3)
+
+
+def bucketization(dataset: pd.DataFrame, n_buckets: int = 10, columns=None, strategy: str = 'equal_width', labels: bool = False):
+    """
+    Bucketize numeric columns into discrete buckets.
+
+    Parameters:
+        n_buckets: number of buckets to create (int)
+        columns: list of column names to bucketize; if None, all numeric columns are used
+        strategy: 'equal_width' for fixed-width bins (pd.cut) or 'equal_freq' for quantile bins (pd.qcut)
+        labels: if True, keep interval labels (strings); if False, convert to integer bucket ids starting at 0
+
+    Returns:
+        A new DataFrame with the specified columns bucketized.
+
+    Notes:
+        - Columns that cannot be bucketized (constant values or too few unique values) are left unchanged.
+        - For 'equal_freq' strategy, duplicates='drop' is used to avoid errors when there are fewer unique values than bins.
+    """
+    df = dataset.copy()
+    if columns is None:
+        columns = df.select_dtypes(include=[np.number]).columns.tolist()
+
+    for col in columns:
+        if col not in df.columns:
+            continue
+        try:
+            if strategy == 'equal_freq':
+                # equal-frequency (quantile) binning
+                buckets = pd.qcut(df[col], q=n_buckets, duplicates='drop', labels=labels)
+            else:
+                # equal-width binning by default
+                buckets = pd.cut(df[col], bins=n_buckets, labels=labels)
+
+            if labels:
+                # Keep readable interval labels
+                df[col] = buckets.astype(str)
+            else:
+                # Convert to integer bucket ids (Categorical codes start at 0)
+                df[col] = pd.Series(pd.Categorical(buckets)).cat.codes
+        except Exception:
+            # If bucketing fails (e.g., constant column), leave the column unchanged
+            df[col] = df[col]
+
+    return df

@@ -15,99 +15,47 @@ The DME maps the profiling and PES results to appropriate privacy-preserving tra
 in a “clinical diagnosis” style:
     Dataset profile → Associated risk → Matching technique.
 """
-
 def decide_techniques(profile_metrics, pes_score):
     """
-    Determine suitable privacy-preserving methods using rule-based logic.
-
-    Input:
-        profile_metrics (dict): Quantitative dataset metrics from profiling.
-        pes_score (float): Normalized privacy exposure score [0, 1].
-
-    Output:
-        list[dict]: [{"technique": str, "reason": str}]
+    Decide which privacy techniques to apply based on profiling metrics and PES score.
+    Uses a tiered rule-based decision model for interpretability.
     """
-
     decisions = []
-    uniq = profile_metrics.get("uniqueness_ratio", 0)
-    mi = profile_metrics.get("mutual_info", 0)
-    kl = profile_metrics.get("kl_divergence", 0)
-    out = profile_metrics.get("outlier_index", 0)
-    dim = profile_metrics.get("dimensionality", 1)
 
-    # --- Rule 1: High Uniqueness → Generalization / Suppression ---
-    if uniq > 0.5:
+    # 🔹 Tier 1: Re-identification risk (uniqueness)
+    if profile_metrics["uniqueness_ratio"] > 0.7:
         decisions.append({
             "technique": "generalisation",
-            "reason": f"High uniqueness ratio ({uniq:.2f}) indicates re-identification risk; reduce granularity."
-        })
-    elif uniq > 0.3:
-        decisions.append({
-            "technique": "microaggregation",
-            "reason": f"Moderate uniqueness ratio ({uniq:.2f}); cluster similar records to reduce identifiability."
+            "reason": f"High uniqueness ratio ({profile_metrics['uniqueness_ratio']:.2f}) "
+                      f"indicates re-identification risk; reduce granularity."
         })
 
-    # --- Rule 2: High Mutual Information → Perturbation ---
-    if mi > 0.5:
+    # 🔹 Tier 2: Moderate privacy exposure → mild noise
+    if 0.4 <= pes_score <= 0.7:
         decisions.append({
             "technique": "noise_addition",
-            "reason": f"High mutual information ({mi:.2f}) shows strong linkage between identifiers and sensitive attributes."
-        })
-    elif mi > 0.3:
-        decisions.append({
-            "technique": "attribute_masking",
-            "reason": f"Moderate linkage detected; selective masking of attributes recommended."
+            "reason": f"PES = {pes_score:.2f} (Medium) → add slight statistical noise to safeguard sensitive data."
         })
 
-    # --- Rule 3: High KL Divergence → t-Closeness / Resampling ---
-    if kl > 0.4:
+    # 🔹 Tier 3: High privacy exposure → strong anonymization
+    if pes_score > 0.7:
+        decisions.extend([
+            {
+                "technique": "k_anonymity",
+                "reason": f"PES = {pes_score:.2f} (High) → apply k-anonymity to ensure indistinguishable records."
+            },
+            {
+                "technique": "pseudonymization",
+                "reason": "Direct identifiers must be replaced to prevent identity linkage."
+            }
+        ])
+
+    # 🔹 Tier 4: Attribute imbalance → distributional privacy
+    if profile_metrics["kl_divergence"] > 10:
         decisions.append({
-            "technique": "t_closeness_adjustment",
-            "reason": f"KL divergence ({kl:.2f}) indicates sensitive attribute distribution differs across groups."
+            "technique": "t_closeness",
+            "reason": f"KL divergence ({profile_metrics['kl_divergence']:.2f}) "
+                      f"shows sensitive attribute imbalance across equivalence classes."
         })
 
-    # --- Rule 4: Outlier Risk → Suppression or Local Smoothing ---
-    if out > 0.3:
-        decisions.append({
-            "technique": "local_suppression",
-            "reason": f"Outlier index ({out:.2f}) high; rare records may reveal individuals."
-        })
-
-    # --- Rule 5: Dimensionality Effect → Dimensionality Reduction ---
-    if dim > 10:
-        decisions.append({
-            "technique": "pca_reduction",
-            "reason": f"High dimensionality ({dim}); apply PCA to remove redundant quasi-identifiers."
-        })
-
-    # --- Rule 6: PES-Based Global Decision ---
-    if pes_score >= 0.66:
-        decisions.append({
-            "technique": "k_anonymity",
-            "reason": f"PES = {pes_score:.2f} (High); enforce minimum k-anonymity threshold."
-        })
-        decisions.append({
-            "technique": "l_diversity",
-            "reason": "High exposure; ensure intra-group diversity for sensitive attributes."
-        })
-    elif 0.33 <= pes_score < 0.66:
-        decisions.append({
-            "technique": "pseudonymization",
-            "reason": f"PES = {pes_score:.2f} (Medium); replace direct identifiers."
-        })
-    else:
-        decisions.append({
-            "technique": "minimal_masking",
-            "reason": f"PES = {pes_score:.2f} (Low); apply lightweight tokenization only."
-        })
-
-    # --- Rule 7: Resolve Redundancies ---
-    # Remove duplicate technique suggestions
-    unique_decisions = []
-    seen = set()
-    for d in decisions:
-        if d["technique"] not in seen:
-            unique_decisions.append(d)
-            seen.add(d["technique"])
-
-    return unique_decisions
+    return decisions
