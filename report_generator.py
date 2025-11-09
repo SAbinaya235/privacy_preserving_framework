@@ -1,7 +1,7 @@
-# Unified Logging and Report Synthesis
-# -----------------------------------
-# Collects intermediate results from each stage of the framework pipeline
-# and compiles them into a structured final report.
+# report_generator.py — Unified Logging and Closed-Loop Report Synthesis
+# ----------------------------------------------------------------------
+# Collects intermediate results from each stage and compares pre/post
+# transformation privacy metrics for end-to-end validation.
 
 import json
 import os
@@ -10,10 +10,9 @@ import datetime
 LOG_FILE = "logs/system_log.json"
 FINAL_REPORT = "logs/final_report.json"
 
+
 def log_step(step_name, data):
-    """
-    Enhanced logger – captures reasoning and evidence for applied techniques.
-    """
+    """Enhanced logger – captures reasoning and evidence for applied techniques."""
     os.makedirs("logs", exist_ok=True)
     timestamp = datetime.datetime.now().isoformat()
 
@@ -23,12 +22,10 @@ def log_step(step_name, data):
         "data": data
     }
 
-    # Ensure log file exists
     if not os.path.exists(LOG_FILE):
         with open(LOG_FILE, "w") as f:
             json.dump({"log_entries": []}, f, indent=4)
 
-    # Append
     with open(LOG_FILE, "r+") as f:
         log_data = json.load(f)
         log_data["log_entries"].append(entry)
@@ -37,10 +34,10 @@ def log_step(step_name, data):
         f.truncate()
 
 
-def generate_final_report():
+def generate_final_report(before_pes=None, after_pes=None):
     """
-    Generate a full interpretive final report.
-    Includes evidence for why each technique was applied.
+    Generate a closed-loop privacy validation report.
+    Includes before/after metrics and privacy improvement evaluation.
     """
     if not os.path.exists(LOG_FILE):
         print("No logs found to generate a report.")
@@ -52,34 +49,23 @@ def generate_final_report():
     report = {
         "report_generated_at": datetime.datetime.now().isoformat(),
         "summary": {},
-        "detailed_log": log_data["log_entries"]
+        "detailed_log": log_data["log_entries"],
+        "pre_post_comparison": {}
     }
 
-    # Extract
+    # Extract summarized data
     for entry in log_data["log_entries"]:
         step = entry["step"]
         report["summary"][step] = entry["data"]
 
-    # ✅ Enhanced Technique Evidence Mapping
-    if "profiling" in report["summary"] and "decision_making" in report["summary"]:
-        profiling = report["summary"]["profiling"]
-        decisions = report["summary"]["decision_making"]
+    # ✅ Include pre/post PES comparison if available
+    if before_pes and after_pes:
+        report["pre_post_comparison"] = _compare_pes(before_pes, after_pes)
 
-        technique_evidence = []
-        for d in decisions:
-            evidence = {
-                "technique": d["technique"],
-                "identified_problem": _map_problem(d["technique"], profiling),
-                "reason": d["reason"],
-                "expected_effect": _expected_effect(d["technique"]),
-            }
-            technique_evidence.append(evidence)
-        report["technique_evidence"] = technique_evidence
+    # Attach additional compliance and risk interpretation
+    _attach_insights(report, before_pes, after_pes)
 
-    # Attach compliance and insights
-    _attach_insights(report)
-
-    # Save
+    # Save to file
     os.makedirs("logs", exist_ok=True)
     with open(FINAL_REPORT, "w") as f:
         json.dump(report, f, indent=4)
@@ -89,102 +75,84 @@ def generate_final_report():
     print_report_summary(report)
 
 
-def _map_problem(technique, metrics):
-    """
-    Maps technique to identified problem in dataset profile.
-    """
-    if technique == "generalisation":
-        return f"High uniqueness ratio ({metrics.get('uniqueness_ratio')}) indicates possible identity disclosure."
-    elif technique == "k_anonymity":
-        return f"High privacy exposure suggests re-identification risk."
-    elif technique == "l_diversity":
-        return f"Sensitive attribute distribution imbalance — possible attribute disclosure."
-    elif technique == "t_closeness":
-        return f"KL divergence ({metrics.get('kl_divergence')}) indicates distance between groups’ sensitive values."
-    elif technique == "suppression":
-        return "Outlier index high — few records identifiable due to extreme values."
-    elif technique == "noise_addition":
-        return "High mutual information — attribute correlation might reveal private patterns."
-    elif technique == "permutation":
-        return "Correlated quasi-identifiers — linkage risk detected."
-    elif technique == "differential_privacy":
-        return "Overall high PES score, strong mathematical protection required."
-    else:
-        return "No specific problem mapping."
+def _compare_pes(before, after):
+    """Compare pre/post PES values and derive improvement metrics."""
+    before_value = before.get("PES") or before.get("score", 0)
+    after_value = after.get("PES") or after.get("score", 0)
 
+    improvement = before_value - after_value
+    improvement_pct = (improvement / before_value * 100) if before_value else 0
 
-def _expected_effect(technique):
-    """
-    Describes the intended privacy impact of each technique.
-    """
-    mapping = {
-        "generalisation": "Reduce identity disclosure by broadening attribute categories.",
-        "suppression": "Remove identifiable records or rare quasi-identifier values.",
-        "k_anonymity": "Ensure each record indistinguishable within k-group.",
-        "l_diversity": "Protect against sensitive attribute inference.",
-        "t_closeness": "Balance sensitive attribute distribution within groups.",
-        "noise_addition": "Obfuscate exact values while retaining statistical trends.",
-        "permutation": "Break linkage between identifiers and sensitive data.",
-        "differential_privacy": "Guarantee privacy mathematically across all outputs."
+    return {
+        "before_PES": round(before_value, 4),
+        "after_PES": round(after_value, 4),
+        "absolute_change": round(improvement, 4),
+        "percentage_improvement": f"{improvement_pct:.2f}%",
+        "status": "Improved" if improvement > 0 else "Degraded" if improvement < 0 else "No Change"
     }
-    return mapping.get(technique, "Enhances privacy protection.")
 
 
-def _attach_insights(report):
-    """
-    Adds compliance and risk interpretation summary.
-    """
+def _attach_insights(report, before_pes, after_pes):
+    """Adds compliance and risk interpretation summary."""
     summary = report["summary"]
-    pes = summary.get("risk_assessment", {}).get("PES", None)
-    compliance_score = summary.get("compliance", {}).get("compliance_score", None)
+    compliance_score = summary.get("compliance_results", {}).get("compliance_score", None)
+
+    pre_post = report.get("pre_post_comparison", {})
+    risk_reduction = pre_post.get("absolute_change", 0)
+    risk_trend = pre_post.get("status", "N/A")
 
     report["insights"] = {
-        "initial_privacy_exposure": pes,
+        "initial_privacy_exposure": pre_post.get("before_PES", None),
+        "final_privacy_exposure": pre_post.get("after_PES", None),
+        "risk_reduction": f"{risk_reduction:.3f}",
+        "trend": risk_trend,
         "overall_compliance_score": compliance_score,
-        "remarks": _generate_remark(pes, compliance_score)
+        "remarks": _generate_remark(pre_post, compliance_score)
     }
 
 
-def _generate_remark(risk, compliance_score):
-    """
-    Generate textual remark based on privacy risk and compliance.
-    """
-    if risk is None or compliance_score is None:
-        return "Insufficient data for full interpretation."
-    
-    if risk < 0.3 and compliance_score >= 0.8:
-        return "Dataset is safe for use and GDPR-compliant."
-    elif risk < 0.5:
-        return "Dataset moderately safe; minor compliance improvements suggested."
+def _generate_remark(pre_post, compliance_score):
+    """Generate contextual remark based on improvements and compliance."""
+    risk_reduction = pre_post.get("absolute_change", 0)
+    trend = pre_post.get("status", "N/A")
+
+    if trend == "Improved" and compliance_score and compliance_score >= 0.8:
+        return "Dataset shows improved privacy and strong compliance — ready for deployment."
+    elif trend == "Improved" and compliance_score:
+        return "Privacy improved, but compliance needs attention."
+    elif trend == "No Change":
+        return "No effective change detected — review anonymization parameters."
     else:
-        return "Dataset exhibits high privacy risk — additional anonymization recommended."
+        return "Privacy degradation detected — re-evaluate chosen techniques."
 
 
 def print_report_summary(report):
-    """
-    Prints a concise human-readable summary to console.
-    """
+    """Prints a concise human-readable summary to console."""
     print("\n=== PRIVACY VALIDATION SUMMARY ===")
     summary = report.get("summary", {})
-    profiling = summary.get("profiling", {})
-    pes = summary.get("risk_assessment", {})
-    techniques = summary.get("decision_making", [])
-    compliance = summary.get("compliance", {})
+    profiling = summary.get("profiling_metrics", {})
+    pre_post = report.get("pre_post_comparison", {})
+    compliance = summary.get("compliance_results", {})
     insights = report.get("insights", {})
 
     print(f"🕒 Report Generated: {report['report_generated_at']}")
-    print("\n🔹 Profiling Metrics:")
+
+    print("\n🔹 Profiling Metrics (Pre):")
     for k, v in profiling.items():
         print(f"   - {k}: {v}")
 
-    print(f"\n🔹 Privacy Exposure Score (PES): {pes.get('PES', 'N/A')} → Risk Level: {pes.get('risk_level', 'N/A')}")
-    print("\n🔹 Techniques Applied:")
-    for d in techniques:
-        print(f"   - {d['technique']}: {d['reason']}")
+    print("\n🔹 Privacy Exposure Comparison:")
+    print(f"   - Before PES: {pre_post.get('before_PES', 'N/A')}")
+    print(f"   - After PES:  {pre_post.get('after_PES', 'N/A')}")
+    print(f"   - Δ Change:   {pre_post.get('absolute_change', 'N/A')} "
+          f"({pre_post.get('percentage_improvement', 'N/A')}) → {pre_post.get('status', 'N/A')}")
 
     print("\n🔹 Compliance Summary:")
-    for k, v in compliance.items():
-        print(f"   - {k}: {v}")
+    if isinstance(compliance, dict):
+        for k, v in compliance.items():
+            print(f"   - {k}: {v}")
+    else:
+        print("   - No compliance data available.")
 
     print("\n💡 Insights:")
     for k, v in insights.items():

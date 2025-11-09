@@ -1,0 +1,254 @@
+{
+    "report_generated_at": "2025-11-09T11:50:53.873775",
+    "summary": {
+        "dataset_loaded": {
+            "path": "datasets/employee_records.csv"
+        },
+        "profiling_metrics": {
+            "uniqueness_ratio": 1.0,
+            "entropy": 6.14,
+            "mutual_info": 1.382,
+            "kl_divergence": 15.4,
+            "outlier_index": 0.0,
+            "dimensionality": 3
+        },
+        "pes_score": {
+            "PES": 0.602,
+            "risk_level": "Medium"
+        },
+        "technique_decisions": [
+            {
+                "technique": "generalisation",
+                "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+            },
+            {
+                "technique": "noise_addition",
+                "reason": "PES = 0.60 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+            },
+            {
+                "technique": "t_closeness",
+                "reason": "KL divergence (15.40) shows sensitive attribute imbalance across equivalence classes."
+            }
+        ],
+        "techniques_applied": [
+            "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+            "noise_addition (PES = 0.60 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+            "t_closeness (KL divergence (15.40) shows sensitive attribute imbalance across equivalence classes.)"
+        ],
+        "post_profiling": {
+            "uniqueness_ratio": 1.0,
+            "entropy": 2.307,
+            "mutual_info": 0.372,
+            "kl_divergence": 0.015,
+            "outlier_index": 0.0,
+            "dimensionality": 3
+        },
+        "post_risk_assessment": {
+            "PES": 0.362,
+            "risk_level": "Medium"
+        },
+        "compliance_results": {
+            "checks": [
+                {
+                    "check": "purpose_limitation",
+                    "status": "Pass",
+                    "article": "Article 5(1)(b)",
+                    "description": "Data used only for declared purpose"
+                },
+                {
+                    "check": "data_minimization",
+                    "status": "Fail",
+                    "article": "Article 5(1)(c)",
+                    "description": "Limit data to what is necessary"
+                },
+                {
+                    "check": "lawfulness",
+                    "status": "Fail",
+                    "article": "Article 6",
+                    "description": "Lawful basis for processing"
+                },
+                {
+                    "check": "erasure_right",
+                    "status": "Fail",
+                    "article": "Article 17",
+                    "description": "Right to erasure of data"
+                },
+                {
+                    "check": "privacy_by_design",
+                    "status": "Fail",
+                    "article": "Article 25",
+                    "description": "Integrate privacy controls in design"
+                }
+            ],
+            "compliance_score": 0.2,
+            "compliance_status": "Partially Compliant",
+            "remediation_actions": [
+                {
+                    "article": "Article 5(1)(c)",
+                    "action": "Remove or anonymize unnecessary personal data fields."
+                },
+                {
+                    "article": "Article 6",
+                    "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                },
+                {
+                    "article": "Article 17",
+                    "action": "Add unique identifiers to enable data deletion requests."
+                },
+                {
+                    "article": "Article 25",
+                    "action": "Integrate technical controls such as encryption or pseudonymization."
+                }
+            ]
+        }
+    },
+    "detailed_log": [
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T11:50:52.974784",
+            "data": {
+                "path": "datasets/employee_records.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T11:50:53.032044",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 6.14,
+                "mutual_info": 1.382,
+                "kl_divergence": 15.4,
+                "outlier_index": 0.0,
+                "dimensionality": 3
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T11:50:53.062902",
+            "data": {
+                "PES": 0.602,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "technique_decisions",
+            "timestamp": "2025-11-09T11:50:53.084204",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.60 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (15.40) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T11:50:53.708058",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.60 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (15.40) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T11:50:53.773714",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 2.307,
+                "mutual_info": 0.372,
+                "kl_divergence": 0.015,
+                "outlier_index": 0.0,
+                "dimensionality": 3
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T11:50:53.801622",
+            "data": {
+                "PES": 0.362,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T11:50:53.832456",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        }
+    ],
+    "pre_post_comparison": {
+        "before_PES": 0.602,
+        "after_PES": 0.362,
+        "absolute_change": 0.24,
+        "percentage_improvement": "39.87%",
+        "status": "Improved"
+    },
+    "insights": {
+        "initial_privacy_exposure": 0.602,
+        "final_privacy_exposure": 0.362,
+        "risk_reduction": "0.240",
+        "trend": "Improved",
+        "overall_compliance_score": 0.2,
+        "remarks": "Privacy improved, but compliance needs attention."
+    }
+}
