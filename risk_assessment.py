@@ -38,8 +38,8 @@ def calculate_pes(profile_metrics):
     e = profile_metrics.get("entropy", 0)
     m = profile_metrics.get("mutual_info", 0)
     k = profile_metrics.get("kl_divergence", 0)
-    o = profile_metrics.get("outlier_index", 0)
-    d = profile_metrics.get("dimensionality", 1)
+    # o = profile_metrics.get("outlier_index", 0)
+    # d = profile_metrics.get("dimensionality", 1)
 
     # ----- 2. Normalization -----
     # Entropy and dimensionality are inverted — higher values often reduce re-identification risk.
@@ -50,28 +50,28 @@ def calculate_pes(profile_metrics):
         "e": 1 / (1 + np.exp(-e)),  # sigmoid to bound entropy
         "m": np.tanh(m),
         "k": np.tanh(k),
-        "o": min(o * 5, 1.0),
-        "d": 1 / (1 + d)  # more dimensions → lower exposure
+        # "o": min(o * 5, 1.0),
+        # "d": 1 / (1 + d)  # more dimensions → lower exposure
     }
 
     # ----- 3. Weighted Aggregation -----
     # Based on sensitivity of each metric to disclosure risk.
     weights = {
-        "u": 0.25,  # uniqueness strongly increases re-identification
-        "e": 0.15,  # entropy contributes moderately
+        "u": 0.35,  # uniqueness strongly increases re-identification
+        "e": 0.20,  # entropy contributes moderately
         "m": 0.20,  # linkability
-        "k": 0.15,  # distributional deviation
-        "o": 0.15,  # outliers
-        "d": 0.10   # dimensionality effect (inverse)
+        "k": 0.25,  # distributional deviation
+        # "o": 0.15,  # outliers
+        # "d": 0.10   # dimensionality effect (inverse)
     }
 
     pes = (
         weights["u"] * norm["u"] +
         weights["e"] * (1 - norm["e"]) +  # inverse effect
         weights["m"] * norm["m"] +
-        weights["k"] * norm["k"] +
-        weights["o"] * norm["o"] +
-        weights["d"] * norm["d"]
+        weights["k"] * norm["k"]
+        # weights["o"] * norm["o"] +
+        # weights["d"] * norm["d"]
     )
 
     pes = round(pes, 3)

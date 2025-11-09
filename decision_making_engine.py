@@ -26,6 +26,44 @@ def decide_techniques(profile_metrics: dict, pes_score=None, max_per_column=2):
         decisions.append({"technique": tech, "reason": reason, "params": params or {}})
 
     per_col = profile_metrics.get("columns") or profile_metrics.get("per_column") or {}
+
+    # --- Ensure DP / Noise are applied if any numeric attributes exist ---
+    numeric_present = False
+    numeric_entropies = []
+    if isinstance(per_col, dict) and per_col:
+        for m in per_col.values():
+            is_num = bool(m.get("is_numeric") or (m.get("dtype") and str(m.get("dtype")).startswith(("float","int"))))
+            if is_num:
+                numeric_present = True
+                try:
+                    numeric_entropies.append(float(m.get("entropy", 0.0)))
+                except Exception:
+                    pass
+    else:
+        # Fallback: treat as numeric-heavy if dimensionality/entropy high
+        try:
+            if float(profile_metrics.get("dimensionality", 0.0) or 0.0) >= 0.6 or float(profile_metrics.get("entropy", 0.0) or 0.0) >= 0.45:
+                numeric_present = True
+        except Exception:
+            numeric_present = False
+
+    if numeric_present:
+        avg_ent = float(sum(numeric_entropies) / len(numeric_entropies)) if numeric_entropies else float(profile_metrics.get("entropy", 0.0) or 0.0)
+        # choose epsilon inverse to PES / entropy (smaller epsilon = stronger privacy)
+        eps = 0.5
+        try:
+            if pes_score is not None:
+                eps = max(0.01, min(1.0, 1.0 - float(pes_score) * 0.4))
+            else:
+                eps = max(0.01, min(1.0, 1.0 - avg_ent * 0.5))
+        except Exception:
+            eps = 0.5
+        scale = round(max(0.001, avg_ent * 0.05), 6)
+        # force-add DP and noise (will be de-duplicated by add)
+        add("differential_privacy", "numeric_dp_for_numericals_detected", {"epsilon": round(eps, 3)})
+        add("noise_addition", "numeric_noise_for_numericals_detected", {"scale": scale})
+    # --------------------------------------------------------------------
+
     # Column-level heuristics if available
     if isinstance(per_col, dict) and per_col:
         for col, m in per_col.items():
@@ -43,19 +81,8 @@ def decide_techniques(profile_metrics: dict, pes_score=None, max_per_column=2):
                 continue
 
             if is_numeric:
-                # numeric: DP preferred, add noise as fallback/augmentation
-                # pick epsilon inversely proportional to pes_score / entropy: higher PES -> stronger privacy (smaller epsilon)
-                base_eps = 0.5
-                try:
-                    if pes_score is not None:
-                        base_eps = max(0.05, min(1.0, 1.0 - float(pes_score) * 0.5))
-                    else:
-                        base_eps = max(0.05, min(1.0, 1.0 - ent * 0.5))
-                except Exception:
-                    base_eps = 0.5
-                add("differential_privacy", "numeric_dp_based_on_entropy_or_pes", {"epsilon": round(base_eps, 3)})
+                # numeric: DP already ensured above; add numeric-specific robustness techniques
                 add("noise_addition", "numeric_noise_for_robustness", {"scale": round(max(0.01, ent * 0.05), 4)})
-                # handle outliers
                 if outl > 0.4:
                     add("top_bottom_coding", "trim_extremes", {"lower_pct": 1, "upper_pct": 99})
                 continue
@@ -84,12 +111,12 @@ def decide_techniques(profile_metrics: dict, pes_score=None, max_per_column=2):
 
         # If global uniqueness is high -> try k-anonymity (moderate k)
         if uniq >= 0.5:
-            add("k_anonymity", "global_high_uniqueness", {"k": 5})
+            k_val = 5
+            add("k_anonymity", "global_high_uniqueness", {"k": k_val})
             add("l_diversity", "augment_k_with_l_diversity", {"l": 2})
 
-        # numeric-heavy / high entropy -> DP + noise
-        if ent >= 0.45 or dim >= 0.6:
-            # choose epsilon based on PES if available
+        # numeric-heavy / high entropy -> DP + noise already ensured above; add noise fallback if not present
+        if (ent >= 0.45 or dim >= 0.6) and not any(d["technique"] == "differential_privacy" for d in decisions):
             eps = 0.5
             try:
                 if pes_score is not None:
@@ -115,5 +142,20 @@ def decide_techniques(profile_metrics: dict, pes_score=None, max_per_column=2):
         "bucketization", "top_bottom_coding", "noise_addition", "differential_privacy",
         "permutation", "suppression"
     ]
+
+    # Ensure suppression is treated as a true last-resort:
+    # - keep any detected 'suppression' decision aside,
+    # - remove it from the main decisions list so other techniques are preferred,
+    # - only re-add it if no other technique was chosen (fallback).
+    suppression_decision = None
+    for d in decisions[:]:
+        if d.get("technique") == "suppression":
+            suppression_decision = d
+            decisions.remove(d)
+
+    # If there are no other techniques selected, use suppression as a fallback.
+    if not decisions and suppression_decision is not None:
+        decisions.append(suppression_decision)
+
     decisions_sorted = sorted(decisions, key=lambda x: preferred_order.index(x["technique"]) if x["technique"] in preferred_order else len(preferred_order))
     return decisions_sorted

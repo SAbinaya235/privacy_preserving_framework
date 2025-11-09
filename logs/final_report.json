@@ -1,13 +1,13 @@
 {
-  "timestamp": "2025-11-09T07:23:42.968392Z",
+  "timestamp": "2025-11-09T09:54:40.045795Z",
   "before_pes": {
-    "PES": 0.63,
-    "risk_level": "Medium"
+    "PES": 0.795,
+    "risk_level": "High"
   },
   "after_pes": {
-    "PES": 0.337,
-    "risk_level": "Medium"
+    "PES": 0.783,
+    "risk_level": "High"
   },
   "initial_utility": 1.0,
-  "final_utility": 0.7777777777777778
+  "final_utility": 0.7592410256418574
 }

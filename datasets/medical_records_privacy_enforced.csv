@@ -1,301 +1,301 @@
 Patient_ID,Name,Age,Gender,Blood_Type,Region,Hospital_ID,Diagnosis,Treatment_Type,Bill_Amount,Admission_Date,Discharge_Date,FollowUp_Required
-,,,Female,B+,Rural,H9,Flu,Rest,,,,No
-,,,Female,A-,Urban,H6,Cancer,Antivirals,,,,Yes
-,,,Female,O-,Rural,H9,Flu,Chemotherapy,,,,No
-,,,Male,B+,Rural,H8,Hypertension,Chemotherapy,,,,Yes
-,,,Male,O+,Urban,H9,COVID,Diet Control,,,,Yes
-,,,Female,AB+,Rural,H8,Diabetes,Diet Control,,,,No
-,,,Female,O+,Urban,H9,Hypertension,Diet Control,,,,Yes
-,,,Female,O-,Urban,H2,Diabetes,Rest,,,,No
-,,,Female,A-,Urban,H4,Cancer,Diet Control,,,,Yes
-,,,Female,O+,Rural,H7,Cancer,Chemotherapy,,,,Yes
-,,,Male,A-,Rural,H7,Cancer,Diet Control,,,,No
-,,,Male,O+,Rural,H3,Diabetes,Insulin,,,,No
-,,,Male,O+,Urban,H0,Hypertension,Diet Control,,,,No
-,,,Male,A-,Urban,H0,Cancer,Rest,,,,Yes
-,,,Female,B-,Rural,H3,Hypertension,Insulin,,,,Yes
-,,,Male,O+,Rural,H5,Diabetes,Chemotherapy,,,,Yes
-,,,Female,B+,Rural,H7,Hypertension,Chemotherapy,,,,No
-,,,Female,AB+,Rural,H5,Diabetes,Antivirals,,,,No
-,,,Female,O-,Rural,H8,Diabetes,Insulin,,,,No
-,,,Male,B-,Urban,H8,COVID,Antivirals,,,,Yes
-,,,Female,A-,Urban,H1,Diabetes,Insulin,,,,Yes
-,,,Male,B-,Urban,H9,Diabetes,Insulin,,,,No
-,,,Male,A+,Rural,H0,Flu,Rest,,,,Yes
-,,,Female,A+,Urban,H1,Cancer,Antivirals,,,,No
-,,,Female,O+,Urban,H4,COVID,Rest,,,,Yes
-,,,Female,O+,Urban,H3,COVID,Insulin,,,,Yes
-,,,Male,B+,Urban,H3,COVID,Chemotherapy,,,,No
-,,,Female,AB+,Urban,H8,Flu,Insulin,,,,Yes
-,,,Male,O-,Rural,H7,Diabetes,Rest,,,,Yes
-,,,Female,B-,Urban,H5,Cancer,Antivirals,,,,No
-,,,Female,A+,Rural,H0,Hypertension,Antivirals,,,,No
-,,,Male,O+,Rural,H1,Diabetes,Rest,,,,Yes
-,,,Male,O-,Rural,H5,Flu,Antivirals,,,,No
-,,,Male,B-,Rural,H1,Diabetes,Diet Control,,,,Yes
-,,,Male,O+,Rural,H9,Diabetes,Chemotherapy,,,,No
-,,,Male,O+,Urban,H4,Flu,Chemotherapy,,,,Yes
-,,,Male,A+,Urban,H4,COVID,Chemotherapy,,,,Yes
-,,,Female,A+,Rural,H5,COVID,Antivirals,,,,No
-,,,Female,O+,Rural,H5,Cancer,Antivirals,,,,Yes
-,,,Male,A-,Rural,H5,Cancer,Insulin,,,,Yes
-,,,Female,O+,Urban,H1,COVID,Insulin,,,,No
-,,,Male,O-,Rural,H9,Hypertension,Chemotherapy,,,,No
-,,,Female,O+,Urban,H2,Diabetes,Diet Control,,,,Yes
-,,,Female,B+,Rural,H5,Hypertension,Insulin,,,,No
-,,,Male,AB+,Urban,H7,Diabetes,Insulin,,,,No
-,,,Male,B+,Rural,H0,COVID,Antivirals,,,,Yes
-,,,Male,B+,Urban,H0,Cancer,Diet Control,,,,Yes
-,,,Female,A-,Rural,H1,Cancer,Chemotherapy,,,,No
-,,,Male,A-,Urban,H5,Hypertension,Insulin,,,,No
-,,,Female,O+,Urban,H8,Cancer,Diet Control,,,,No
-,,,Male,B+,Urban,H3,COVID,Diet Control,,,,Yes
-,,,Female,A-,Urban,H2,Hypertension,Chemotherapy,,,,Yes
-,,,Female,A+,Urban,H7,Diabetes,Diet Control,,,,Yes
-,,,Male,O+,Urban,H9,Cancer,Diet Control,,,,Yes
-,,,Female,O-,Urban,H8,Flu,Diet Control,,,,Yes
-,,,Female,AB+,Rural,H4,Cancer,Insulin,,,,Yes
-,,,Male,B-,Rural,H8,Diabetes,Chemotherapy,,,,Yes
-,,,Female,O+,Rural,H1,Hypertension,Diet Control,,,,No
-,,,Male,B-,Rural,H2,Diabetes,Diet Control,,,,No
-,,,Male,B+,Rural,H6,Flu,Insulin,,,,Yes
-,,,Male,AB+,Urban,H6,COVID,Chemotherapy,,,,Yes
-,,,Male,B-,Urban,H5,Cancer,Antivirals,,,,Yes
-,,,Female,B+,Urban,H5,Hypertension,Insulin,,,,No
-,,,Female,A+,Urban,H1,COVID,Chemotherapy,,,,Yes
-,,,Female,B-,Urban,H9,Diabetes,Diet Control,,,,No
-,,,Male,AB+,Rural,H5,Hypertension,Chemotherapy,,,,No
-,,,Female,O+,Rural,H3,COVID,Chemotherapy,,,,No
-,,,Female,B+,Rural,H2,Hypertension,Chemotherapy,,,,No
-,,,Male,O+,Rural,H1,Flu,Antivirals,,,,No
-,,,Male,AB+,Urban,H0,Flu,Chemotherapy,,,,Yes
-,,,Female,A-,Urban,H4,Cancer,Antivirals,,,,Yes
-,,,Male,B+,Urban,H1,Cancer,Diet Control,,,,No
-,,,Male,B-,Rural,H1,Flu,Antivirals,,,,Yes
-,,,Male,B+,Urban,H6,Hypertension,Diet Control,,,,No
-,,,Male,O+,Rural,H7,Flu,Diet Control,,,,No
-,,,Female,A+,Urban,H9,Cancer,Antivirals,,,,Yes
-,,,Male,B+,Urban,H7,Flu,Insulin,,,,Yes
-,,,Male,B-,Rural,H3,Flu,Rest,,,,Yes
-,,,Male,A-,Urban,H0,Hypertension,Chemotherapy,,,,Yes
-,,,Male,O-,Urban,H6,COVID,Rest,,,,Yes
-,,,Male,A+,Rural,H0,Cancer,Chemotherapy,,,,No
-,,,Male,A-,Urban,H3,Hypertension,Chemotherapy,,,,Yes
-,,,Male,B+,Rural,H7,Flu,Diet Control,,,,Yes
-,,,Male,O+,Urban,H1,Flu,Chemotherapy,,,,Yes
-,,,Female,AB+,Urban,H5,COVID,Chemotherapy,,,,No
-,,,Male,O+,Urban,H5,Cancer,Antivirals,,,,Yes
-,,,Female,B-,Urban,H8,Cancer,Rest,,,,No
-,,,Male,O+,Urban,H4,Diabetes,Antivirals,,,,Yes
-,,,Male,A+,Urban,H9,Cancer,Chemotherapy,,,,Yes
-,,,Male,O+,Urban,H3,COVID,Diet Control,,,,No
-,,,Male,B-,Urban,H4,Diabetes,Antivirals,,,,Yes
-,,,Female,O-,Rural,H9,Diabetes,Antivirals,,,,Yes
-,,,Male,B+,Rural,H4,Flu,Insulin,,,,No
-,,,Male,AB+,Urban,H7,Flu,Chemotherapy,,,,Yes
-,,,Female,B+,Urban,H9,Cancer,Diet Control,,,,No
-,,,Female,O+,Rural,H7,Diabetes,Antivirals,,,,No
-,,,Male,A-,Urban,H1,Flu,Antivirals,,,,No
-,,,Female,B+,Urban,H6,COVID,Diet Control,,,,No
-,,,Female,O-,Rural,H7,Flu,Chemotherapy,,,,No
-,,,Female,O+,Urban,H5,Flu,Insulin,,,,Yes
-,,,Male,AB+,Urban,H4,Diabetes,Antivirals,,,,Yes
-,,,Male,B-,Rural,H8,Diabetes,Insulin,,,,Yes
-,,,Male,O-,Urban,H2,Hypertension,Rest,,,,No
-,,,Female,O+,Urban,H9,COVID,Chemotherapy,,,,No
-,,,Male,O-,Rural,H3,Diabetes,Rest,,,,No
-,,,Female,B+,Urban,H8,Cancer,Rest,,,,No
-,,,Male,AB+,Rural,H5,COVID,Rest,,,,Yes
-,,,Male,B-,Urban,H7,COVID,Chemotherapy,,,,Yes
-,,,Female,O+,Urban,H6,Diabetes,Chemotherapy,,,,No
-,,,Male,A+,Rural,H1,COVID,Diet Control,,,,No
-,,,Female,B-,Rural,H2,Diabetes,Insulin,,,,Yes
-,,,Female,A+,Urban,H0,Flu,Insulin,,,,No
-,,,Male,O-,Rural,H8,Hypertension,Diet Control,,,,No
-,,,Female,A-,Rural,H6,Flu,Diet Control,,,,No
-,,,Male,B-,Urban,H0,Diabetes,Rest,,,,Yes
-,,,Male,O-,Urban,H2,Diabetes,Diet Control,,,,Yes
-,,,Female,A+,Urban,H3,Flu,Antivirals,,,,No
-,,,Male,B+,Rural,H3,Cancer,Insulin,,,,Yes
-,,,Female,B+,Rural,H4,Cancer,Diet Control,,,,No
-,,,Male,A-,Rural,H2,Cancer,Antivirals,,,,No
-,,,Male,B-,Rural,H2,Diabetes,Antivirals,,,,Yes
-,,,Male,B-,Urban,H0,COVID,Antivirals,,,,No
-,,,Male,B-,Rural,H6,Diabetes,Antivirals,,,,No
-,,,Male,O-,Urban,H9,COVID,Rest,,,,Yes
-,,,Female,AB+,Rural,H0,Flu,Antivirals,,,,No
-,,,Female,AB+,Urban,H1,Hypertension,Rest,,,,No
-,,,Female,A-,Urban,H3,COVID,Rest,,,,No
-,,,Female,B-,Urban,H3,Cancer,Antivirals,,,,Yes
-,,,Female,O-,Rural,H4,Diabetes,Insulin,,,,No
-,,,Female,B+,Urban,H1,Flu,Antivirals,,,,Yes
-,,,Male,A+,Urban,H3,Cancer,Antivirals,,,,No
-,,,Male,O-,Rural,H0,Flu,Antivirals,,,,No
-,,,Female,AB+,Urban,H1,Hypertension,Insulin,,,,No
-,,,Female,AB+,Rural,H0,Diabetes,Chemotherapy,,,,No
-,,,Male,B+,Rural,H9,Diabetes,Chemotherapy,,,,Yes
-,,,Male,B+,Urban,H9,Hypertension,Rest,,,,Yes
-,,,Male,A+,Urban,H3,Diabetes,Rest,,,,No
-,,,Female,B+,Rural,H3,COVID,Insulin,,,,No
-,,,Female,A-,Urban,H6,Flu,Diet Control,,,,No
-,,,Female,A+,Rural,H9,Cancer,Chemotherapy,,,,No
-,,,Male,B+,Rural,H8,Hypertension,Rest,,,,No
-,,,Male,O+,Rural,H8,COVID,Chemotherapy,,,,No
-,,,Female,O-,Urban,H4,Cancer,Insulin,,,,No
-,,,Female,B+,Rural,H9,Cancer,Insulin,,,,No
-,,,Male,A-,Urban,H0,Hypertension,Diet Control,,,,Yes
-,,,Male,B-,Urban,H0,COVID,Diet Control,,,,Yes
-,,,Male,B+,Urban,H5,Cancer,Insulin,,,,Yes
-,,,Male,AB+,Urban,H1,Cancer,Rest,,,,No
-,,,Female,AB+,Rural,H7,COVID,Chemotherapy,,,,No
-,,,Male,AB+,Urban,H8,Diabetes,Antivirals,,,,No
-,,,Male,B-,Rural,H3,Cancer,Diet Control,,,,Yes
-,,,Male,AB+,Rural,H4,Flu,Antivirals,,,,No
-,,,Female,O+,Urban,H7,COVID,Rest,,,,Yes
-,,,Female,B+,Rural,H2,Cancer,Diet Control,,,,No
-,,,Male,AB+,Rural,H4,Hypertension,Antivirals,,,,Yes
-,,,Male,A+,Urban,H2,Flu,Rest,,,,Yes
-,,,Male,B-,Rural,H9,Cancer,Chemotherapy,,,,Yes
-,,,Female,O+,Rural,H2,Flu,Rest,,,,No
-,,,Female,A+,Rural,H2,Flu,Diet Control,,,,Yes
-,,,Female,A+,Rural,H6,Diabetes,Insulin,,,,No
-,,,Male,A+,Urban,H6,Flu,Chemotherapy,,,,No
-,,,Female,A+,Rural,H6,Diabetes,Antivirals,,,,No
-,,,Male,B+,Rural,H9,COVID,Diet Control,,,,No
-,,,Male,AB+,Rural,H7,Diabetes,Insulin,,,,No
-,,,Male,O-,Rural,H4,Hypertension,Rest,,,,Yes
-,,,Female,B+,Urban,H4,Cancer,Insulin,,,,No
-,,,Male,B+,Rural,H3,COVID,Diet Control,,,,No
-,,,Female,O+,Urban,H6,COVID,Diet Control,,,,No
-,,,Female,O+,Rural,H9,Hypertension,Insulin,,,,No
-,,,Male,AB+,Urban,H3,Diabetes,Rest,,,,No
-,,,Male,O-,Urban,H1,Cancer,Insulin,,,,Yes
-,,,Female,O+,Urban,H3,Diabetes,Diet Control,,,,Yes
-,,,Male,AB+,Urban,H7,Flu,Diet Control,,,,No
-,,,Female,AB+,Urban,H8,Diabetes,Antivirals,,,,Yes
-,,,Male,A-,Rural,H2,COVID,Antivirals,,,,Yes
-,,,Female,O-,Rural,H6,Cancer,Chemotherapy,,,,No
-,,,Female,O+,Rural,H8,Diabetes,Diet Control,,,,Yes
-,,,Female,O-,Urban,H3,Cancer,Antivirals,,,,No
-,,,Female,B+,Rural,H9,Cancer,Insulin,,,,Yes
-,,,Male,B+,Urban,H2,Flu,Rest,,,,Yes
-,,,Male,O-,Urban,H4,Flu,Insulin,,,,Yes
-,,,Female,A-,Rural,H0,COVID,Rest,,,,No
-,,,Female,A-,Rural,H2,Hypertension,Antivirals,,,,Yes
-,,,Male,O-,Urban,H7,Cancer,Chemotherapy,,,,Yes
-,,,Male,O+,Urban,H7,Hypertension,Insulin,,,,No
-,,,Male,B-,Rural,H3,COVID,Insulin,,,,No
-,,,Male,A-,Rural,H1,Cancer,Insulin,,,,Yes
-,,,Male,A+,Rural,H7,Cancer,Rest,,,,No
-,,,Male,B+,Rural,H7,Hypertension,Antivirals,,,,Yes
-,,,Female,O-,Urban,H9,Diabetes,Insulin,,,,Yes
-,,,Male,A+,Rural,H3,Flu,Insulin,,,,No
-,,,Male,O-,Rural,H2,Diabetes,Chemotherapy,,,,No
-,,,Female,AB+,Rural,H1,Hypertension,Chemotherapy,,,,No
-,,,Male,B+,Urban,H8,Flu,Antivirals,,,,Yes
-,,,Male,B+,Urban,H0,Diabetes,Antivirals,,,,No
-,,,Male,A-,Urban,H6,Flu,Diet Control,,,,Yes
-,,,Male,A-,Urban,H4,Cancer,Chemotherapy,,,,No
-,,,Male,A+,Rural,H7,Diabetes,Diet Control,,,,Yes
-,,,Female,AB+,Urban,H3,Flu,Rest,,,,No
-,,,Male,O-,Rural,H6,Flu,Diet Control,,,,Yes
-,,,Female,AB+,Rural,H4,Flu,Insulin,,,,No
-,,,Female,B+,Rural,H4,Diabetes,Diet Control,,,,Yes
-,,,Male,A+,Rural,H8,COVID,Antivirals,,,,No
-,,,Female,B-,Urban,H8,Diabetes,Rest,,,,No
-,,,Male,A+,Urban,H8,Hypertension,Insulin,,,,Yes
-,,,Female,O+,Urban,H5,Diabetes,Diet Control,,,,No
-,,,Female,A+,Rural,H5,Flu,Rest,,,,Yes
-,,,Male,AB+,Rural,H4,Cancer,Rest,,,,Yes
-,,,Male,O+,Rural,H8,Diabetes,Insulin,,,,No
-,,,Male,O+,Rural,H9,Diabetes,Diet Control,,,,Yes
-,,,Male,O+,Rural,H7,Flu,Rest,,,,No
-,,,Male,B-,Urban,H6,Cancer,Rest,,,,No
-,,,Female,A+,Rural,H6,Cancer,Chemotherapy,,,,Yes
-,,,Female,AB+,Urban,H5,Hypertension,Rest,,,,No
-,,,Female,A+,Rural,H4,Diabetes,Chemotherapy,,,,Yes
-,,,Female,B-,Rural,H3,Cancer,Diet Control,,,,Yes
-,,,Female,B+,Urban,H2,Cancer,Diet Control,,,,No
-,,,Female,A-,Urban,H2,COVID,Diet Control,,,,No
-,,,Female,AB+,Rural,H5,COVID,Antivirals,,,,Yes
-,,,Male,AB+,Rural,H3,Cancer,Diet Control,,,,Yes
-,,,Male,A+,Rural,H5,Hypertension,Rest,,,,No
-,,,Female,A-,Rural,H2,Cancer,Insulin,,,,No
-,,,Female,O-,Urban,H3,Flu,Chemotherapy,,,,No
-,,,Male,O-,Rural,H8,Diabetes,Antivirals,,,,No
-,,,Male,B-,Urban,H4,Hypertension,Diet Control,,,,Yes
-,,,Male,O-,Rural,H6,Flu,Diet Control,,,,No
-,,,Male,AB+,Urban,H9,Hypertension,Insulin,,,,Yes
-,,,Female,O-,Urban,H1,Flu,Insulin,,,,Yes
-,,,Male,B+,Rural,H4,Diabetes,Antivirals,,,,No
-,,,Female,B+,Urban,H8,Diabetes,Chemotherapy,,,,Yes
-,,,Female,B+,Rural,H2,COVID,Diet Control,,,,No
-,,,Female,O-,Urban,H8,Flu,Antivirals,,,,Yes
-,,,Male,B-,Rural,H5,COVID,Rest,,,,No
-,,,Male,O+,Urban,H3,Flu,Rest,,,,Yes
-,,,Female,O+,Rural,H6,COVID,Antivirals,,,,Yes
-,,,Female,A-,Rural,H7,Diabetes,Diet Control,,,,No
-,,,Female,O+,Urban,H5,Hypertension,Antivirals,,,,No
-,,,Male,O+,Urban,H4,COVID,Diet Control,,,,Yes
-,,,Female,B+,Urban,H5,Flu,Insulin,,,,Yes
-,,,Male,B+,Urban,H4,Flu,Antivirals,,,,No
-,,,Female,O-,Rural,H7,Diabetes,Diet Control,,,,Yes
-,,,Female,A-,Urban,H0,Flu,Antivirals,,,,No
-,,,Female,A+,Rural,H6,Cancer,Antivirals,,,,Yes
-,,,Male,AB+,Urban,H9,Hypertension,Diet Control,,,,No
-,,,Male,A-,Rural,H9,COVID,Diet Control,,,,Yes
-,,,Female,A-,Rural,H1,Hypertension,Chemotherapy,,,,No
-,,,Male,B-,Rural,H8,Diabetes,Antivirals,,,,No
-,,,Female,O-,Rural,H0,COVID,Rest,,,,Yes
-,,,Male,B-,Urban,H9,COVID,Antivirals,,,,No
-,,,Male,A-,Urban,H5,Cancer,Antivirals,,,,Yes
-,,,Male,A-,Rural,H8,Diabetes,Diet Control,,,,No
-,,,Female,A-,Urban,H0,Flu,Antivirals,,,,No
-,,,Male,O+,Urban,H3,Cancer,Antivirals,,,,No
-,,,Male,AB+,Rural,H3,Cancer,Rest,,,,Yes
-,,,Female,AB+,Urban,H8,Hypertension,Diet Control,,,,No
-,,,Female,B-,Urban,H4,Hypertension,Antivirals,,,,Yes
-,,,Female,A-,Urban,H4,Hypertension,Insulin,,,,No
-,,,Female,AB+,Rural,H5,Cancer,Chemotherapy,,,,Yes
-,,,Male,B+,Urban,H0,Flu,Rest,,,,Yes
-,,,Male,AB+,Rural,H0,COVID,Antivirals,,,,Yes
-,,,Male,O-,Urban,H8,Hypertension,Insulin,,,,No
-,,,Male,O-,Urban,H2,Flu,Antivirals,,,,Yes
-,,,Male,AB+,Urban,H3,Diabetes,Antivirals,,,,No
-,,,Female,B+,Rural,H0,Hypertension,Diet Control,,,,Yes
-,,,Male,O-,Rural,H8,COVID,Diet Control,,,,Yes
-,,,Male,O+,Urban,H7,Diabetes,Diet Control,,,,Yes
-,,,Male,AB+,Rural,H1,Diabetes,Insulin,,,,Yes
-,,,Female,O+,Urban,H7,COVID,Antivirals,,,,No
-,,,Female,AB+,Rural,H6,Hypertension,Chemotherapy,,,,Yes
-,,,Male,A+,Rural,H5,Cancer,Rest,,,,Yes
-,,,Female,A+,Urban,H0,COVID,Diet Control,,,,No
-,,,Female,A+,Urban,H6,COVID,Diet Control,,,,Yes
-,,,Female,O-,Urban,H9,COVID,Antivirals,,,,Yes
-,,,Female,O+,Urban,H6,Diabetes,Antivirals,,,,Yes
-,,,Female,O+,Rural,H8,Flu,Insulin,,,,Yes
-,,,Female,O+,Rural,H0,Cancer,Insulin,,,,No
-,,,Female,B+,Rural,H1,Hypertension,Diet Control,,,,No
-,,,Male,O+,Urban,H8,Hypertension,Antivirals,,,,Yes
-,,,Male,B+,Urban,H8,Flu,Chemotherapy,,,,No
-,,,Female,A+,Rural,H5,COVID,Rest,,,,No
-,,,Male,A+,Urban,H5,Cancer,Antivirals,,,,Yes
-,,,Male,O-,Rural,H3,Hypertension,Antivirals,,,,No
-,,,Female,AB+,Rural,H3,Hypertension,Insulin,,,,Yes
-,,,Male,A+,Rural,H4,COVID,Rest,,,,No
-,,,Female,AB+,Rural,H2,Flu,Diet Control,,,,No
-,,,Female,AB+,Rural,H0,Cancer,Antivirals,,,,No
-,,,Female,O-,Urban,H0,Flu,Diet Control,,,,Yes
-,,,Male,A-,Urban,H6,Flu,Antivirals,,,,No
-,,,Male,A-,Urban,H0,Cancer,Diet Control,,,,Yes
-,,,Male,B-,Rural,H0,Cancer,Rest,,,,Yes
-,,,Male,O-,Rural,H2,Hypertension,Insulin,,,,No
-,,,Female,B-,Rural,H9,Hypertension,Rest,,,,Yes
-,,,Female,B-,Rural,H3,Cancer,Chemotherapy,,,,No
-,,,Male,A-,Urban,H3,Diabetes,Insulin,,,,Yes
-,,,Female,O-,Urban,H1,Hypertension,Rest,,,,Yes
-,,,Female,A-,Rural,H0,Diabetes,Chemotherapy,,,,No
-,,,Male,B-,Rural,H2,Cancer,Antivirals,,,,No
-,,,Female,O-,Rural,H3,Hypertension,Antivirals,,,,No
-,,,Male,B-,Urban,H2,Flu,Diet Control,,,,No
-,,,Female,O+,Urban,H7,Cancer,Insulin,,,,Yes
+,,94.22034202357631,Female,B+,Rural,H9,Flu,Rest,-8484.02419097917,,,No
+,,70.07631395500565,Female,A-,Urban,H6,Cancer,Antivirals,98974.57273793813,,,Yes
+,,29.50548557606045,Female,O-,Rural,H9,Flu,Chemotherapy,50143.577149233926,,,No
+,,99.86772053951066,Male,B+,Rural,H8,Hypertension,Chemotherapy,81391.09517710788,,,Yes
+,,54.80311145034242,Male,O+,Urban,H9,COVID,Diet Control,205431.47072633274,,,Yes
+,,47.52202584685938,Female,AB+,Rural,H8,Diabetes,Diet Control,982.5237021230205,,,No
+,,81.45755159785156,Female,O+,Urban,H9,Hypertension,Diet Control,87227.69222901047,,,Yes
+,,103.82942943526145,Female,O-,Urban,H2,Diabetes,Rest,353228.12518734107,,,No
+,,84.55838231675625,Female,A-,Urban,H4,Cancer,Diet Control,200643.03311115882,,,Yes
+,,61.66747840563204,Female,O+,Rural,H7,Cancer,Chemotherapy,52560.65089185505,,,Yes
+,,32.36766631462695,Male,A-,Rural,H7,Cancer,Diet Control,4309.894684233441,,,No
+,,54.615807443125405,Male,O+,Rural,H3,Diabetes,Insulin,2788.021637912927,,,No
+,,61.39058103440204,Male,O+,Urban,H0,Hypertension,Diet Control,-259831.6990661409,,,No
+,,10.721289808993882,Male,A-,Urban,H0,Cancer,Rest,-21178.67939028534,,,Yes
+,,67.9938352041563,Female,B-,Rural,H3,Hypertension,Insulin,26784.886555974525,,,Yes
+,,69.7390651387812,Male,O+,Rural,H5,Diabetes,Chemotherapy,62346.37589223907,,,Yes
+,,71.51483115136006,Female,B+,Rural,H7,Hypertension,Chemotherapy,108061.87882882853,,,No
+,,68.30100874786905,Female,AB+,Rural,H5,Diabetes,Antivirals,207849.22282320648,,,No
+,,41.98876929326915,Female,O-,Rural,H8,Diabetes,Insulin,24660.47182519863,,,No
+,,-86.48783696248509,Male,B-,Urban,H8,COVID,Antivirals,193802.5768900878,,,Yes
+,,6.030555979166975,Female,A-,Urban,H1,Diabetes,Insulin,148703.23219275998,,,Yes
+,,53.48167274182479,Male,B-,Urban,H9,Diabetes,Insulin,-39396.69692547992,,,No
+,,-32.8780212966045,Male,A+,Rural,H0,Flu,Rest,160324.50052571864,,,Yes
+,,-26.102512581204863,Female,A+,Urban,H1,Cancer,Antivirals,174258.7133437493,,,No
+,,68.27712179363157,Female,O+,Urban,H4,COVID,Rest,78101.10696030031,,,Yes
+,,36.373733443275654,Female,O+,Urban,H3,COVID,Insulin,62226.888501060916,,,Yes
+,,78.28169077017365,Male,B+,Urban,H3,COVID,Chemotherapy,180264.6103617929,,,No
+,,131.96979651595112,Female,AB+,Urban,H8,Flu,Insulin,117777.9561914774,,,Yes
+,,52.54874354131955,Male,O-,Rural,H7,Diabetes,Rest,28513.95227656114,,,Yes
+,,131.83375990000394,Female,B-,Urban,H5,Cancer,Antivirals,81097.48376947915,,,No
+,,54.43785437328071,Female,A+,Rural,H0,Hypertension,Antivirals,156417.40869990172,,,No
+,,6.381700060310763,Male,O+,Rural,H1,Diabetes,Rest,41464.78534431462,,,Yes
+,,49.13847229697696,Male,O-,Rural,H5,Flu,Antivirals,65577.50823656151,,,No
+,,42.474490844491186,Male,B-,Rural,H1,Diabetes,Diet Control,134875.74545846484,,,Yes
+,,91.4005959828594,Male,O+,Rural,H9,Diabetes,Chemotherapy,160404.10474398354,,,No
+,,58.45108346316167,Male,O+,Urban,H4,Flu,Chemotherapy,272650.4651605489,,,Yes
+,,69.50831173021868,Male,A+,Urban,H4,COVID,Chemotherapy,86658.40946627995,,,Yes
+,,16.209678587658797,Female,A+,Rural,H5,COVID,Antivirals,186496.12145229854,,,No
+,,41.79180771017365,Female,O+,Rural,H5,Cancer,Antivirals,137304.21538355737,,,Yes
+,,75.74734521289193,Male,A-,Rural,H5,Cancer,Insulin,202430.1171223207,,,Yes
+,,29.271392587098397,Female,O+,Urban,H1,COVID,Insulin,-65014.14658621421,,,No
+,,-30.588953787788228,Male,O-,Rural,H9,Hypertension,Chemotherapy,66656.13555270628,,,No
+,,-33.9113289925251,Female,O+,Urban,H2,Diabetes,Diet Control,194984.4138053732,,,Yes
+,,45.975700490131345,Female,B+,Rural,H5,Hypertension,Insulin,122442.45931833662,,,No
+,,79.35253643624192,Male,AB+,Urban,H7,Diabetes,Insulin,54521.31327976388,,,No
+,,24.304389546634965,Male,B+,Rural,H0,COVID,Antivirals,59741.249095078674,,,Yes
+,,76.12886004107779,Male,B+,Urban,H0,Cancer,Diet Control,120594.66752232729,,,Yes
+,,37.06624449506666,Female,A-,Rural,H1,Cancer,Chemotherapy,50766.828851463404,,,No
+,,50.56044927986153,Male,A-,Urban,H5,Hypertension,Insulin,-4413.3065693988865,,,No
+,,-18.444258391097705,Female,O+,Urban,H8,Cancer,Diet Control,186927.37062383007,,,No
+,,123.86669664860014,Male,B+,Urban,H3,COVID,Diet Control,15022.976367711439,,,Yes
+,,50.33780953748921,Female,A-,Urban,H2,Hypertension,Chemotherapy,-135199.619685037,,,Yes
+,,-13.704254495083678,Female,A+,Urban,H7,Diabetes,Diet Control,99822.156548991,,,Yes
+,,-37.860952254749655,Male,O+,Urban,H9,Cancer,Diet Control,152366.49737876584,,,Yes
+,,97.86937694509692,Female,O-,Urban,H8,Flu,Diet Control,114714.58116326341,,,Yes
+,,12.315205983750333,Female,AB+,Rural,H4,Cancer,Insulin,176450.65070966003,,,Yes
+,,37.5237314745125,Male,B-,Rural,H8,Diabetes,Chemotherapy,123261.27399481848,,,Yes
+,,20.356795556822163,Female,O+,Rural,H1,Hypertension,Diet Control,45010.285013623004,,,No
+,,70.22705597889438,Male,B-,Rural,H2,Diabetes,Diet Control,120246.87133908189,,,No
+,,64.91161018372505,Male,B+,Rural,H6,Flu,Insulin,-32924.83746666755,,,Yes
+,,136.9780635346218,Male,AB+,Urban,H6,COVID,Chemotherapy,168830.807669199,,,Yes
+,,60.40297596799033,Male,B-,Urban,H5,Cancer,Antivirals,114813.59156837738,,,Yes
+,,7.911817957554688,Female,B+,Urban,H5,Hypertension,Insulin,17135.41309751966,,,No
+,,65.4432516923369,Female,A+,Urban,H1,COVID,Chemotherapy,204005.66817581712,,,Yes
+,,3.8774857731641514,Female,B-,Urban,H9,Diabetes,Diet Control,37922.77910518304,,,No
+,,15.718409139232527,Male,AB+,Rural,H5,Hypertension,Chemotherapy,219775.90219129442,,,No
+,,76.23241052759802,Female,O+,Rural,H3,COVID,Chemotherapy,71527.48449728091,,,No
+,,28.03253622598718,Female,B+,Rural,H2,Hypertension,Chemotherapy,-97828.4441066182,,,No
+,,33.27327846845389,Male,O+,Rural,H1,Flu,Antivirals,195522.35012244352,,,No
+,,96.43251326297846,Male,AB+,Urban,H0,Flu,Chemotherapy,211550.76091339812,,,Yes
+,,112.45041057624888,Female,A-,Urban,H4,Cancer,Antivirals,209014.4463554856,,,Yes
+,,32.426830101092314,Male,B+,Urban,H1,Cancer,Diet Control,182127.29265920303,,,No
+,,-3.2388723457678417,Male,B-,Rural,H1,Flu,Antivirals,88897.81868059759,,,Yes
+,,17.511433121533425,Male,B+,Urban,H6,Hypertension,Diet Control,-43770.30576269262,,,No
+,,63.38748316452505,Male,O+,Rural,H7,Flu,Diet Control,2511.420179528526,,,No
+,,11.372569046844294,Female,A+,Urban,H9,Cancer,Antivirals,96748.02589516815,,,Yes
+,,7.9923358894979,Male,B+,Urban,H7,Flu,Insulin,132864.19957329152,,,Yes
+,,-12.841111127432704,Male,B-,Rural,H3,Flu,Rest,141169.1456312256,,,Yes
+,,120.80450079642488,Male,A-,Urban,H0,Hypertension,Chemotherapy,99297.59418559524,,,Yes
+,,-0.8727468646004297,Male,O-,Urban,H6,COVID,Rest,147558.87167704402,,,Yes
+,,-45.225316126962184,Male,A+,Rural,H0,Cancer,Chemotherapy,79147.51680279456,,,No
+,,-51.157080227624,Male,A-,Urban,H3,Hypertension,Chemotherapy,-65395.013102528756,,,Yes
+,,58.2578570747271,Male,B+,Rural,H7,Flu,Diet Control,37431.15701180183,,,Yes
+,,39.072146438417974,Male,O+,Urban,H1,Flu,Chemotherapy,102288.49960872383,,,Yes
+,,-49.2012572254213,Female,AB+,Urban,H5,COVID,Chemotherapy,104038.7533871959,,,No
+,,82.22605902469549,Male,O+,Urban,H5,Cancer,Antivirals,47735.80445874673,,,Yes
+,,-20.23496292740289,Female,B-,Urban,H8,Cancer,Rest,134371.61536270764,,,No
+,,63.25520036836555,Male,O+,Urban,H4,Diabetes,Antivirals,107735.14657724136,,,Yes
+,,-48.26590890530759,Male,A+,Urban,H9,Cancer,Chemotherapy,52923.376335707675,,,Yes
+,,8.007441702653866,Male,O+,Urban,H3,COVID,Diet Control,161406.28765184252,,,No
+,,-45.06776931933588,Male,B-,Urban,H4,Diabetes,Antivirals,7133.816107124119,,,Yes
+,,10.959373414447889,Female,O-,Rural,H9,Diabetes,Antivirals,-49283.23573070584,,,Yes
+,,21.750997607029973,Male,B+,Rural,H4,Flu,Insulin,43722.97060593129,,,No
+,,-25.14409595988073,Male,AB+,Urban,H7,Flu,Chemotherapy,185598.13484926554,,,Yes
+,,19.308915517955477,Female,B+,Urban,H9,Cancer,Diet Control,185838.39835805082,,,No
+,,41.56076867759356,Female,O+,Rural,H7,Diabetes,Antivirals,252550.28592214495,,,No
+,,72.6617253496645,Male,A-,Urban,H1,Flu,Antivirals,84602.57070003264,,,No
+,,57.062870295143426,Female,B+,Urban,H6,COVID,Diet Control,173036.26912401183,,,No
+,,19.086879244913895,Female,O-,Rural,H7,Flu,Chemotherapy,47156.04436785877,,,No
+,,28.493355032716863,Female,O+,Urban,H5,Flu,Insulin,-111651.82387949094,,,Yes
+,,40.89043559217252,Male,AB+,Urban,H4,Diabetes,Antivirals,108883.95115370494,,,Yes
+,,66.11985483809893,Male,B-,Rural,H8,Diabetes,Insulin,-37263.59249497816,,,Yes
+,,5.613476993438638,Male,O-,Urban,H2,Hypertension,Rest,194034.51549708023,,,No
+,,94.20571948898689,Female,O+,Urban,H9,COVID,Chemotherapy,42637.92588187002,,,No
+,,35.823013840235745,Male,O-,Rural,H3,Diabetes,Rest,12145.366810832464,,,No
+,,-34.49193711922098,Female,B+,Urban,H8,Cancer,Rest,31470.87860301946,,,No
+,,34.34946165738501,Male,AB+,Rural,H5,COVID,Rest,-82033.11199285276,,,Yes
+,,0.6687285854897596,Male,B-,Urban,H7,COVID,Chemotherapy,320177.1989531181,,,Yes
+,,-13.366660767530334,Female,O+,Urban,H6,Diabetes,Chemotherapy,168499.82529367137,,,No
+,,79.96405682155981,Male,A+,Rural,H1,COVID,Diet Control,-59794.32506091142,,,No
+,,62.96695567747902,Female,B-,Rural,H2,Diabetes,Insulin,11192.963871445958,,,Yes
+,,33.98814270254529,Female,A+,Urban,H0,Flu,Insulin,60006.57315445025,,,No
+,,76.38144377749583,Male,O-,Rural,H8,Hypertension,Diet Control,-3819.9707706750814,,,No
+,,9.989955737736757,Female,A-,Rural,H6,Flu,Diet Control,298337.6085406879,,,No
+,,92.08361054757407,Male,B-,Urban,H0,Diabetes,Rest,80294.77711990516,,,Yes
+,,10.06441416408552,Male,O-,Urban,H2,Diabetes,Diet Control,135458.95050333184,,,Yes
+,,91.14266438652798,Female,A+,Urban,H3,Flu,Antivirals,248250.2268678575,,,No
+,,86.88544063433083,Male,B+,Rural,H3,Cancer,Insulin,127480.4151953738,,,Yes
+,,32.510634043897674,Female,B+,Rural,H4,Cancer,Diet Control,72188.83062102256,,,No
+,,16.414494679826824,Male,A-,Rural,H2,Cancer,Antivirals,184454.45111043146,,,No
+,,51.81210987418796,Male,B-,Rural,H2,Diabetes,Antivirals,-14445.315428022292,,,Yes
+,,79.36609780567485,Male,B-,Urban,H0,COVID,Antivirals,247873.2107147645,,,No
+,,76.33623713898153,Male,B-,Rural,H6,Diabetes,Antivirals,162350.81606554778,,,No
+,,45.49128791779995,Male,O-,Urban,H9,COVID,Rest,39849.45400589834,,,Yes
+,,106.1902146802108,Female,AB+,Rural,H0,Flu,Antivirals,153358.09996118103,,,No
+,,21.820292636927576,Female,AB+,Urban,H1,Hypertension,Rest,-18781.499096303764,,,No
+,,54.79578705284462,Female,A-,Urban,H3,COVID,Rest,-63371.66747871743,,,No
+,,83.52388877564721,Female,B-,Urban,H3,Cancer,Antivirals,-29362.03196341901,,,Yes
+,,56.49256303861682,Female,O-,Rural,H4,Diabetes,Insulin,143146.6342465643,,,No
+,,12.012275572170743,Female,B+,Urban,H1,Flu,Antivirals,112296.2443113538,,,Yes
+,,17.177828168850755,Male,A+,Urban,H3,Cancer,Antivirals,119478.76287429659,,,No
+,,92.082623090328,Male,O-,Rural,H0,Flu,Antivirals,56693.97195633591,,,No
+,,42.34543229760814,Female,AB+,Urban,H1,Hypertension,Insulin,168872.59425588636,,,No
+,,26.935843788230287,Female,AB+,Rural,H0,Diabetes,Chemotherapy,93160.1166077049,,,No
+,,75.4793301341096,Male,B+,Rural,H9,Diabetes,Chemotherapy,216917.43304449174,,,Yes
+,,6.033584632341444,Male,B+,Urban,H9,Hypertension,Rest,59015.320329772905,,,Yes
+,,86.38291913401655,Male,A+,Urban,H3,Diabetes,Rest,34668.533967491625,,,No
+,,47.12913390338105,Female,B+,Rural,H3,COVID,Insulin,98268.00018929929,,,No
+,,93.21757439146813,Female,A-,Urban,H6,Flu,Diet Control,62815.95498330997,,,No
+,,25.71567196592588,Female,A+,Rural,H9,Cancer,Chemotherapy,239703.83250859118,,,No
+,,121.61179176126478,Male,B+,Rural,H8,Hypertension,Rest,-3188.1925544975547,,,No
+,,108.90754877250204,Male,O+,Rural,H8,COVID,Chemotherapy,189659.99523507297,,,No
+,,-21.10908855552023,Female,O-,Urban,H4,Cancer,Insulin,45544.0146547205,,,No
+,,66.47276649893236,Female,B+,Rural,H9,Cancer,Insulin,112201.67926354348,,,No
+,,14.369488655493212,Male,A-,Urban,H0,Hypertension,Diet Control,9974.45142018509,,,Yes
+,,77.61311651456442,Male,B-,Urban,H0,COVID,Diet Control,114730.91798066226,,,Yes
+,,24.12227794369063,Male,B+,Urban,H5,Cancer,Insulin,95069.05076320551,,,Yes
+,,-61.50719068545658,Male,AB+,Urban,H1,Cancer,Rest,143777.3751301987,,,No
+,,69.45547961072414,Female,AB+,Rural,H7,COVID,Chemotherapy,116008.69201395863,,,No
+,,22.82284968094476,Male,AB+,Urban,H8,Diabetes,Antivirals,136305.3250458377,,,No
+,,-4.892671192909592,Male,B-,Rural,H3,Cancer,Diet Control,179792.96526166028,,,Yes
+,,32.05191495939198,Male,AB+,Rural,H4,Flu,Antivirals,142951.39309823938,,,No
+,,10.636032220771291,Female,O+,Urban,H7,COVID,Rest,-21186.354253695696,,,Yes
+,,77.8460488438201,Female,B+,Rural,H2,Cancer,Diet Control,148633.75114143034,,,No
+,,2.1253430220309895,Male,AB+,Rural,H4,Hypertension,Antivirals,153486.5560857955,,,Yes
+,,32.018292224982346,Male,A+,Urban,H2,Flu,Rest,119222.9058656721,,,Yes
+,,98.11715918359401,Male,B-,Rural,H9,Cancer,Chemotherapy,60569.869445842596,,,Yes
+,,133.6355262148843,Female,O+,Rural,H2,Flu,Rest,136269.8519741267,,,No
+,,2.8965198798516596,Female,A+,Rural,H2,Flu,Diet Control,143305.72557397845,,,Yes
+,,86.63350473703991,Female,A+,Rural,H6,Diabetes,Insulin,116486.23957855556,,,No
+,,48.63293397953879,Male,A+,Urban,H6,Flu,Chemotherapy,232079.13303340154,,,No
+,,80.25696281625892,Female,A+,Rural,H6,Diabetes,Antivirals,135915.20330500352,,,No
+,,33.21476147214989,Male,B+,Rural,H9,COVID,Diet Control,117222.89960742134,,,No
+,,14.610991356230382,Male,AB+,Rural,H7,Diabetes,Insulin,73559.8791018912,,,No
+,,-49.228267222186155,Male,O-,Rural,H4,Hypertension,Rest,57351.587660856516,,,Yes
+,,19.102805418426932,Female,B+,Urban,H4,Cancer,Insulin,43864.01180355614,,,No
+,,97.08934562824244,Male,B+,Rural,H3,COVID,Diet Control,309514.1239243858,,,No
+,,65.6507684773186,Female,O+,Urban,H6,COVID,Diet Control,85877.30459421485,,,No
+,,60.435479396698675,Female,O+,Rural,H9,Hypertension,Insulin,120973.03664933497,,,No
+,,102.68352878785488,Male,AB+,Urban,H3,Diabetes,Rest,337385.62250316265,,,No
+,,11.447809462339336,Male,O-,Urban,H1,Cancer,Insulin,229177.64594337472,,,Yes
+,,13.137188221386165,Female,O+,Urban,H3,Diabetes,Diet Control,193117.9981408968,,,Yes
+,,41.68018069660927,Male,AB+,Urban,H7,Flu,Diet Control,91396.49382977078,,,No
+,,90.57006207575893,Female,AB+,Urban,H8,Diabetes,Antivirals,73115.0976566117,,,Yes
+,,31.889145110634658,Male,A-,Rural,H2,COVID,Antivirals,7760.667826669829,,,Yes
+,,73.09760720529381,Female,O-,Rural,H6,Cancer,Chemotherapy,-2308.464806667733,,,No
+,,-2.5763494258718715,Female,O+,Rural,H8,Diabetes,Diet Control,-34820.62445777655,,,Yes
+,,43.19356915007726,Female,O-,Urban,H3,Cancer,Antivirals,75362.57859181854,,,No
+,,-26.457298005052493,Female,B+,Rural,H9,Cancer,Insulin,203581.75411471858,,,Yes
+,,49.401330101974246,Male,B+,Urban,H2,Flu,Rest,-2747.142388302709,,,Yes
+,,44.310317836832695,Male,O-,Urban,H4,Flu,Insulin,204116.98444059378,,,Yes
+,,75.82867270464212,Female,A-,Rural,H0,COVID,Rest,90917.08929038364,,,No
+,,15.436711697469784,Female,A-,Rural,H2,Hypertension,Antivirals,229523.4065012603,,,Yes
+,,50.97058819393958,Male,O-,Urban,H7,Cancer,Chemotherapy,39617.707310865175,,,Yes
+,,6.883417301297117,Male,O+,Urban,H7,Hypertension,Insulin,245138.5453911773,,,No
+,,110.18222246642134,Male,B-,Rural,H3,COVID,Insulin,187379.3075199055,,,No
+,,50.909540787685316,Male,A-,Rural,H1,Cancer,Insulin,192988.25121170998,,,Yes
+,,92.65223377514702,Male,A+,Rural,H7,Cancer,Rest,-14395.797825977064,,,No
+,,49.51644549511353,Male,B+,Rural,H7,Hypertension,Antivirals,30506.929340036244,,,Yes
+,,34.05320410507092,Female,O-,Urban,H9,Diabetes,Insulin,18435.598235488927,,,Yes
+,,36.64759653694062,Male,A+,Rural,H3,Flu,Insulin,122858.45610040752,,,No
+,,65.98965908010565,Male,O-,Rural,H2,Diabetes,Chemotherapy,-31643.09706767303,,,No
+,,48.35080654943502,Female,AB+,Rural,H1,Hypertension,Chemotherapy,-8339.442501814287,,,No
+,,8.025626267685604,Male,B+,Urban,H8,Flu,Antivirals,305976.281995507,,,Yes
+,,99.06370437637395,Male,B+,Urban,H0,Diabetes,Antivirals,153546.42733156157,,,No
+,,51.135912187481566,Male,A-,Urban,H6,Flu,Diet Control,-87921.37973249414,,,Yes
+,,67.52439975241066,Male,A-,Urban,H4,Cancer,Chemotherapy,298171.481127696,,,No
+,,30.513327794474012,Male,A+,Rural,H7,Diabetes,Diet Control,118656.19976598716,,,Yes
+,,10.577037289565975,Female,AB+,Urban,H3,Flu,Rest,77476.92766446968,,,No
+,,93.4359111880407,Male,O-,Rural,H6,Flu,Diet Control,135088.3832463951,,,Yes
+,,71.95945015704206,Female,AB+,Rural,H4,Flu,Insulin,355021.59024305217,,,No
+,,21.113024081511213,Female,B+,Rural,H4,Diabetes,Diet Control,54017.858176627225,,,Yes
+,,-1.0118304102714077,Male,A+,Rural,H8,COVID,Antivirals,54812.78996213453,,,No
+,,103.9422687883415,Female,B-,Urban,H8,Diabetes,Rest,211072.62706636311,,,No
+,,44.564098855709815,Male,A+,Urban,H8,Hypertension,Insulin,112618.62810674608,,,Yes
+,,53.54544769551211,Female,O+,Urban,H5,Diabetes,Diet Control,112570.2931436005,,,No
+,,86.38920876669309,Female,A+,Rural,H5,Flu,Rest,70994.97897859318,,,Yes
+,,-1.706744535650767,Male,AB+,Rural,H4,Cancer,Rest,-13701.42871557055,,,Yes
+,,67.72608934569789,Male,O+,Rural,H8,Diabetes,Insulin,233080.54151368985,,,No
+,,63.44103991296339,Male,O+,Rural,H9,Diabetes,Diet Control,64362.74759000784,,,Yes
+,,47.42204064126606,Male,O+,Rural,H7,Flu,Rest,15335.97577289219,,,No
+,,2.0744234109402275,Male,B-,Urban,H6,Cancer,Rest,166868.60045076913,,,No
+,,28.940743703979813,Female,A+,Rural,H6,Cancer,Chemotherapy,91071.80491189199,,,Yes
+,,37.62623945527936,Female,AB+,Urban,H5,Hypertension,Rest,19547.19642389891,,,No
+,,87.12505321301121,Female,A+,Rural,H4,Diabetes,Chemotherapy,237942.08221858137,,,Yes
+,,25.068594108535454,Female,B-,Rural,H3,Cancer,Diet Control,164168.54153139296,,,Yes
+,,75.97856496323463,Female,B+,Urban,H2,Cancer,Diet Control,224800.53250422925,,,No
+,,34.39682736470505,Female,A-,Urban,H2,COVID,Diet Control,16769.034572050266,,,No
+,,-70.382273342107,Female,AB+,Rural,H5,COVID,Antivirals,167457.7647222287,,,Yes
+,,104.62864230483956,Male,AB+,Rural,H3,Cancer,Diet Control,123877.9710877965,,,Yes
+,,67.67290290086864,Male,A+,Rural,H5,Hypertension,Rest,170784.45026298251,,,No
+,,70.77190916625466,Female,A-,Rural,H2,Cancer,Insulin,56894.91190978501,,,No
+,,0.7582472840455345,Female,O-,Urban,H3,Flu,Chemotherapy,302521.2489282066,,,No
+,,47.070386615067676,Male,O-,Rural,H8,Diabetes,Antivirals,62783.49119993511,,,No
+,,53.17511856093317,Male,B-,Urban,H4,Hypertension,Diet Control,71904.25471782856,,,Yes
+,,57.27697198374261,Male,O-,Rural,H6,Flu,Diet Control,101857.00391287259,,,No
+,,30.505249900453826,Male,AB+,Urban,H9,Hypertension,Insulin,179095.37571270665,,,Yes
+,,63.02921719170618,Female,O-,Urban,H1,Flu,Insulin,-49316.48459478061,,,Yes
+,,100.88724198768182,Male,B+,Rural,H4,Diabetes,Antivirals,118336.02262403395,,,No
+,,43.86061430461366,Female,B+,Urban,H8,Diabetes,Chemotherapy,90873.41082906966,,,Yes
+,,108.23251700147176,Female,B+,Rural,H2,COVID,Diet Control,29762.258224395933,,,No
+,,42.17321274941941,Female,O-,Urban,H8,Flu,Antivirals,-6228.236203384513,,,Yes
+,,3.383614442845273,Male,B-,Rural,H5,COVID,Rest,45331.06008314377,,,No
+,,69.66139849660351,Male,O+,Urban,H3,Flu,Rest,173113.66729897575,,,Yes
+,,28.088381732584658,Female,O+,Rural,H6,COVID,Antivirals,81966.57791207728,,,Yes
+,,66.72137992414306,Female,A-,Rural,H7,Diabetes,Diet Control,175385.2192544886,,,No
+,,213.54937861806883,Female,O+,Urban,H5,Hypertension,Antivirals,-67628.83165336864,,,No
+,,18.89870637756524,Male,O+,Urban,H4,COVID,Diet Control,125217.75149939352,,,Yes
+,,72.62031341752316,Female,B+,Urban,H5,Flu,Insulin,36825.090234815754,,,Yes
+,,14.733119924788866,Male,B+,Urban,H4,Flu,Antivirals,177709.96237354184,,,No
+,,71.22888973599109,Female,O-,Rural,H7,Diabetes,Diet Control,136148.30187405332,,,Yes
+,,89.30153668036576,Female,A-,Urban,H0,Flu,Antivirals,52324.293826005094,,,No
+,,51.13422617406839,Female,A+,Rural,H6,Cancer,Antivirals,148285.035814573,,,Yes
+,,18.42894246286857,Male,AB+,Urban,H9,Hypertension,Diet Control,17235.18314945267,,,No
+,,72.138515307737,Male,A-,Rural,H9,COVID,Diet Control,183441.1308115154,,,Yes
+,,-0.1719174991906911,Female,A-,Rural,H1,Hypertension,Chemotherapy,66042.17018644884,,,No
+,,-14.558536217295195,Male,B-,Rural,H8,Diabetes,Antivirals,50325.35947206154,,,No
+,,96.09876300716536,Female,O-,Rural,H0,COVID,Rest,-21306.87045795319,,,Yes
+,,46.85453375698372,Male,B-,Urban,H9,COVID,Antivirals,108007.97199168784,,,No
+,,55.78396885152162,Male,A-,Urban,H5,Cancer,Antivirals,126189.1108455958,,,Yes
+,,43.32018533678074,Male,A-,Rural,H8,Diabetes,Diet Control,109891.97947963545,,,No
+,,87.65727355519658,Female,A-,Urban,H0,Flu,Antivirals,36421.55467810864,,,No
+,,63.434367054191895,Male,O+,Urban,H3,Cancer,Antivirals,-21989.909956375363,,,No
+,,26.12334475968176,Male,AB+,Rural,H3,Cancer,Rest,150376.80452924772,,,Yes
+,,27.05948165732565,Female,AB+,Urban,H8,Hypertension,Diet Control,209506.87958515686,,,No
+,,58.43097225932344,Female,B-,Urban,H4,Hypertension,Antivirals,55052.230032858286,,,Yes
+,,26.26494190068643,Female,A-,Urban,H4,Hypertension,Insulin,-7920.624577496652,,,No
+,,65.35626314337492,Female,AB+,Rural,H5,Cancer,Chemotherapy,23816.635367160576,,,Yes
+,,21.15422938584787,Male,B+,Urban,H0,Flu,Rest,212340.76028824702,,,Yes
+,,39.69412283043804,Male,AB+,Rural,H0,COVID,Antivirals,-53858.0457583361,,,Yes
+,,30.366304455453047,Male,O-,Urban,H8,Hypertension,Insulin,54822.726647514646,,,No
+,,70.385046635517,Male,O-,Urban,H2,Flu,Antivirals,-57490.64704244532,,,Yes
+,,55.30011204508509,Male,AB+,Urban,H3,Diabetes,Antivirals,126167.75170684776,,,No
+,,-3.9624245938565252,Female,B+,Rural,H0,Hypertension,Diet Control,2338.002354243843,,,Yes
+,,42.942219822376856,Male,O-,Rural,H8,COVID,Diet Control,118999.40511909532,,,Yes
+,,9.845902273068269,Male,O+,Urban,H7,Diabetes,Diet Control,-36568.1503874843,,,Yes
+,,-41.54831764657274,Male,AB+,Rural,H1,Diabetes,Insulin,106561.19082569725,,,Yes
+,,93.90661933232931,Female,O+,Urban,H7,COVID,Antivirals,47566.96701933588,,,No
+,,67.02386005202052,Female,AB+,Rural,H6,Hypertension,Chemotherapy,-14331.755889643187,,,Yes
+,,37.67911797320183,Male,A+,Rural,H5,Cancer,Rest,49601.53434355084,,,Yes
+,,66.46632598307318,Female,A+,Urban,H0,COVID,Diet Control,100756.4280687743,,,No
+,,63.81138963264033,Female,A+,Urban,H6,COVID,Diet Control,-32692.4325042422,,,Yes
+,,122.95755388152267,Female,O-,Urban,H9,COVID,Antivirals,-70597.05032438754,,,Yes
+,,80.01054543665596,Female,O+,Urban,H6,Diabetes,Antivirals,106988.5639027716,,,Yes
+,,65.19479656197568,Female,O+,Rural,H8,Flu,Insulin,83499.30449929147,,,Yes
+,,8.145222062834254,Female,O+,Rural,H0,Cancer,Insulin,54343.276466006486,,,No
+,,41.934490189962744,Female,B+,Rural,H1,Hypertension,Diet Control,62560.79599495114,,,No
+,,81.49137303319324,Male,O+,Urban,H8,Hypertension,Antivirals,38110.89339930008,,,Yes
+,,44.08667049203015,Male,B+,Urban,H8,Flu,Chemotherapy,59297.432053217424,,,No
+,,46.94301599344151,Female,A+,Rural,H5,COVID,Rest,-115624.0396302419,,,No
+,,36.183873278579576,Male,A+,Urban,H5,Cancer,Antivirals,-31615.0107467185,,,Yes
+,,53.44005616830888,Male,O-,Rural,H3,Hypertension,Antivirals,295862.930606422,,,No
+,,78.24507062967953,Female,AB+,Rural,H3,Hypertension,Insulin,250705.20698383165,,,Yes
+,,26.157770334523757,Male,A+,Rural,H4,COVID,Rest,216406.2285677657,,,No
+,,61.5884748741981,Female,AB+,Rural,H2,Flu,Diet Control,67781.9938158494,,,No
+,,24.16748455654193,Female,AB+,Rural,H0,Cancer,Antivirals,215066.3173823417,,,No
+,,35.0300222401113,Female,O-,Urban,H0,Flu,Diet Control,239772.72924123923,,,Yes
+,,25.048462354517206,Male,A-,Urban,H6,Flu,Antivirals,57072.108342334854,,,No
+,,62.213004256402215,Male,A-,Urban,H0,Cancer,Diet Control,72749.77132541074,,,Yes
+,,18.41480704787966,Male,B-,Rural,H0,Cancer,Rest,99804.66935340645,,,Yes
+,,13.644976440694077,Male,O-,Rural,H2,Hypertension,Insulin,200997.57663098353,,,No
+,,69.9486895593241,Female,B-,Rural,H9,Hypertension,Rest,195501.0001863261,,,Yes
+,,45.03987606169417,Female,B-,Rural,H3,Cancer,Chemotherapy,292123.5730893458,,,No
+,,-5.550444689025333,Male,A-,Urban,H3,Diabetes,Insulin,142633.61061254155,,,Yes
+,,-5.308415171535444,Female,O-,Urban,H1,Hypertension,Rest,51132.42092701178,,,Yes
+,,25.769848466083438,Female,A-,Rural,H0,Diabetes,Chemotherapy,271694.7352268035,,,No
+,,4.338377429373004,Male,B-,Rural,H2,Cancer,Antivirals,120842.27833463089,,,No
+,,48.27562967425409,Female,O-,Rural,H3,Hypertension,Antivirals,206193.4030304807,,,No
+,,74.59877934892532,Male,B-,Urban,H2,Flu,Diet Control,6071.280783728915,,,No
+,,15.749273183041815,Female,O+,Urban,H7,Cancer,Insulin,30513.843412133865,,,Yes

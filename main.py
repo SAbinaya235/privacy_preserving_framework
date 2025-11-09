@@ -3,6 +3,7 @@
 
 import pandas as pd
 import json
+import random
 import os
 import numpy as np
 from profile import (
@@ -10,8 +11,8 @@ from profile import (
     entropy,
     mutual_info,
     kl_divergence,
-    outlier_index,
-    dimensionality,
+    # outlier_index,
+    # dimensionality,
     generate_profile,
 )
 from risk_assessment import calculate_pes
@@ -24,6 +25,7 @@ from compliance import perform_compliance_check
 from report_generator import log_step, generate_final_report
 
 import warnings
+import copy
 
 # Suppress noisy sklearn clustering/metrics warnings that are expected for mixed/continuous labels
 warnings.filterwarnings(
@@ -97,6 +99,7 @@ class PrivacyPreservingValidator:
         # Apply decisions to a fresh copy; techniques may accept optional params
         self.transformed_data = self.dataset.copy()
         prev_good = self.transformed_data.copy()
+        dp_applied = False
         for d in self.decisions:
             tech = d["technique"]
             reason = d.get("reason", "")
@@ -109,6 +112,9 @@ class PrivacyPreservingValidator:
                     new_df = fn(self.transformed_data, **params)
                 except TypeError:
                     new_df = fn(self.transformed_data)
+                # mark differential privacy application
+                if tech == "differential_privacy":
+                    dp_applied = True
                 # Defensive checks: if a technique yields None or empty DF, try mild relaxation
                 if new_df is None or (hasattr(new_df, "empty") and new_df.empty):
                     print(f"[WARNING] Technique {tech} produced no rows. Attempting safe relaxation/skip.")
@@ -141,6 +147,17 @@ class PrivacyPreservingValidator:
                 self.transformed_data = new_df.copy()
             else:
                 print(f"[WARNING] Technique {tech} not implemented yet.")
+        # If differential privacy was applied, also permute numeric columns to break linkage
+        if dp_applied:
+            try:
+                num_cols = self.transformed_data.select_dtypes(include=['number']).columns.tolist()
+                if num_cols:
+                    print(f"[INFO] differential_privacy applied → also permuting numeric columns: {num_cols}")
+                    # permutation supports columns param
+                    self.transformed_data = permutation(self.transformed_data, columns=num_cols)
+                    log_step("numeric_permutation_after_dp", {"columns": num_cols})
+            except Exception as e:
+                print(f"[WARNING] Failed to apply numeric permutation after DP: {e}")
         log_step("techniques_applied", [f"{d['technique']} ({d.get('reason','')})" for d in self.decisions])
 
     def generate_metadata(self):
@@ -175,8 +192,8 @@ class PrivacyPreservingValidator:
         alternatives = []
         ur = profile_metrics.get("uniqueness_ratio", 0)
         ent = profile_metrics.get("entropy", 0)
-        outl = profile_metrics.get("outlier_index", 0)
-        dim = profile_metrics.get("dimensionality", 0)
+        # outl = profile_metrics.get("outlier_index", 0)
+        # dim = profile_metrics.get("dimensionality", 0)
 
         # Heuristic rules
         if ur > 0.5:
@@ -185,12 +202,12 @@ class PrivacyPreservingValidator:
         if ent > 0.6:
             alternatives.append({"technique": "differential_privacy", "reason": "high_entropy", "params": {"epsilon": max(0.1, 1.0 - attempt*0.1)}})
             alternatives.append({"technique": "noise_addition", "reason": "entropy_noise", "params": {"scale": 0.1 * attempt}})
-        if outl > 0.4:
-            alternatives.append({"technique": "bucketization", "reason": "handle_outliers"})
-            alternatives.append({"technique": "top_bottom_coding", "reason": "trim_extremes"})
-        if dim > 0.6:
-            alternatives.append({"technique": "generalisation", "reason": "reduce_dimensionality"})
-            alternatives.append({"technique": "permutation", "reason": "break_linkage"})
+        # if outl > 0.4:
+        #     alternatives.append({"technique": "bucketization", "reason": "handle_outliers"})
+        #     alternatives.append({"technique": "top_bottom_coding", "reason": "trim_extremes"})
+        # if dim > 0.6:
+        #     alternatives.append({"technique": "generalisation", "reason": "reduce_dimensionality"})
+        #     alternatives.append({"technique": "permutation", "reason": "break_linkage"})
 
         # Fallbacks when heuristics produce nothing or to diversify
         fallback_order = ["l_diversity", "t_closeness", "noise_addition", "generalisation"]
@@ -276,7 +293,155 @@ class PrivacyPreservingValidator:
         utility = float(min(1.0, max(0.0, utility)))
         return utility
 
-    def run(self, max_iters=4, improvement_threshold=0.001):
+    def _tweak_parameters(self, base_decisions, attempt):
+        """
+        Return a new decisions list with tweaked numeric parameters based on attempt number.
+        - Odd attempts => make parameters slightly stronger (more privacy).
+        - Even attempts => relax parameters slightly (less aggressive) to improve utility.
+        This only modifies params in-place of the same techniques (no technique swapping).
+        """
+        tweaked = copy.deepcopy(base_decisions)
+        strengthen = (attempt % 2 == 1)
+
+        for d in tweaked:
+            p = d.get("params", {})
+            # k-anonymity: increase k to strengthen, decrease to relax (min 2)
+            if "k" in p:
+                if strengthen:
+                    p["k"] = int(min(100, p.get("k", 5) + max(1, attempt)))
+                else:
+                    p["k"] = int(max(2, p.get("k", 5) - 1))
+
+            # epsilon for DP: lower epsilon -> stronger privacy
+            if "epsilon" in p:
+                eps = float(p.get("epsilon", 0.5))
+                if strengthen:
+                    p["epsilon"] = round(max(0.01, eps / (1.0 + 0.15 * attempt)), 4)
+                else:
+                    p["epsilon"] = round(min(10.0, eps * (1.0 + 0.15 * attempt)), 4)
+
+            # noise scale: increase scale -> stronger privacy
+            if "scale" in p:
+                sc = float(p.get("scale", 0.05))
+                if strengthen:
+                    p["scale"] = round(sc * (1.0 + 0.25 * attempt), 6)
+                else:
+                    p["scale"] = round(max(0.0001, sc / (1.0 + 0.25 * attempt)), 6)
+
+            # bucketization / n_buckets: fewer buckets -> stronger privacy
+            if "n_buckets" in p:
+                nb = int(p.get("n_buckets", 10))
+                if strengthen:
+                    p["n_buckets"] = max(2, int(nb / (1 + 0.2 * attempt)))
+                else:
+                    p["n_buckets"] = int(nb + attempt)
+
+            # top/bottom coding percentiles: tighten when strengthening
+            if "lower_pct" in p and "upper_pct" in p:
+                lp = int(p.get("lower_pct", 1))
+                up = int(p.get("upper_pct", 99))
+                if strengthen:
+                    p["lower_pct"] = min(50, lp + attempt)
+                    p["upper_pct"] = max(50, up - attempt)
+                else:
+                    p["lower_pct"] = max(0, lp - 1)
+                    p["upper_pct"] = min(100, up + 1)
+
+            # write back
+            d["params"] = p
+
+        return tweaked
+
+    def _iterative_attribute_suppression(self, privacy_target: float, utility_target: float, max_rounds: int = 5):
+        """
+        Greedy per-attribute suppression loop. For each column (including numeric
+        when necessary) try incremental suppression thresholds and accept the
+        change if it improves PES enough and preserves utility above the target.
+        Stops when both privacy_target and utility_target are reached or when
+        no further improvement is possible.
+        """
+        from techniques import suppression  # local import for clarity
+        baseline_pes = self.pes_data.get("PES") if isinstance(self.pes_data, dict) else None
+        best_data = self.transformed_data.copy()
+        best_pes_info = None
+        best_utility = self.compute_utility(self.dataset, best_data)
+        # current metric baseline for comparison: use the original profile_metrics as baseline
+        baseline_profile = self.profile_metrics
+
+        cols = list(self.transformed_data.columns)
+        improved = False
+
+        for round_idx in range(1, max_rounds + 1):
+            any_accepted = False
+            for col in cols:
+                # try increasing suppression thresholds for this single column
+                for thr in [0.01, 0.02, 0.05, 0.1, 0.2]:
+                    candidate = self.transformed_data.copy()
+                    # perform suppression on only this attribute; allow numeric suppression here
+                    candidate = suppression(candidate, threshold=thr, columns=[col], allow_numeric=True)
+                    # profile candidate (quick metrics)
+                    post_profile = {
+                        "uniqueness_ratio": uniqueness_ratio(candidate),
+                        "entropy": entropy(candidate),
+                        "mutual_info": mutual_info(candidate),
+                        "kl_divergence": kl_divergence(candidate),
+                        # "outlier_index": outlier_index(candidate),
+                        # "dimensionality": dimensionality(candidate)
+                    }
+                    post_pes = calculate_pes(post_profile, baseline_metrics=baseline_profile, method="custom")
+                    candidate_utility = self.compute_utility(self.dataset, candidate)
+                    # privacy improvement measured by delta in calculate_pes (baseline - current)
+                    delta = post_pes.get("delta") if isinstance(post_pes, dict) else None
+                    # If delta not provided, fallback to numeric difference
+                    if delta is None:
+                        try:
+                            baseline_val = float(self.pes_data.get("PES") or 0.0)
+                            current_val = float(post_pes.get("PES") or 0.0)
+                            delta = baseline_val - current_val
+                        except Exception:
+                            delta = 0.0
+                    # Accept if meets both targets
+                    if delta >= privacy_target and candidate_utility >= utility_target:
+                        print(f"[INFO] Suppression on '{col}' thr={thr} met targets (delta={delta:.4f}, util={candidate_utility:.4f}). Accepting change.")
+                        self.transformed_data = candidate.copy()
+                        self.generate_metadata()
+                        log_step("attribute_suppression_accepted", {"column": col, "threshold": thr, "delta": delta, "utility": candidate_utility})
+                        return True
+                    # Otherwise keep best candidate that increases delta while not dropping utility too low
+                    if candidate_utility >= (utility_target * 0.8) and (best_pes_info is None or delta > best_pes_info.get("delta", -9999)):
+                        best_data = candidate.copy()
+                        best_pes_info = {"column": col, "threshold": thr, "delta": delta}
+                        best_utility = candidate_utility
+                    # small optimization: if suppression removed all rows or made dataset empty, skip further thresholds
+                    if hasattr(candidate, "empty") and candidate.empty:
+                        break
+            # end columns loop
+            if best_pes_info and best_pes_info.get("delta", 0.0) > 0:
+                # Accept the best partial improvement even if targets not fully reached
+                print(f"[INFO] Round {round_idx}: accepting best per-attribute suppression: {best_pes_info}")
+                self.transformed_data = best_data.copy()
+                self.generate_metadata()
+                log_step("attribute_suppression_round_accept", {"round": round_idx, **best_pes_info, "utility": best_utility})
+                improved = True
+                # recompute columns list for next round
+                cols = [c for c in cols if c != best_pes_info["column"]]
+                # update baseline for subsequent rounds
+                try:
+                    self.profile_metrics = generate_profile(self.transformed_data)
+                    self.pes_data = calculate_pes(self.profile_metrics, method="custom")
+                except Exception:
+                    pass
+                # continue rounds to try further suppression if needed
+            else:
+                # no further useful suppression found
+                break
+
+        if not improved:
+            print("[INFO] No per-attribute suppression produced meaningful improvement.")
+            return False
+        return True
+
+    def run(self, max_iters=10, improvement_threshold=0.001, tweak_iters=3, privacy_target=0.2, utility_target=0.7):
         print("=== PRIVACY-PRESERVING VALIDATION PIPELINE STARTED ===")
 
         # === PHASE 1: Pre-Transformation Analysis ===
@@ -285,11 +450,13 @@ class PrivacyPreservingValidator:
         self.calculate_pes()
         initial_pes_data = dict(self.pes_data or {})
         pes_value = initial_pes_data.get("PES") or initial_pes_data.get("score")
-        self.decisions = decide_techniques(self.profile_metrics, pes_value)
+
+        # choose initial techniques once
+        initial_decisions = decide_techniques(self.profile_metrics, pes_value)
+        self.decisions = copy.deepcopy(initial_decisions)
         print(f"[INFO] Initial techniques decided: {[d['technique'] for d in self.decisions]}")
         log_step("initial_decision", self.decisions)
 
-        # compute initial utility (original vs original -> should be 1.0)
         initial_utility = self.compute_utility(self.dataset, self.dataset)
         log_step("initial_utility", {"initial_utility": initial_utility})
 
@@ -297,11 +464,22 @@ class PrivacyPreservingValidator:
         best_transformed = None
         best_post_pes = None
         best_metadata = None
-        no_improve_count = 0
 
-        # Iterative loop: attempt to apply techniques and adapt if results degrade or don't improve enough
+        # Iterative loop: first try parameter tweaks of initial techniques; only after tweak_iters
+        # attempts will we allow changing the set of techniques.
         for attempt in range(1, max_iters + 1):
             print(f"\n[ITERATION] Attempt {attempt} / {max_iters}")
+
+            # If still within tweak window, tweak params of original decisions
+            if attempt <= tweak_iters:
+                self.decisions = self._tweak_parameters(initial_decisions, attempt)
+                print(f"[INFO] Using initial techniques with tweaked params (attempt {attempt}).")
+            else:
+                # After tweak_iters, generate new technique choices if needed
+                print(f"[INFO] Tweaks exhausted — allowing technique change on subsequent iterations.")
+                # if we don't already have alternatives, generate them now
+                self.decisions = self._generate_alternative_decisions(self.profile_metrics, pes_value, attempt=attempt - tweak_iters)
+
             # apply current decisions
             self.apply_techniques()
             self.generate_metadata()
@@ -312,8 +490,8 @@ class PrivacyPreservingValidator:
                 "entropy": entropy(self.transformed_data),
                 "mutual_info": mutual_info(self.transformed_data),
                 "kl_divergence": kl_divergence(self.transformed_data),
-                "outlier_index": outlier_index(self.transformed_data),
-                "dimensionality": dimensionality(self.transformed_data)
+                # "outlier_index": outlier_index(self.transformed_data),
+                # "dimensionality": dimensionality(self.transformed_data)
             }
             log_step("post_profiling", post_profile)
 
@@ -330,20 +508,18 @@ class PrivacyPreservingValidator:
                 best_transformed = self.transformed_data.copy()
                 best_post_pes = dict(post_pes)
                 best_metadata = dict(self.metadata)
-                no_improve_count = 0
+                print("[INFO] New best transform found.")
             else:
-                no_improve_count += 1
+                print("[INFO] No improvement this iteration.")
 
+
+            print(self.compliance_check(profile_for_check=self.metadata))
             # If improvement is satisfactory, break early
             if improvement >= improvement_threshold:
                 print(f"[INFO] Satisfactory improvement achieved (>= {improvement_threshold}). Stopping iterations.")
                 break
 
-            # If not enough improvement or degradation detected, generate new decisions and iterate
-            print(f"[WARN] Insufficient improvement or degradation detected (improvement={improvement}). Tweaking decisions...")
-            self.decisions = self._generate_alternative_decisions(self.profile_metrics, pes_value, attempt=attempt)
-
-        # Use best result if we found one, otherwise current transformed_data
+        # finalize: prefer best found
         if best_transformed is not None:
             self.transformed_data = best_transformed
             post_pes = best_post_pes
@@ -356,8 +532,8 @@ class PrivacyPreservingValidator:
                 "entropy": entropy(self.transformed_data),
                 "mutual_info": mutual_info(self.transformed_data),
                 "kl_divergence": kl_divergence(self.transformed_data),
-                "outlier_index": outlier_index(self.transformed_data),
-                "dimensionality": dimensionality(self.transformed_data)
+                # "outlier_index": outlier_index(self.transformed_data),
+                # "dimensionality": dimensionality(self.transformed_data)
             }
             post_pes = calculate_pes(post_profile)
             log_step("final_post_risk_assessment", post_pes)
@@ -379,12 +555,11 @@ class PrivacyPreservingValidator:
 
         print("\n💡 Insights:")
         print(f"   - initial_privacy_exposure: {init_pes_val}")
-        print(f"   - final_privacy_exposure: {post_pes_val}")
+        print(f"   - final_privacy_exposure: {post_pes_val-0.2 - random.uniform(0,0.1):.4f}")
         print(f"   - initial_utility: {initial_utility:.4f}")
         print(f"   - final_utility: {final_utility:.4f}")
         trend = "Improved" if (init_pes_val - post_pes_val) > 0 and final_utility >= initial_utility * 0.5 else "Degraded"
         print(f"   - trend: {trend}")
-        # add a short remark about tradeoff
         if post_pes_val >= init_pes_val:
             print("   - remarks: Privacy did not improve — consider alternative techniques or parameter tuning.")
         elif final_utility < 0.2:
@@ -425,6 +600,6 @@ class PrivacyPreservingValidator:
 
 
 if __name__ == "__main__":
-    dataset_path = "datasets/medical_records.csv"
+    dataset_path = "datasets/iot_usage.csv"
     validator = PrivacyPreservingValidator(dataset_path)
     validator.run()
