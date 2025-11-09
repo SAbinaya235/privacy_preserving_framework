@@ -131,6 +131,2916 @@
                     }
                 ]
             }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T11:56:37.516292",
+            "data": {
+                "path": "datasets/employee_records.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T11:56:37.534762",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 6.14,
+                "mutual_info": 1.382,
+                "kl_divergence": 15.4,
+                "outlier_index": 0.0,
+                "dimensionality": 3
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T11:56:37.535091",
+            "data": {
+                "PES": 0.602,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "technique_decisions",
+            "timestamp": "2025-11-09T11:56:37.535292",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.60 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (15.40) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T11:56:37.633276",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.60 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (15.40) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T11:56:37.645561",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 2.307,
+                "mutual_info": 0.372,
+                "kl_divergence": 0.015,
+                "outlier_index": 0.0,
+                "dimensionality": 3
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T11:56:37.645851",
+            "data": {
+                "PES": 0.362,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T11:56:37.646099",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:08:06.626536",
+            "data": {
+                "path": "datasets/medical_records.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:08:06.645696",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 7.237,
+                "mutual_info": 2.338,
+                "kl_divergence": 16.394,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:08:06.646065",
+            "data": {
+                "PES": 0.63,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "technique_decisions",
+            "timestamp": "2025-11-09T12:08:06.646370",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:08:06.761079",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:08:06.771278",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 2.318,
+                "mutual_info": 0.532,
+                "kl_divergence": 0.008,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:08:06.771662",
+            "data": {
+                "PES": 0.395,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T12:08:06.772309",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:11:30.070659",
+            "data": {
+                "path": "datasets/iot_usage.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:11:30.107387",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 6.034,
+                "mutual_info": 2.146,
+                "kl_divergence": 14.475,
+                "outlier_index": 0.0,
+                "dimensionality": 8
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:11:30.107897",
+            "data": {
+                "PES": 0.606,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "technique_decisions",
+            "timestamp": "2025-11-09T12:11:30.108310",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.61 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (14.47) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:11:30.206299",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.61 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (14.47) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:11:30.231026",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 2.293,
+                "mutual_info": 0.653,
+                "kl_divergence": 0.043,
+                "outlier_index": 0.0,
+                "dimensionality": 8
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:11:30.231495",
+            "data": {
+                "PES": 0.396,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T12:11:30.231939",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:18:42.434227",
+            "data": {
+                "path": "datasets/iot_usage.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:18:42.472789",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 6.034,
+                "mutual_info": 2.146,
+                "kl_divergence": 14.475,
+                "outlier_index": 0.0,
+                "dimensionality": 8
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:18:42.473393",
+            "data": {
+                "PES": 0.606,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "technique_decisions",
+            "timestamp": "2025-11-09T12:18:42.473915",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.61 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (14.47) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:18:42.581688",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.61 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (14.47) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:18:42.612835",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.016,
+                "mutual_info": 3.087,
+                "kl_divergence": 15.019,
+                "outlier_index": 0.0,
+                "dimensionality": 8
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:18:42.613516",
+            "data": {
+                "PES": 0.61,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T12:18:42.614202",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:20:01.112324",
+            "data": {
+                "path": "datasets/medical_records.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:20:01.127467",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 7.237,
+                "mutual_info": 2.338,
+                "kl_divergence": 16.394,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:20:01.128119",
+            "data": {
+                "PES": 0.63,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "technique_decisions",
+            "timestamp": "2025-11-09T12:20:01.128723",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:20:01.226572",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:20:01.238008",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.229,
+                "mutual_info": 2.846,
+                "kl_divergence": 15.019,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:20:01.238734",
+            "data": {
+                "PES": 0.632,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T12:20:01.239676",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:26:39.099655",
+            "data": {
+                "path": "datasets/medical_records.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:26:39.116746",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 7.237,
+                "mutual_info": 2.338,
+                "kl_divergence": 16.394,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:26:39.117525",
+            "data": {
+                "PES": 0.63,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "technique_decisions",
+            "timestamp": "2025-11-09T12:26:39.118233",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:26:39.217698",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:26:39.218568",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 7.237,
+                    "mutual_info": 2.338,
+                    "kl_divergence": 16.394,
+                    "outlier_index": 0.0,
+                    "dimensionality": 2
+                },
+                "pes_data": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "generalisation",
+                    "noise_addition",
+                    "t_closeness"
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:26:39.230487",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.229,
+                "mutual_info": 2.847,
+                "kl_divergence": 15.019,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:26:39.231404",
+            "data": {
+                "PES": 0.632,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T12:26:39.232242",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:30:36.534321",
+            "data": {
+                "path": "datasets/medical_records.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:30:36.552224",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 7.237,
+                "mutual_info": 2.338,
+                "kl_divergence": 16.394,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:30:36.553168",
+            "data": {
+                "PES": 0.63,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "initial_decision",
+            "timestamp": "2025-11-09T12:30:36.553949",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:30:36.655576",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:30:36.656538",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 7.237,
+                    "mutual_info": 2.338,
+                    "kl_divergence": 16.394,
+                    "outlier_index": 0.0,
+                    "dimensionality": 2
+                },
+                "pes_data": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "generalisation",
+                    "noise_addition",
+                    "t_closeness"
+                ],
+                "technique_config": [
+                    {},
+                    {},
+                    {}
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:30:36.669423",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.229,
+                "mutual_info": 2.847,
+                "kl_divergence": 15.019,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:30:36.670388",
+            "data": {
+                "PES": 0.632,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "alternative_decisions",
+            "timestamp": "2025-11-09T12:30:36.671248",
+            "data": {
+                "attempt": 1,
+                "decisions": [
+                    {
+                        "technique": "k_anonymity",
+                        "reason": "high_uniqueness",
+                        "params": {
+                            "k": 10
+                        }
+                    },
+                    {
+                        "technique": "suppression",
+                        "reason": "reduce_identifiers",
+                        "params": {}
+                    },
+                    {
+                        "technique": "differential_privacy",
+                        "reason": "high_entropy",
+                        "params": {
+                            "epsilon": 0.9
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:31:59.344891",
+            "data": {
+                "path": "datasets/medical_records.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:31:59.361369",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 7.237,
+                "mutual_info": 2.338,
+                "kl_divergence": 16.394,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:31:59.362375",
+            "data": {
+                "PES": 0.63,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "initial_decision",
+            "timestamp": "2025-11-09T12:31:59.363291",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:31:59.464315",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:31:59.465434",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 7.237,
+                    "mutual_info": 2.338,
+                    "kl_divergence": 16.394,
+                    "outlier_index": 0.0,
+                    "dimensionality": 2
+                },
+                "pes_data": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "generalisation",
+                    "noise_addition",
+                    "t_closeness"
+                ],
+                "technique_config": [
+                    {},
+                    {},
+                    {}
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:31:59.476689",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.229,
+                "mutual_info": 2.847,
+                "kl_divergence": 15.019,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:31:59.477803",
+            "data": {
+                "PES": 0.632,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "alternative_decisions",
+            "timestamp": "2025-11-09T12:31:59.479085",
+            "data": {
+                "attempt": 1,
+                "decisions": [
+                    {
+                        "technique": "k_anonymity",
+                        "reason": "high_uniqueness",
+                        "params": {
+                            "k": 10
+                        }
+                    },
+                    {
+                        "technique": "suppression",
+                        "reason": "reduce_identifiers",
+                        "params": {}
+                    },
+                    {
+                        "technique": "differential_privacy",
+                        "reason": "high_entropy",
+                        "params": {
+                            "epsilon": 0.9
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:31:59.483914",
+            "data": [
+                "k_anonymity (high_uniqueness)",
+                "suppression (reduce_identifiers)",
+                "differential_privacy (high_entropy)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:31:59.484946",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 7.237,
+                    "mutual_info": 2.338,
+                    "kl_divergence": 16.394,
+                    "outlier_index": 0.0,
+                    "dimensionality": 2
+                },
+                "pes_data": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "k_anonymity",
+                    "suppression",
+                    "differential_privacy"
+                ],
+                "technique_config": [
+                    {
+                        "k": 10
+                    },
+                    {},
+                    {
+                        "epsilon": 0.9
+                    }
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:31:59.486932",
+            "data": {
+                "uniqueness_ratio": 0.0,
+                "entropy": 0.0,
+                "mutual_info": 0.0,
+                "kl_divergence": 0.0,
+                "outlier_index": 0.0,
+                "dimensionality": 13
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:31:59.487978",
+            "data": {
+                "PES": 0.082,
+                "risk_level": "Low"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T12:31:59.489081",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:33:49.329073",
+            "data": {
+                "path": "datasets/medical_records.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:33:49.345171",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 7.237,
+                "mutual_info": 2.338,
+                "kl_divergence": 16.394,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:33:49.346303",
+            "data": {
+                "PES": 0.63,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "initial_decision",
+            "timestamp": "2025-11-09T12:33:49.347387",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:33:49.448772",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:33:49.449943",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 7.237,
+                    "mutual_info": 2.338,
+                    "kl_divergence": 16.394,
+                    "outlier_index": 0.0,
+                    "dimensionality": 2
+                },
+                "pes_data": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "generalisation",
+                    "noise_addition",
+                    "t_closeness"
+                ],
+                "technique_config": [
+                    {},
+                    {},
+                    {}
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:33:49.461226",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.229,
+                "mutual_info": 2.846,
+                "kl_divergence": 15.019,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:33:49.462508",
+            "data": {
+                "PES": 0.632,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "alternative_decisions",
+            "timestamp": "2025-11-09T12:33:49.463660",
+            "data": {
+                "attempt": 1,
+                "decisions": [
+                    {
+                        "technique": "k_anonymity",
+                        "reason": "high_uniqueness",
+                        "params": {
+                            "k": 10
+                        }
+                    },
+                    {
+                        "technique": "suppression",
+                        "reason": "reduce_identifiers",
+                        "params": {}
+                    },
+                    {
+                        "technique": "differential_privacy",
+                        "reason": "high_entropy",
+                        "params": {
+                            "epsilon": 0.9
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:33:49.468057",
+            "data": [
+                "k_anonymity (high_uniqueness)",
+                "suppression (reduce_identifiers)",
+                "differential_privacy (high_entropy)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:33:49.469262",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 7.237,
+                    "mutual_info": 2.338,
+                    "kl_divergence": 16.394,
+                    "outlier_index": 0.0,
+                    "dimensionality": 2
+                },
+                "pes_data": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "k_anonymity",
+                    "suppression",
+                    "differential_privacy"
+                ],
+                "technique_config": [
+                    {
+                        "k": 10
+                    },
+                    {},
+                    {
+                        "epsilon": 0.9
+                    }
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:33:49.471377",
+            "data": {
+                "uniqueness_ratio": 0.0,
+                "entropy": 0.0,
+                "mutual_info": 0.0,
+                "kl_divergence": 0.0,
+                "outlier_index": 0.0,
+                "dimensionality": 13
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:33:49.472488",
+            "data": {
+                "PES": 0.082,
+                "risk_level": "Low"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T12:33:49.473678",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:40:52.141200",
+            "data": {
+                "path": "datasets/medical_records.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:40:52.157742",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 7.237,
+                "mutual_info": 2.338,
+                "kl_divergence": 16.394,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:40:52.159070",
+            "data": {
+                "PES": 0.63,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "initial_decision",
+            "timestamp": "2025-11-09T12:40:52.160301",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "initial_utility",
+            "timestamp": "2025-11-09T12:40:52.163766",
+            "data": {
+                "initial_utility": 1.0
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:40:52.265625",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:40:52.267052",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 7.237,
+                    "mutual_info": 2.338,
+                    "kl_divergence": 16.394,
+                    "outlier_index": 0.0,
+                    "dimensionality": 2
+                },
+                "pes_data": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "generalisation",
+                    "noise_addition",
+                    "t_closeness"
+                ],
+                "technique_config": [
+                    {},
+                    {},
+                    {}
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:40:52.279067",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.229,
+                "mutual_info": 2.847,
+                "kl_divergence": 15.019,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:40:52.280521",
+            "data": {
+                "PES": 0.632,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "alternative_decisions",
+            "timestamp": "2025-11-09T12:40:52.281878",
+            "data": {
+                "attempt": 1,
+                "decisions": [
+                    {
+                        "technique": "k_anonymity",
+                        "reason": "high_uniqueness",
+                        "params": {
+                            "k": 10
+                        }
+                    },
+                    {
+                        "technique": "suppression",
+                        "reason": "reduce_identifiers",
+                        "params": {}
+                    },
+                    {
+                        "technique": "differential_privacy",
+                        "reason": "high_entropy",
+                        "params": {
+                            "epsilon": 0.9
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:40:52.286652",
+            "data": [
+                "k_anonymity (high_uniqueness)",
+                "suppression (reduce_identifiers)",
+                "differential_privacy (high_entropy)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:40:52.288129",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 7.237,
+                    "mutual_info": 2.338,
+                    "kl_divergence": 16.394,
+                    "outlier_index": 0.0,
+                    "dimensionality": 2
+                },
+                "pes_data": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "k_anonymity",
+                    "suppression",
+                    "differential_privacy"
+                ],
+                "technique_config": [
+                    {
+                        "k": 10
+                    },
+                    {},
+                    {
+                        "epsilon": 0.9
+                    }
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:40:52.290548",
+            "data": {
+                "uniqueness_ratio": 0.0,
+                "entropy": 0.0,
+                "mutual_info": 0.0,
+                "kl_divergence": 0.0,
+                "outlier_index": 0.0,
+                "dimensionality": 13
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:40:52.291868",
+            "data": {
+                "PES": 0.082,
+                "risk_level": "Low"
+            }
+        },
+        {
+            "step": "utility_metrics",
+            "timestamp": "2025-11-09T12:40:52.295825",
+            "data": {
+                "initial_utility": 1.0,
+                "final_utility": 0.4230769230769231
+            }
+        },
+        {
+            "step": "saved_transformed",
+            "timestamp": "2025-11-09T12:40:52.298162",
+            "data": {
+                "path": "datasets/medical_records_privacy_enforced.csv"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T12:40:52.299616",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "final_report",
+            "timestamp": "2025-11-09T12:40:52.301352",
+            "data": {
+                "timestamp": "2025-11-09T07:10:52.301132Z",
+                "before_pes": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "after_pes": {
+                    "PES": 0.082,
+                    "risk_level": "Low"
+                },
+                "initial_utility": 1.0,
+                "final_utility": 0.4230769230769231
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:41:58.018188",
+            "data": {
+                "path": "datasets/iot_usage.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:41:58.048153",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 6.034,
+                "mutual_info": 2.146,
+                "kl_divergence": 14.475,
+                "outlier_index": 0.0,
+                "dimensionality": 8
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:41:58.049724",
+            "data": {
+                "PES": 0.606,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "initial_decision",
+            "timestamp": "2025-11-09T12:41:58.051277",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.61 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (14.47) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "initial_utility",
+            "timestamp": "2025-11-09T12:41:58.054349",
+            "data": {
+                "initial_utility": 1.0
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:41:58.162155",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.61 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (14.47) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:41:58.163816",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 6.034,
+                    "mutual_info": 2.146,
+                    "kl_divergence": 14.475,
+                    "outlier_index": 0.0,
+                    "dimensionality": 8
+                },
+                "pes_data": {
+                    "PES": 0.606,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "generalisation",
+                    "noise_addition",
+                    "t_closeness"
+                ],
+                "technique_config": [
+                    {},
+                    {},
+                    {}
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:41:58.192941",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.012,
+                "mutual_info": 3.086,
+                "kl_divergence": 15.019,
+                "outlier_index": 0.0,
+                "dimensionality": 8
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:41:58.194570",
+            "data": {
+                "PES": 0.61,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "alternative_decisions",
+            "timestamp": "2025-11-09T12:41:58.196144",
+            "data": {
+                "attempt": 1,
+                "decisions": [
+                    {
+                        "technique": "k_anonymity",
+                        "reason": "high_uniqueness",
+                        "params": {
+                            "k": 10
+                        }
+                    },
+                    {
+                        "technique": "suppression",
+                        "reason": "reduce_identifiers",
+                        "params": {}
+                    },
+                    {
+                        "technique": "differential_privacy",
+                        "reason": "high_entropy",
+                        "params": {
+                            "epsilon": 0.9
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:41:58.201283",
+            "data": [
+                "k_anonymity (high_uniqueness)",
+                "suppression (reduce_identifiers)",
+                "differential_privacy (high_entropy)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:41:58.203068",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 6.034,
+                    "mutual_info": 2.146,
+                    "kl_divergence": 14.475,
+                    "outlier_index": 0.0,
+                    "dimensionality": 8
+                },
+                "pes_data": {
+                    "PES": 0.606,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "k_anonymity",
+                    "suppression",
+                    "differential_privacy"
+                ],
+                "technique_config": [
+                    {
+                        "k": 10
+                    },
+                    {},
+                    {
+                        "epsilon": 0.9
+                    }
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:41:58.212495",
+            "data": {
+                "uniqueness_ratio": 0.0,
+                "entropy": 0.0,
+                "mutual_info": 0.0,
+                "kl_divergence": 0.0,
+                "outlier_index": 0.0,
+                "dimensionality": 13
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:41:58.214080",
+            "data": {
+                "PES": 0.082,
+                "risk_level": "Low"
+            }
+        },
+        {
+            "step": "utility_metrics",
+            "timestamp": "2025-11-09T12:41:58.217201",
+            "data": {
+                "initial_utility": 1.0,
+                "final_utility": 0.19230769230769232
+            }
+        },
+        {
+            "step": "saved_transformed",
+            "timestamp": "2025-11-09T12:41:58.219331",
+            "data": {
+                "path": "datasets/iot_usage_privacy_enforced.csv"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T12:41:58.221433",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "final_report",
+            "timestamp": "2025-11-09T12:41:58.223227",
+            "data": {
+                "timestamp": "2025-11-09T07:11:58.223131Z",
+                "before_pes": {
+                    "PES": 0.606,
+                    "risk_level": "Medium"
+                },
+                "after_pes": {
+                    "PES": 0.082,
+                    "risk_level": "Low"
+                },
+                "initial_utility": 1.0,
+                "final_utility": 0.19230769230769232
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:45:35.037246",
+            "data": {
+                "path": "datasets/iot_usage.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:45:35.074260",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 6.034,
+                "mutual_info": 2.146,
+                "kl_divergence": 14.475,
+                "outlier_index": 0.0,
+                "dimensionality": 8
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:45:35.076021",
+            "data": {
+                "PES": 0.606,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "initial_decision",
+            "timestamp": "2025-11-09T12:45:35.077744",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.61 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (14.47) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "initial_utility",
+            "timestamp": "2025-11-09T12:45:35.081077",
+            "data": {
+                "initial_utility": 1.0
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:45:35.192004",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.61 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (14.47) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:45:35.193902",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 6.034,
+                    "mutual_info": 2.146,
+                    "kl_divergence": 14.475,
+                    "outlier_index": 0.0,
+                    "dimensionality": 8
+                },
+                "pes_data": {
+                    "PES": 0.606,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "generalisation",
+                    "noise_addition",
+                    "t_closeness"
+                ],
+                "technique_config": [
+                    {},
+                    {},
+                    {}
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:45:35.229618",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.001,
+                "mutual_info": 3.082,
+                "kl_divergence": 15.019,
+                "outlier_index": 0.0,
+                "dimensionality": 8
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:45:35.231715",
+            "data": {
+                "PES": 0.61,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "alternative_decisions",
+            "timestamp": "2025-11-09T12:45:35.237723",
+            "data": {
+                "attempt": 1,
+                "decisions": [
+                    {
+                        "technique": "k_anonymity",
+                        "reason": "high_uniqueness",
+                        "params": {
+                            "k": 10
+                        }
+                    },
+                    {
+                        "technique": "suppression",
+                        "reason": "reduce_identifiers",
+                        "params": {}
+                    },
+                    {
+                        "technique": "differential_privacy",
+                        "reason": "high_entropy",
+                        "params": {
+                            "epsilon": 0.9
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:45:35.264543",
+            "data": [
+                "k_anonymity (high_uniqueness)",
+                "suppression (reduce_identifiers)",
+                "differential_privacy (high_entropy)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:45:35.266589",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 6.034,
+                    "mutual_info": 2.146,
+                    "kl_divergence": 14.475,
+                    "outlier_index": 0.0,
+                    "dimensionality": 8
+                },
+                "pes_data": {
+                    "PES": 0.606,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "k_anonymity",
+                    "suppression",
+                    "differential_privacy"
+                ],
+                "technique_config": [
+                    {
+                        "k": 10
+                    },
+                    {},
+                    {
+                        "epsilon": 0.9
+                    }
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:45:35.288773",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 2.391,
+                "mutual_info": 1.543,
+                "kl_divergence": 1.001,
+                "outlier_index": 0.0,
+                "dimensionality": 11
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:45:35.290755",
+            "data": {
+                "PES": 0.568,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "utility_metrics",
+            "timestamp": "2025-11-09T12:45:35.294042",
+            "data": {
+                "initial_utility": 1.0,
+                "final_utility": 0.513395544229871
+            }
+        },
+        {
+            "step": "saved_transformed",
+            "timestamp": "2025-11-09T12:45:35.297600",
+            "data": {
+                "path": "datasets/iot_usage_privacy_enforced.csv"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T12:45:35.299498",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "final_report",
+            "timestamp": "2025-11-09T12:45:35.301484",
+            "data": {
+                "timestamp": "2025-11-09T07:15:35.301398Z",
+                "before_pes": {
+                    "PES": 0.606,
+                    "risk_level": "Medium"
+                },
+                "after_pes": {
+                    "PES": 0.568,
+                    "risk_level": "Medium"
+                },
+                "initial_utility": 1.0,
+                "final_utility": 0.513395544229871
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:46:54.387331",
+            "data": {
+                "path": "datasets/medical_records.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:46:54.400427",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 7.237,
+                "mutual_info": 2.338,
+                "kl_divergence": 16.394,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:46:54.402464",
+            "data": {
+                "PES": 0.63,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "initial_decision",
+            "timestamp": "2025-11-09T12:46:54.404350",
+            "data": [
+                {
+                    "technique": "generalisation",
+                    "reason": "High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity."
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data."
+                },
+                {
+                    "technique": "t_closeness",
+                    "reason": "KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes."
+                }
+            ]
+        },
+        {
+            "step": "initial_utility",
+            "timestamp": "2025-11-09T12:46:54.408924",
+            "data": {
+                "initial_utility": 1.0
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:46:54.508685",
+            "data": [
+                "generalisation (High uniqueness ratio (1.00) indicates re-identification risk; reduce granularity.)",
+                "noise_addition (PES = 0.63 (Medium) \u2192 add slight statistical noise to safeguard sensitive data.)",
+                "t_closeness (KL divergence (16.39) shows sensitive attribute imbalance across equivalence classes.)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:46:54.510773",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 7.237,
+                    "mutual_info": 2.338,
+                    "kl_divergence": 16.394,
+                    "outlier_index": 0.0,
+                    "dimensionality": 2
+                },
+                "pes_data": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "generalisation",
+                    "noise_addition",
+                    "t_closeness"
+                ],
+                "technique_config": [
+                    {},
+                    {},
+                    {}
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:46:54.523610",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.229,
+                "mutual_info": 2.847,
+                "kl_divergence": 15.019,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:46:54.526173",
+            "data": {
+                "PES": 0.632,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "alternative_decisions",
+            "timestamp": "2025-11-09T12:46:54.528171",
+            "data": {
+                "attempt": 1,
+                "decisions": [
+                    {
+                        "technique": "k_anonymity",
+                        "reason": "high_uniqueness",
+                        "params": {
+                            "k": 10
+                        }
+                    },
+                    {
+                        "technique": "suppression",
+                        "reason": "reduce_identifiers",
+                        "params": {}
+                    },
+                    {
+                        "technique": "differential_privacy",
+                        "reason": "high_entropy",
+                        "params": {
+                            "epsilon": 0.9
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:46:54.541720",
+            "data": [
+                "k_anonymity (high_uniqueness)",
+                "suppression (reduce_identifiers)",
+                "differential_privacy (high_entropy)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:46:54.544288",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 7.237,
+                    "mutual_info": 2.338,
+                    "kl_divergence": 16.394,
+                    "outlier_index": 0.0,
+                    "dimensionality": 2
+                },
+                "pes_data": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "k_anonymity",
+                    "suppression",
+                    "differential_privacy"
+                ],
+                "technique_config": [
+                    {
+                        "k": 10
+                    },
+                    {},
+                    {
+                        "epsilon": 0.9
+                    }
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:46:54.553642",
+            "data": {
+                "uniqueness_ratio": 0.997,
+                "entropy": 0.0,
+                "mutual_info": 0.0,
+                "kl_divergence": 0.0,
+                "outlier_index": 0.0,
+                "dimensionality": 7
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:46:54.555675",
+            "data": {
+                "PES": 0.337,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "utility_metrics",
+            "timestamp": "2025-11-09T12:46:54.559241",
+            "data": {
+                "initial_utility": 1.0,
+                "final_utility": 0.7777777777777778
+            }
+        },
+        {
+            "step": "saved_transformed",
+            "timestamp": "2025-11-09T12:46:54.562750",
+            "data": {
+                "path": "datasets/medical_records_privacy_enforced.csv"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T12:46:54.564813",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "final_report",
+            "timestamp": "2025-11-09T12:46:54.566944",
+            "data": {
+                "timestamp": "2025-11-09T07:16:54.566871Z",
+                "before_pes": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "after_pes": {
+                    "PES": 0.337,
+                    "risk_level": "Medium"
+                },
+                "initial_utility": 1.0,
+                "final_utility": 0.7777777777777778
+            }
+        },
+        {
+            "step": "dataset_loaded",
+            "timestamp": "2025-11-09T12:53:42.863386",
+            "data": {
+                "path": "datasets/medical_records.csv"
+            }
+        },
+        {
+            "step": "profiling_metrics",
+            "timestamp": "2025-11-09T12:53:42.883960",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 7.237,
+                "mutual_info": 2.338,
+                "kl_divergence": 16.394,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "pes_score",
+            "timestamp": "2025-11-09T12:53:42.886170",
+            "data": {
+                "PES": 0.63,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "initial_decision",
+            "timestamp": "2025-11-09T12:53:42.888261",
+            "data": [
+                {
+                    "technique": "k_anonymity",
+                    "reason": "global_high_uniqueness",
+                    "params": {
+                        "k": 5
+                    }
+                },
+                {
+                    "technique": "l_diversity",
+                    "reason": "augment_k_with_l_diversity",
+                    "params": {
+                        "l": 2
+                    }
+                },
+                {
+                    "technique": "noise_addition",
+                    "reason": "aggregate_noise",
+                    "params": {
+                        "scale": 0.3619
+                    }
+                },
+                {
+                    "technique": "differential_privacy",
+                    "reason": "aggregate_high_entropy_or_dimensionality",
+                    "params": {
+                        "epsilon": 0.748
+                    }
+                }
+            ]
+        },
+        {
+            "step": "initial_utility",
+            "timestamp": "2025-11-09T12:53:42.893291",
+            "data": {
+                "initial_utility": 1.0
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:53:42.905573",
+            "data": [
+                "k_anonymity (global_high_uniqueness)",
+                "l_diversity (augment_k_with_l_diversity)",
+                "noise_addition (aggregate_noise)",
+                "differential_privacy (aggregate_high_entropy_or_dimensionality)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:53:42.907739",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 7.237,
+                    "mutual_info": 2.338,
+                    "kl_divergence": 16.394,
+                    "outlier_index": 0.0,
+                    "dimensionality": 2
+                },
+                "pes_data": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "k_anonymity",
+                    "l_diversity",
+                    "noise_addition",
+                    "differential_privacy"
+                ],
+                "technique_config": [
+                    {
+                        "k": 5
+                    },
+                    {
+                        "l": 2
+                    },
+                    {
+                        "scale": 0.3619
+                    },
+                    {
+                        "epsilon": 0.748
+                    }
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:53:42.920736",
+            "data": {
+                "uniqueness_ratio": 1.0,
+                "entropy": 8.229,
+                "mutual_info": 2.847,
+                "kl_divergence": 15.019,
+                "outlier_index": 0.0,
+                "dimensionality": 2
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:53:42.922959",
+            "data": {
+                "PES": 0.632,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "alternative_decisions",
+            "timestamp": "2025-11-09T12:53:42.925193",
+            "data": {
+                "attempt": 1,
+                "decisions": [
+                    {
+                        "technique": "k_anonymity",
+                        "reason": "high_uniqueness",
+                        "params": {
+                            "k": 10
+                        }
+                    },
+                    {
+                        "technique": "suppression",
+                        "reason": "reduce_identifiers",
+                        "params": {}
+                    },
+                    {
+                        "technique": "differential_privacy",
+                        "reason": "high_entropy",
+                        "params": {
+                            "epsilon": 0.9
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "step": "techniques_applied",
+            "timestamp": "2025-11-09T12:53:42.939296",
+            "data": [
+                "k_anonymity (high_uniqueness)",
+                "suppression (reduce_identifiers)",
+                "differential_privacy (high_entropy)"
+            ]
+        },
+        {
+            "step": "metadata_generated",
+            "timestamp": "2025-11-09T12:53:42.941760",
+            "data": {
+                "profiling_metrics": {
+                    "uniqueness_ratio": 1.0,
+                    "entropy": 7.237,
+                    "mutual_info": 2.338,
+                    "kl_divergence": 16.394,
+                    "outlier_index": 0.0,
+                    "dimensionality": 2
+                },
+                "pes_data": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "techniques_applied": [
+                    "k_anonymity",
+                    "suppression",
+                    "differential_privacy"
+                ],
+                "technique_config": [
+                    {
+                        "k": 10
+                    },
+                    {},
+                    {
+                        "epsilon": 0.9
+                    }
+                ]
+            }
+        },
+        {
+            "step": "post_profiling",
+            "timestamp": "2025-11-09T12:53:42.952781",
+            "data": {
+                "uniqueness_ratio": 0.997,
+                "entropy": 0.0,
+                "mutual_info": 0.0,
+                "kl_divergence": 0.0,
+                "outlier_index": 0.0,
+                "dimensionality": 7
+            }
+        },
+        {
+            "step": "post_risk_assessment",
+            "timestamp": "2025-11-09T12:53:42.955140",
+            "data": {
+                "PES": 0.337,
+                "risk_level": "Medium"
+            }
+        },
+        {
+            "step": "utility_metrics",
+            "timestamp": "2025-11-09T12:53:42.959607",
+            "data": {
+                "initial_utility": 1.0,
+                "final_utility": 0.7777777777777778
+            }
+        },
+        {
+            "step": "saved_transformed",
+            "timestamp": "2025-11-09T12:53:42.963718",
+            "data": {
+                "path": "datasets/medical_records_privacy_enforced.csv"
+            }
+        },
+        {
+            "step": "compliance_results",
+            "timestamp": "2025-11-09T12:53:42.965994",
+            "data": {
+                "checks": [
+                    {
+                        "check": "purpose_limitation",
+                        "status": "Pass",
+                        "article": "Article 5(1)(b)",
+                        "description": "Data used only for declared purpose"
+                    },
+                    {
+                        "check": "data_minimization",
+                        "status": "Fail",
+                        "article": "Article 5(1)(c)",
+                        "description": "Limit data to what is necessary"
+                    },
+                    {
+                        "check": "lawfulness",
+                        "status": "Fail",
+                        "article": "Article 6",
+                        "description": "Lawful basis for processing"
+                    },
+                    {
+                        "check": "erasure_right",
+                        "status": "Fail",
+                        "article": "Article 17",
+                        "description": "Right to erasure of data"
+                    },
+                    {
+                        "check": "privacy_by_design",
+                        "status": "Fail",
+                        "article": "Article 25",
+                        "description": "Integrate privacy controls in design"
+                    }
+                ],
+                "compliance_score": 0.2,
+                "compliance_status": "Partially Compliant",
+                "remediation_actions": [
+                    {
+                        "article": "Article 5(1)(c)",
+                        "action": "Remove or anonymize unnecessary personal data fields."
+                    },
+                    {
+                        "article": "Article 6",
+                        "action": "Specify a lawful basis for data processing (e.g., consent or contract)."
+                    },
+                    {
+                        "article": "Article 17",
+                        "action": "Add unique identifiers to enable data deletion requests."
+                    },
+                    {
+                        "article": "Article 25",
+                        "action": "Integrate technical controls such as encryption or pseudonymization."
+                    }
+                ]
+            }
+        },
+        {
+            "step": "final_report",
+            "timestamp": "2025-11-09T12:53:42.968515",
+            "data": {
+                "timestamp": "2025-11-09T07:23:42.968392Z",
+                "before_pes": {
+                    "PES": 0.63,
+                    "risk_level": "Medium"
+                },
+                "after_pes": {
+                    "PES": 0.337,
+                    "risk_level": "Medium"
+                },
+                "initial_utility": 1.0,
+                "final_utility": 0.7777777777777778
+            }
         }
     ]
 }

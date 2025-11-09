@@ -91,30 +91,37 @@ def permutation(dataset: pd.DataFrame):
 
 # ------------------------- Statistical Methods -------------------------
 
-def k_anonymity(dataset: pd.DataFrame, k=None):
+def k_anonymity(df, quasi_identifiers=None, k=5):
     """
-    Enforce k-anonymity.
-    Automatically determines k based on dataset size:
-        - small datasets → smaller k (to avoid over-suppression)
-        - large datasets → larger k
+    Enforce k-anonymity by keeping only rows that belong to groups of size >= k.
+    quasi_identifiers: list of column names to consider (defaults to all columns).
     """
-    df = dataset.copy()
-    n = len(df)
-    if k is None:
-        if n < 100:
-            k = 3
-        elif n < 1000:
-            k = 5
-        else:
-            k = 10
+    if quasi_identifiers is None:
+        quasi_identifiers = df.columns.tolist()
 
-    # Simplified enforcement: remove records that appear < k times
-    qi_cols = df.columns[:min(3, len(df.columns))]  # assume first 3 as QIs
-    grouped = df.groupby(list(qi_cols))
-    mask = grouped.transform('size') >= k
-    df = df[mask.all(axis=1)]
-    df.reset_index(drop=True, inplace=True)
-    return df
+    # Compute group sizes aligned to the original rows.
+    # group_sizes can be a DataFrame (one column per qi) or a Series depending on df shape,
+    # so normalize to a single Series that aligns with df rows.
+    try:
+        group_sizes = df.groupby(quasi_identifiers).transform('size')
+    except Exception:
+        # Fallback: map group-size Series back to rows (handles edge cases)
+        sizes_by_group = df.groupby(quasi_identifiers).size()
+        idx = df.set_index(quasi_identifiers).index
+        mapped = sizes_by_group.reindex(idx).to_numpy()
+        mask = mapped >= k
+        return df.iloc[mask].reset_index(drop=True)
+
+    # Normalize transform result to a single Series
+    if hasattr(group_sizes, "ndim") and group_sizes.ndim == 2:
+        sizes_series = group_sizes.iloc[:, 0]
+    else:
+        sizes_series = group_sizes
+
+    # sizes_series is aligned to df rows; create boolean mask
+    mask = (sizes_series >= k)
+    # Ensure mask is a numpy boolean array aligned to row order
+    return df.iloc[mask.to_numpy()].reset_index(drop=True)
 
 
 def l_diversity(dataset: pd.DataFrame, sensitive_col=None, l=2):

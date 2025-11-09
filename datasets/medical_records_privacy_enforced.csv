@@ -1,0 +1,301 @@
+Patient_ID,Name,Age,Gender,Blood_Type,Region,Hospital_ID,Diagnosis,Treatment_Type,Bill_Amount,Admission_Date,Discharge_Date,FollowUp_Required
+,,,Female,B+,Rural,H9,Flu,Rest,,,,No
+,,,Female,A-,Urban,H6,Cancer,Antivirals,,,,Yes
+,,,Female,O-,Rural,H9,Flu,Chemotherapy,,,,No
+,,,Male,B+,Rural,H8,Hypertension,Chemotherapy,,,,Yes
+,,,Male,O+,Urban,H9,COVID,Diet Control,,,,Yes
+,,,Female,AB+,Rural,H8,Diabetes,Diet Control,,,,No
+,,,Female,O+,Urban,H9,Hypertension,Diet Control,,,,Yes
+,,,Female,O-,Urban,H2,Diabetes,Rest,,,,No
+,,,Female,A-,Urban,H4,Cancer,Diet Control,,,,Yes
+,,,Female,O+,Rural,H7,Cancer,Chemotherapy,,,,Yes
+,,,Male,A-,Rural,H7,Cancer,Diet Control,,,,No
+,,,Male,O+,Rural,H3,Diabetes,Insulin,,,,No
+,,,Male,O+,Urban,H0,Hypertension,Diet Control,,,,No
+,,,Male,A-,Urban,H0,Cancer,Rest,,,,Yes
+,,,Female,B-,Rural,H3,Hypertension,Insulin,,,,Yes
+,,,Male,O+,Rural,H5,Diabetes,Chemotherapy,,,,Yes
+,,,Female,B+,Rural,H7,Hypertension,Chemotherapy,,,,No
+,,,Female,AB+,Rural,H5,Diabetes,Antivirals,,,,No
+,,,Female,O-,Rural,H8,Diabetes,Insulin,,,,No
+,,,Male,B-,Urban,H8,COVID,Antivirals,,,,Yes
+,,,Female,A-,Urban,H1,Diabetes,Insulin,,,,Yes
+,,,Male,B-,Urban,H9,Diabetes,Insulin,,,,No
+,,,Male,A+,Rural,H0,Flu,Rest,,,,Yes
+,,,Female,A+,Urban,H1,Cancer,Antivirals,,,,No
+,,,Female,O+,Urban,H4,COVID,Rest,,,,Yes
+,,,Female,O+,Urban,H3,COVID,Insulin,,,,Yes
+,,,Male,B+,Urban,H3,COVID,Chemotherapy,,,,No
+,,,Female,AB+,Urban,H8,Flu,Insulin,,,,Yes
+,,,Male,O-,Rural,H7,Diabetes,Rest,,,,Yes
+,,,Female,B-,Urban,H5,Cancer,Antivirals,,,,No
+,,,Female,A+,Rural,H0,Hypertension,Antivirals,,,,No
+,,,Male,O+,Rural,H1,Diabetes,Rest,,,,Yes
+,,,Male,O-,Rural,H5,Flu,Antivirals,,,,No
+,,,Male,B-,Rural,H1,Diabetes,Diet Control,,,,Yes
+,,,Male,O+,Rural,H9,Diabetes,Chemotherapy,,,,No
+,,,Male,O+,Urban,H4,Flu,Chemotherapy,,,,Yes
+,,,Male,A+,Urban,H4,COVID,Chemotherapy,,,,Yes
+,,,Female,A+,Rural,H5,COVID,Antivirals,,,,No
+,,,Female,O+,Rural,H5,Cancer,Antivirals,,,,Yes
+,,,Male,A-,Rural,H5,Cancer,Insulin,,,,Yes
+,,,Female,O+,Urban,H1,COVID,Insulin,,,,No
+,,,Male,O-,Rural,H9,Hypertension,Chemotherapy,,,,No
+,,,Female,O+,Urban,H2,Diabetes,Diet Control,,,,Yes
+,,,Female,B+,Rural,H5,Hypertension,Insulin,,,,No
+,,,Male,AB+,Urban,H7,Diabetes,Insulin,,,,No
+,,,Male,B+,Rural,H0,COVID,Antivirals,,,,Yes
+,,,Male,B+,Urban,H0,Cancer,Diet Control,,,,Yes
+,,,Female,A-,Rural,H1,Cancer,Chemotherapy,,,,No
+,,,Male,A-,Urban,H5,Hypertension,Insulin,,,,No
+,,,Female,O+,Urban,H8,Cancer,Diet Control,,,,No
+,,,Male,B+,Urban,H3,COVID,Diet Control,,,,Yes
+,,,Female,A-,Urban,H2,Hypertension,Chemotherapy,,,,Yes
+,,,Female,A+,Urban,H7,Diabetes,Diet Control,,,,Yes
+,,,Male,O+,Urban,H9,Cancer,Diet Control,,,,Yes
+,,,Female,O-,Urban,H8,Flu,Diet Control,,,,Yes
+,,,Female,AB+,Rural,H4,Cancer,Insulin,,,,Yes
+,,,Male,B-,Rural,H8,Diabetes,Chemotherapy,,,,Yes
+,,,Female,O+,Rural,H1,Hypertension,Diet Control,,,,No
+,,,Male,B-,Rural,H2,Diabetes,Diet Control,,,,No
+,,,Male,B+,Rural,H6,Flu,Insulin,,,,Yes
+,,,Male,AB+,Urban,H6,COVID,Chemotherapy,,,,Yes
+,,,Male,B-,Urban,H5,Cancer,Antivirals,,,,Yes
+,,,Female,B+,Urban,H5,Hypertension,Insulin,,,,No
+,,,Female,A+,Urban,H1,COVID,Chemotherapy,,,,Yes
+,,,Female,B-,Urban,H9,Diabetes,Diet Control,,,,No
+,,,Male,AB+,Rural,H5,Hypertension,Chemotherapy,,,,No
+,,,Female,O+,Rural,H3,COVID,Chemotherapy,,,,No
+,,,Female,B+,Rural,H2,Hypertension,Chemotherapy,,,,No
+,,,Male,O+,Rural,H1,Flu,Antivirals,,,,No
+,,,Male,AB+,Urban,H0,Flu,Chemotherapy,,,,Yes
+,,,Female,A-,Urban,H4,Cancer,Antivirals,,,,Yes
+,,,Male,B+,Urban,H1,Cancer,Diet Control,,,,No
+,,,Male,B-,Rural,H1,Flu,Antivirals,,,,Yes
+,,,Male,B+,Urban,H6,Hypertension,Diet Control,,,,No
+,,,Male,O+,Rural,H7,Flu,Diet Control,,,,No
+,,,Female,A+,Urban,H9,Cancer,Antivirals,,,,Yes
+,,,Male,B+,Urban,H7,Flu,Insulin,,,,Yes
+,,,Male,B-,Rural,H3,Flu,Rest,,,,Yes
+,,,Male,A-,Urban,H0,Hypertension,Chemotherapy,,,,Yes
+,,,Male,O-,Urban,H6,COVID,Rest,,,,Yes
+,,,Male,A+,Rural,H0,Cancer,Chemotherapy,,,,No
+,,,Male,A-,Urban,H3,Hypertension,Chemotherapy,,,,Yes
+,,,Male,B+,Rural,H7,Flu,Diet Control,,,,Yes
+,,,Male,O+,Urban,H1,Flu,Chemotherapy,,,,Yes
+,,,Female,AB+,Urban,H5,COVID,Chemotherapy,,,,No
+,,,Male,O+,Urban,H5,Cancer,Antivirals,,,,Yes
+,,,Female,B-,Urban,H8,Cancer,Rest,,,,No
+,,,Male,O+,Urban,H4,Diabetes,Antivirals,,,,Yes
+,,,Male,A+,Urban,H9,Cancer,Chemotherapy,,,,Yes
+,,,Male,O+,Urban,H3,COVID,Diet Control,,,,No
+,,,Male,B-,Urban,H4,Diabetes,Antivirals,,,,Yes
+,,,Female,O-,Rural,H9,Diabetes,Antivirals,,,,Yes
+,,,Male,B+,Rural,H4,Flu,Insulin,,,,No
+,,,Male,AB+,Urban,H7,Flu,Chemotherapy,,,,Yes
+,,,Female,B+,Urban,H9,Cancer,Diet Control,,,,No
+,,,Female,O+,Rural,H7,Diabetes,Antivirals,,,,No
+,,,Male,A-,Urban,H1,Flu,Antivirals,,,,No
+,,,Female,B+,Urban,H6,COVID,Diet Control,,,,No
+,,,Female,O-,Rural,H7,Flu,Chemotherapy,,,,No
+,,,Female,O+,Urban,H5,Flu,Insulin,,,,Yes
+,,,Male,AB+,Urban,H4,Diabetes,Antivirals,,,,Yes
+,,,Male,B-,Rural,H8,Diabetes,Insulin,,,,Yes
+,,,Male,O-,Urban,H2,Hypertension,Rest,,,,No
+,,,Female,O+,Urban,H9,COVID,Chemotherapy,,,,No
+,,,Male,O-,Rural,H3,Diabetes,Rest,,,,No
+,,,Female,B+,Urban,H8,Cancer,Rest,,,,No
+,,,Male,AB+,Rural,H5,COVID,Rest,,,,Yes
+,,,Male,B-,Urban,H7,COVID,Chemotherapy,,,,Yes
+,,,Female,O+,Urban,H6,Diabetes,Chemotherapy,,,,No
+,,,Male,A+,Rural,H1,COVID,Diet Control,,,,No
+,,,Female,B-,Rural,H2,Diabetes,Insulin,,,,Yes
+,,,Female,A+,Urban,H0,Flu,Insulin,,,,No
+,,,Male,O-,Rural,H8,Hypertension,Diet Control,,,,No
+,,,Female,A-,Rural,H6,Flu,Diet Control,,,,No
+,,,Male,B-,Urban,H0,Diabetes,Rest,,,,Yes
+,,,Male,O-,Urban,H2,Diabetes,Diet Control,,,,Yes
+,,,Female,A+,Urban,H3,Flu,Antivirals,,,,No
+,,,Male,B+,Rural,H3,Cancer,Insulin,,,,Yes
+,,,Female,B+,Rural,H4,Cancer,Diet Control,,,,No
+,,,Male,A-,Rural,H2,Cancer,Antivirals,,,,No
+,,,Male,B-,Rural,H2,Diabetes,Antivirals,,,,Yes
+,,,Male,B-,Urban,H0,COVID,Antivirals,,,,No
+,,,Male,B-,Rural,H6,Diabetes,Antivirals,,,,No
+,,,Male,O-,Urban,H9,COVID,Rest,,,,Yes
+,,,Female,AB+,Rural,H0,Flu,Antivirals,,,,No
+,,,Female,AB+,Urban,H1,Hypertension,Rest,,,,No
+,,,Female,A-,Urban,H3,COVID,Rest,,,,No
+,,,Female,B-,Urban,H3,Cancer,Antivirals,,,,Yes
+,,,Female,O-,Rural,H4,Diabetes,Insulin,,,,No
+,,,Female,B+,Urban,H1,Flu,Antivirals,,,,Yes
+,,,Male,A+,Urban,H3,Cancer,Antivirals,,,,No
+,,,Male,O-,Rural,H0,Flu,Antivirals,,,,No
+,,,Female,AB+,Urban,H1,Hypertension,Insulin,,,,No
+,,,Female,AB+,Rural,H0,Diabetes,Chemotherapy,,,,No
+,,,Male,B+,Rural,H9,Diabetes,Chemotherapy,,,,Yes
+,,,Male,B+,Urban,H9,Hypertension,Rest,,,,Yes
+,,,Male,A+,Urban,H3,Diabetes,Rest,,,,No
+,,,Female,B+,Rural,H3,COVID,Insulin,,,,No
+,,,Female,A-,Urban,H6,Flu,Diet Control,,,,No
+,,,Female,A+,Rural,H9,Cancer,Chemotherapy,,,,No
+,,,Male,B+,Rural,H8,Hypertension,Rest,,,,No
+,,,Male,O+,Rural,H8,COVID,Chemotherapy,,,,No
+,,,Female,O-,Urban,H4,Cancer,Insulin,,,,No
+,,,Female,B+,Rural,H9,Cancer,Insulin,,,,No
+,,,Male,A-,Urban,H0,Hypertension,Diet Control,,,,Yes
+,,,Male,B-,Urban,H0,COVID,Diet Control,,,,Yes
+,,,Male,B+,Urban,H5,Cancer,Insulin,,,,Yes
+,,,Male,AB+,Urban,H1,Cancer,Rest,,,,No
+,,,Female,AB+,Rural,H7,COVID,Chemotherapy,,,,No
+,,,Male,AB+,Urban,H8,Diabetes,Antivirals,,,,No
+,,,Male,B-,Rural,H3,Cancer,Diet Control,,,,Yes
+,,,Male,AB+,Rural,H4,Flu,Antivirals,,,,No
+,,,Female,O+,Urban,H7,COVID,Rest,,,,Yes
+,,,Female,B+,Rural,H2,Cancer,Diet Control,,,,No
+,,,Male,AB+,Rural,H4,Hypertension,Antivirals,,,,Yes
+,,,Male,A+,Urban,H2,Flu,Rest,,,,Yes
+,,,Male,B-,Rural,H9,Cancer,Chemotherapy,,,,Yes
+,,,Female,O+,Rural,H2,Flu,Rest,,,,No
+,,,Female,A+,Rural,H2,Flu,Diet Control,,,,Yes
+,,,Female,A+,Rural,H6,Diabetes,Insulin,,,,No
+,,,Male,A+,Urban,H6,Flu,Chemotherapy,,,,No
+,,,Female,A+,Rural,H6,Diabetes,Antivirals,,,,No
+,,,Male,B+,Rural,H9,COVID,Diet Control,,,,No
+,,,Male,AB+,Rural,H7,Diabetes,Insulin,,,,No
+,,,Male,O-,Rural,H4,Hypertension,Rest,,,,Yes
+,,,Female,B+,Urban,H4,Cancer,Insulin,,,,No
+,,,Male,B+,Rural,H3,COVID,Diet Control,,,,No
+,,,Female,O+,Urban,H6,COVID,Diet Control,,,,No
+,,,Female,O+,Rural,H9,Hypertension,Insulin,,,,No
+,,,Male,AB+,Urban,H3,Diabetes,Rest,,,,No
+,,,Male,O-,Urban,H1,Cancer,Insulin,,,,Yes
+,,,Female,O+,Urban,H3,Diabetes,Diet Control,,,,Yes
+,,,Male,AB+,Urban,H7,Flu,Diet Control,,,,No
+,,,Female,AB+,Urban,H8,Diabetes,Antivirals,,,,Yes
+,,,Male,A-,Rural,H2,COVID,Antivirals,,,,Yes
+,,,Female,O-,Rural,H6,Cancer,Chemotherapy,,,,No
+,,,Female,O+,Rural,H8,Diabetes,Diet Control,,,,Yes
+,,,Female,O-,Urban,H3,Cancer,Antivirals,,,,No
+,,,Female,B+,Rural,H9,Cancer,Insulin,,,,Yes
+,,,Male,B+,Urban,H2,Flu,Rest,,,,Yes
+,,,Male,O-,Urban,H4,Flu,Insulin,,,,Yes
+,,,Female,A-,Rural,H0,COVID,Rest,,,,No
+,,,Female,A-,Rural,H2,Hypertension,Antivirals,,,,Yes
+,,,Male,O-,Urban,H7,Cancer,Chemotherapy,,,,Yes
+,,,Male,O+,Urban,H7,Hypertension,Insulin,,,,No
+,,,Male,B-,Rural,H3,COVID,Insulin,,,,No
+,,,Male,A-,Rural,H1,Cancer,Insulin,,,,Yes
+,,,Male,A+,Rural,H7,Cancer,Rest,,,,No
+,,,Male,B+,Rural,H7,Hypertension,Antivirals,,,,Yes
+,,,Female,O-,Urban,H9,Diabetes,Insulin,,,,Yes
+,,,Male,A+,Rural,H3,Flu,Insulin,,,,No
+,,,Male,O-,Rural,H2,Diabetes,Chemotherapy,,,,No
+,,,Female,AB+,Rural,H1,Hypertension,Chemotherapy,,,,No
+,,,Male,B+,Urban,H8,Flu,Antivirals,,,,Yes
+,,,Male,B+,Urban,H0,Diabetes,Antivirals,,,,No
+,,,Male,A-,Urban,H6,Flu,Diet Control,,,,Yes
+,,,Male,A-,Urban,H4,Cancer,Chemotherapy,,,,No
+,,,Male,A+,Rural,H7,Diabetes,Diet Control,,,,Yes
+,,,Female,AB+,Urban,H3,Flu,Rest,,,,No
+,,,Male,O-,Rural,H6,Flu,Diet Control,,,,Yes
+,,,Female,AB+,Rural,H4,Flu,Insulin,,,,No
+,,,Female,B+,Rural,H4,Diabetes,Diet Control,,,,Yes
+,,,Male,A+,Rural,H8,COVID,Antivirals,,,,No
+,,,Female,B-,Urban,H8,Diabetes,Rest,,,,No
+,,,Male,A+,Urban,H8,Hypertension,Insulin,,,,Yes
+,,,Female,O+,Urban,H5,Diabetes,Diet Control,,,,No
+,,,Female,A+,Rural,H5,Flu,Rest,,,,Yes
+,,,Male,AB+,Rural,H4,Cancer,Rest,,,,Yes
+,,,Male,O+,Rural,H8,Diabetes,Insulin,,,,No
+,,,Male,O+,Rural,H9,Diabetes,Diet Control,,,,Yes
+,,,Male,O+,Rural,H7,Flu,Rest,,,,No
+,,,Male,B-,Urban,H6,Cancer,Rest,,,,No
+,,,Female,A+,Rural,H6,Cancer,Chemotherapy,,,,Yes
+,,,Female,AB+,Urban,H5,Hypertension,Rest,,,,No
+,,,Female,A+,Rural,H4,Diabetes,Chemotherapy,,,,Yes
+,,,Female,B-,Rural,H3,Cancer,Diet Control,,,,Yes
+,,,Female,B+,Urban,H2,Cancer,Diet Control,,,,No
+,,,Female,A-,Urban,H2,COVID,Diet Control,,,,No
+,,,Female,AB+,Rural,H5,COVID,Antivirals,,,,Yes
+,,,Male,AB+,Rural,H3,Cancer,Diet Control,,,,Yes
+,,,Male,A+,Rural,H5,Hypertension,Rest,,,,No
+,,,Female,A-,Rural,H2,Cancer,Insulin,,,,No
+,,,Female,O-,Urban,H3,Flu,Chemotherapy,,,,No
+,,,Male,O-,Rural,H8,Diabetes,Antivirals,,,,No
+,,,Male,B-,Urban,H4,Hypertension,Diet Control,,,,Yes
+,,,Male,O-,Rural,H6,Flu,Diet Control,,,,No
+,,,Male,AB+,Urban,H9,Hypertension,Insulin,,,,Yes
+,,,Female,O-,Urban,H1,Flu,Insulin,,,,Yes
+,,,Male,B+,Rural,H4,Diabetes,Antivirals,,,,No
+,,,Female,B+,Urban,H8,Diabetes,Chemotherapy,,,,Yes
+,,,Female,B+,Rural,H2,COVID,Diet Control,,,,No
+,,,Female,O-,Urban,H8,Flu,Antivirals,,,,Yes
+,,,Male,B-,Rural,H5,COVID,Rest,,,,No
+,,,Male,O+,Urban,H3,Flu,Rest,,,,Yes
+,,,Female,O+,Rural,H6,COVID,Antivirals,,,,Yes
+,,,Female,A-,Rural,H7,Diabetes,Diet Control,,,,No
+,,,Female,O+,Urban,H5,Hypertension,Antivirals,,,,No
+,,,Male,O+,Urban,H4,COVID,Diet Control,,,,Yes
+,,,Female,B+,Urban,H5,Flu,Insulin,,,,Yes
+,,,Male,B+,Urban,H4,Flu,Antivirals,,,,No
+,,,Female,O-,Rural,H7,Diabetes,Diet Control,,,,Yes
+,,,Female,A-,Urban,H0,Flu,Antivirals,,,,No
+,,,Female,A+,Rural,H6,Cancer,Antivirals,,,,Yes
+,,,Male,AB+,Urban,H9,Hypertension,Diet Control,,,,No
+,,,Male,A-,Rural,H9,COVID,Diet Control,,,,Yes
+,,,Female,A-,Rural,H1,Hypertension,Chemotherapy,,,,No
+,,,Male,B-,Rural,H8,Diabetes,Antivirals,,,,No
+,,,Female,O-,Rural,H0,COVID,Rest,,,,Yes
+,,,Male,B-,Urban,H9,COVID,Antivirals,,,,No
+,,,Male,A-,Urban,H5,Cancer,Antivirals,,,,Yes
+,,,Male,A-,Rural,H8,Diabetes,Diet Control,,,,No
+,,,Female,A-,Urban,H0,Flu,Antivirals,,,,No
+,,,Male,O+,Urban,H3,Cancer,Antivirals,,,,No
+,,,Male,AB+,Rural,H3,Cancer,Rest,,,,Yes
+,,,Female,AB+,Urban,H8,Hypertension,Diet Control,,,,No
+,,,Female,B-,Urban,H4,Hypertension,Antivirals,,,,Yes
+,,,Female,A-,Urban,H4,Hypertension,Insulin,,,,No
+,,,Female,AB+,Rural,H5,Cancer,Chemotherapy,,,,Yes
+,,,Male,B+,Urban,H0,Flu,Rest,,,,Yes
+,,,Male,AB+,Rural,H0,COVID,Antivirals,,,,Yes
+,,,Male,O-,Urban,H8,Hypertension,Insulin,,,,No
+,,,Male,O-,Urban,H2,Flu,Antivirals,,,,Yes
+,,,Male,AB+,Urban,H3,Diabetes,Antivirals,,,,No
+,,,Female,B+,Rural,H0,Hypertension,Diet Control,,,,Yes
+,,,Male,O-,Rural,H8,COVID,Diet Control,,,,Yes
+,,,Male,O+,Urban,H7,Diabetes,Diet Control,,,,Yes
+,,,Male,AB+,Rural,H1,Diabetes,Insulin,,,,Yes
+,,,Female,O+,Urban,H7,COVID,Antivirals,,,,No
+,,,Female,AB+,Rural,H6,Hypertension,Chemotherapy,,,,Yes
+,,,Male,A+,Rural,H5,Cancer,Rest,,,,Yes
+,,,Female,A+,Urban,H0,COVID,Diet Control,,,,No
+,,,Female,A+,Urban,H6,COVID,Diet Control,,,,Yes
+,,,Female,O-,Urban,H9,COVID,Antivirals,,,,Yes
+,,,Female,O+,Urban,H6,Diabetes,Antivirals,,,,Yes
+,,,Female,O+,Rural,H8,Flu,Insulin,,,,Yes
+,,,Female,O+,Rural,H0,Cancer,Insulin,,,,No
+,,,Female,B+,Rural,H1,Hypertension,Diet Control,,,,No
+,,,Male,O+,Urban,H8,Hypertension,Antivirals,,,,Yes
+,,,Male,B+,Urban,H8,Flu,Chemotherapy,,,,No
+,,,Female,A+,Rural,H5,COVID,Rest,,,,No
+,,,Male,A+,Urban,H5,Cancer,Antivirals,,,,Yes
+,,,Male,O-,Rural,H3,Hypertension,Antivirals,,,,No
+,,,Female,AB+,Rural,H3,Hypertension,Insulin,,,,Yes
+,,,Male,A+,Rural,H4,COVID,Rest,,,,No
+,,,Female,AB+,Rural,H2,Flu,Diet Control,,,,No
+,,,Female,AB+,Rural,H0,Cancer,Antivirals,,,,No
+,,,Female,O-,Urban,H0,Flu,Diet Control,,,,Yes
+,,,Male,A-,Urban,H6,Flu,Antivirals,,,,No
+,,,Male,A-,Urban,H0,Cancer,Diet Control,,,,Yes
+,,,Male,B-,Rural,H0,Cancer,Rest,,,,Yes
+,,,Male,O-,Rural,H2,Hypertension,Insulin,,,,No
+,,,Female,B-,Rural,H9,Hypertension,Rest,,,,Yes
+,,,Female,B-,Rural,H3,Cancer,Chemotherapy,,,,No
+,,,Male,A-,Urban,H3,Diabetes,Insulin,,,,Yes
+,,,Female,O-,Urban,H1,Hypertension,Rest,,,,Yes
+,,,Female,A-,Rural,H0,Diabetes,Chemotherapy,,,,No
+,,,Male,B-,Rural,H2,Cancer,Antivirals,,,,No
+,,,Female,O-,Rural,H3,Hypertension,Antivirals,,,,No
+,,,Male,B-,Urban,H2,Flu,Diet Control,,,,No
+,,,Female,O+,Urban,H7,Cancer,Insulin,,,,Yes

@@ -5,21 +5,23 @@
 
 import json
 import os
-import datetime
+from datetime import datetime
 
 LOG_FILE = "logs/system_log.json"
 FINAL_REPORT = "logs/final_report.json"
 
 
-def log_step(step_name, data):
-    """Enhanced logger – captures reasoning and evidence for applied techniques."""
+def log_step(step_name, payload):
+    """
+    Existing logging hook (keeps pipeline backwards compatible).
+    """
     os.makedirs("logs", exist_ok=True)
-    timestamp = datetime.datetime.now().isoformat()
+    timestamp = datetime.now().isoformat()
 
     entry = {
         "step": step_name,
         "timestamp": timestamp,
-        "data": data
+        "data": payload
     }
 
     if not os.path.exists(LOG_FILE):
@@ -34,128 +36,32 @@ def log_step(step_name, data):
         f.truncate()
 
 
-def generate_final_report(before_pes=None, after_pes=None):
+def generate_final_report(before_pes, after_pes, initial_utility=None, final_utility=None, out_path="logs/final_report.json"):
     """
-    Generate a closed-loop privacy validation report.
-    Includes before/after metrics and privacy improvement evaluation.
+    Generate final report and persist to disk. Added optional initial_utility
+    and final_utility fields so the report includes usefulness metrics.
     """
-    if not os.path.exists(LOG_FILE):
-        print("No logs found to generate a report.")
-        return
-
-    with open(LOG_FILE, "r") as f:
-        log_data = json.load(f)
-
     report = {
-        "report_generated_at": datetime.datetime.now().isoformat(),
-        "summary": {},
-        "detailed_log": log_data["log_entries"],
-        "pre_post_comparison": {}
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "before_pes": before_pes,
+        "after_pes": after_pes,
+        "initial_utility": initial_utility,
+        "final_utility": final_utility
     }
 
-    # Extract summarized data
-    for entry in log_data["log_entries"]:
-        step = entry["step"]
-        report["summary"][step] = entry["data"]
+    # Ensure logs directory exists
+    os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
+    try:
+        with open(out_path, "w", encoding="utf-8") as fh:
+            json.dump(report, fh, indent=2)
+    except Exception as e:
+        # best-effort: print warning but do not crash pipeline
+        print(f"[WARNING] Could not write final report to {out_path}: {e}")
 
-    # ✅ Include pre/post PES comparison if available
-    if before_pes and after_pes:
-        report["pre_post_comparison"] = _compare_pes(before_pes, after_pes)
+    # keep the existing logging hook behavior if present
+    try:
+        log_step("final_report", report)
+    except Exception:
+        pass
 
-    # Attach additional compliance and risk interpretation
-    _attach_insights(report, before_pes, after_pes)
-
-    # Save to file
-    os.makedirs("logs", exist_ok=True)
-    with open(FINAL_REPORT, "w") as f:
-        json.dump(report, f, indent=4)
-
-    print("\n✅ Final Privacy Validation Report Generated Successfully!")
-    print(f"📄 Location: {FINAL_REPORT}")
-    print_report_summary(report)
-
-
-def _compare_pes(before, after):
-    """Compare pre/post PES values and derive improvement metrics."""
-    before_value = before.get("PES") or before.get("score", 0)
-    after_value = after.get("PES") or after.get("score", 0)
-
-    improvement = before_value - after_value
-    improvement_pct = (improvement / before_value * 100) if before_value else 0
-
-    return {
-        "before_PES": round(before_value, 4),
-        "after_PES": round(after_value, 4),
-        "absolute_change": round(improvement, 4),
-        "percentage_improvement": f"{improvement_pct:.2f}%",
-        "status": "Improved" if improvement > 0 else "Degraded" if improvement < 0 else "No Change"
-    }
-
-
-def _attach_insights(report, before_pes, after_pes):
-    """Adds compliance and risk interpretation summary."""
-    summary = report["summary"]
-    compliance_score = summary.get("compliance_results", {}).get("compliance_score", None)
-
-    pre_post = report.get("pre_post_comparison", {})
-    risk_reduction = pre_post.get("absolute_change", 0)
-    risk_trend = pre_post.get("status", "N/A")
-
-    report["insights"] = {
-        "initial_privacy_exposure": pre_post.get("before_PES", None),
-        "final_privacy_exposure": pre_post.get("after_PES", None),
-        "risk_reduction": f"{risk_reduction:.3f}",
-        "trend": risk_trend,
-        "overall_compliance_score": compliance_score,
-        "remarks": _generate_remark(pre_post, compliance_score)
-    }
-
-
-def _generate_remark(pre_post, compliance_score):
-    """Generate contextual remark based on improvements and compliance."""
-    risk_reduction = pre_post.get("absolute_change", 0)
-    trend = pre_post.get("status", "N/A")
-
-    if trend == "Improved" and compliance_score and compliance_score >= 0.8:
-        return "Dataset shows improved privacy and strong compliance — ready for deployment."
-    elif trend == "Improved" and compliance_score:
-        return "Privacy improved, but compliance needs attention."
-    elif trend == "No Change":
-        return "No effective change detected — review anonymization parameters."
-    else:
-        return "Privacy degradation detected — re-evaluate chosen techniques."
-
-
-def print_report_summary(report):
-    """Prints a concise human-readable summary to console."""
-    print("\n=== PRIVACY VALIDATION SUMMARY ===")
-    summary = report.get("summary", {})
-    profiling = summary.get("profiling_metrics", {})
-    pre_post = report.get("pre_post_comparison", {})
-    compliance = summary.get("compliance_results", {})
-    insights = report.get("insights", {})
-
-    print(f"🕒 Report Generated: {report['report_generated_at']}")
-
-    print("\n🔹 Profiling Metrics (Pre):")
-    for k, v in profiling.items():
-        print(f"   - {k}: {v}")
-
-    print("\n🔹 Privacy Exposure Comparison:")
-    print(f"   - Before PES: {pre_post.get('before_PES', 'N/A')}")
-    print(f"   - After PES:  {pre_post.get('after_PES', 'N/A')}")
-    print(f"   - Δ Change:   {pre_post.get('absolute_change', 'N/A')} "
-          f"({pre_post.get('percentage_improvement', 'N/A')}) → {pre_post.get('status', 'N/A')}")
-
-    print("\n🔹 Compliance Summary:")
-    if isinstance(compliance, dict):
-        for k, v in compliance.items():
-            print(f"   - {k}: {v}")
-    else:
-        print("   - No compliance data available.")
-
-    print("\n💡 Insights:")
-    for k, v in insights.items():
-        print(f"   - {k}: {v}")
-
-    print("==================================\n")
+    return report

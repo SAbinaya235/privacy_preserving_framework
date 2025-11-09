@@ -1,0 +1,301 @@
+Patient_ID,Name,Age,Gender,Blood_Type,Region,Hospital_ID,Diagnosis,Treatment_Type,Bill_Amount,Admission_Date,Discharge_Date,FollowUp_Required
+P2000,Patrick Armstrong,57,Female,B+,Rural,H9,Flu,Rest,20610,2025-06-06,2025-08-13,No
+P2001,Ricardo Fields,66,Female,A-,Urban,H6,Cancer,Antivirals,178718,2025-10-03,2025-09-18,Yes
+P2002,Kimberly Clark,74,Female,O-,Rural,H9,Flu,Chemotherapy,64185,2024-12-31,2025-04-19,No
+P2003,Christina Kelley,16,Male,B+,Rural,H8,Hypertension,Chemotherapy,73567,2025-11-03,2025-04-19,Yes
+P2004,Danielle Thomas,51,Male,O+,Urban,H9,COVID,Diet Control,179646,2025-08-14,2025-10-03,Yes
+P2005,Rose Cervantes,39,Female,AB+,Rural,H8,Diabetes,Diet Control,37182,2025-03-19,2025-02-24,No
+P2006,John Logan,86,Female,O+,Urban,H9,Hypertension,Diet Control,117136,2025-01-03,2025-02-10,Yes
+P2007,Nicole Hamilton,76,Female,O-,Urban,H2,Diabetes,Rest,132642,2025-03-10,2025-04-16,No
+P2008,Joseph Wilson,88,Female,A-,Urban,H4,Cancer,Diet Control,20288,2025-07-05,2025-05-20,Yes
+P2009,James Davis,40,Female,O+,Rural,H7,Cancer,Chemotherapy,79824,2025-10-27,2025-08-14,Yes
+P2010,Randy Norton,38,Male,A-,Rural,H7,Cancer,Diet Control,161949,2025-08-28,2025-06-15,No
+P2011,Melissa Lopez,60,Male,O+,Rural,H3,Diabetes,Insulin,85425,2025-10-06,2025-09-07,No
+P2012,Susan Burns,59,Male,O+,Urban,H0,Hypertension,Diet Control,1917,2024-11-07,2025-01-31,No
+P2013,Lindsay Kerr,10,Male,A-,Urban,H0,Cancer,Rest,76602,2025-04-19,2025-07-21,Yes
+P2014,Natalie Harmon,64,Female,B-,Rural,H3,Hypertension,Insulin,65575,2024-11-28,2025-08-10,Yes
+P2015,Donald Jones,63,Male,O+,Rural,H5,Diabetes,Chemotherapy,73518,2025-07-17,2025-10-11,Yes
+P2016,Rebekah Schwartz,49,Female,B+,Rural,H7,Hypertension,Chemotherapy,40104,2025-07-05,2024-11-18,No
+P2017,Adam Charles,64,Female,AB+,Rural,H5,Diabetes,Antivirals,150134,2024-11-22,2025-10-08,No
+P2018,Zachary Murphy,32,Female,O-,Rural,H8,Diabetes,Insulin,17999,2025-08-19,2025-05-03,No
+P2019,Debra Nelson,7,Male,B-,Urban,H8,COVID,Antivirals,193917,2025-04-28,2025-05-15,Yes
+P2020,Carolyn Richards,21,Female,A-,Urban,H1,Diabetes,Insulin,142013,2025-06-05,2025-02-06,Yes
+P2021,Kathryn Meza,20,Male,B-,Urban,H9,Diabetes,Insulin,62169,2025-02-02,2025-10-31,No
+P2022,April Pruitt,26,Male,A+,Rural,H0,Flu,Rest,155542,2025-08-02,2025-02-26,Yes
+P2023,Joseph Chapman,68,Female,A+,Urban,H1,Cancer,Antivirals,130744,2025-03-23,2024-11-26,No
+P2024,Tim Murray,86,Female,O+,Urban,H4,COVID,Rest,111684,2025-10-12,2025-07-03,Yes
+P2025,Carlos Vasquez,15,Female,O+,Urban,H3,COVID,Insulin,60821,2025-08-23,2025-06-23,Yes
+P2026,Timothy Jones,85,Male,B+,Urban,H3,COVID,Chemotherapy,176507,2025-01-06,2025-02-07,No
+P2027,Bruce Massey,79,Female,AB+,Urban,H8,Flu,Insulin,136601,2025-08-06,2025-11-05,Yes
+P2028,Angel Robertson,86,Male,O-,Rural,H7,Diabetes,Rest,13192,2024-11-13,2025-04-18,Yes
+P2029,Valerie Graham,14,Female,B-,Urban,H5,Cancer,Antivirals,75102,2025-05-18,2025-06-07,No
+P2030,Kelly Maxwell,27,Female,A+,Rural,H0,Hypertension,Antivirals,115894,2025-09-07,2025-04-19,No
+P2031,Tiffany Willis,40,Male,O+,Rural,H1,Diabetes,Rest,87795,2025-06-14,2025-06-29,Yes
+P2032,Rebecca Hendrix,58,Male,O-,Rural,H5,Flu,Antivirals,166159,2025-09-03,2024-12-25,No
+P2033,Raymond Pham,28,Male,B-,Rural,H1,Diabetes,Diet Control,67677,2024-12-09,2025-07-02,Yes
+P2034,Stephen Stuart,26,Male,O+,Rural,H9,Diabetes,Chemotherapy,136699,2025-10-30,2025-09-05,No
+P2035,Mark Taylor,63,Male,O+,Urban,H4,Flu,Chemotherapy,188613,2025-05-28,2025-01-07,Yes
+P2036,Carol Anderson,66,Male,A+,Urban,H4,COVID,Chemotherapy,135327,2025-02-28,2025-02-03,Yes
+P2037,Christopher Mendez,25,Female,A+,Rural,H5,COVID,Antivirals,189505,2025-04-12,2025-04-22,No
+P2038,Mandy Hancock,3,Female,O+,Rural,H5,Cancer,Antivirals,137285,2025-05-30,2024-11-24,Yes
+P2039,Vanessa Bauer,72,Male,A-,Rural,H5,Cancer,Insulin,103412,2024-11-24,2025-01-23,Yes
+P2040,Gregory Knox,44,Female,O+,Urban,H1,COVID,Insulin,20404,2025-03-24,2025-10-07,No
+P2041,Stacey Smith,42,Male,O-,Rural,H9,Hypertension,Chemotherapy,117545,2025-03-02,2024-11-28,No
+P2042,Andrea Williams,6,Female,O+,Urban,H2,Diabetes,Diet Control,157452,2025-05-24,2025-10-10,Yes
+P2043,Ashley Anderson,39,Female,B+,Rural,H5,Hypertension,Insulin,151245,2025-03-01,2025-10-04,No
+P2044,Gwendolyn Alexander,52,Male,AB+,Urban,H7,Diabetes,Insulin,185099,2025-09-12,2025-04-20,No
+P2045,Dawn Martin,23,Male,B+,Rural,H0,COVID,Antivirals,24989,2025-09-24,2025-07-02,Yes
+P2046,Andrew Duncan,89,Male,B+,Urban,H0,Cancer,Diet Control,109106,2025-09-06,2025-09-01,Yes
+P2047,Jeffrey Hopkins,50,Female,A-,Rural,H1,Cancer,Chemotherapy,25519,2025-10-25,2025-02-22,No
+P2048,Krystal Melendez,43,Male,A-,Urban,H5,Hypertension,Insulin,23439,2025-04-02,2025-06-08,No
+P2049,Gabriel Jones,19,Female,O+,Urban,H8,Cancer,Diet Control,119570,2025-10-14,2025-10-12,No
+P2050,James Blair,69,Male,B+,Urban,H3,COVID,Diet Control,15995,2025-01-17,2025-10-10,Yes
+P2051,Mandy Dyer,51,Female,A-,Urban,H2,Hypertension,Chemotherapy,24559,2025-03-02,2025-03-07,Yes
+P2052,Terry Brown,11,Female,A+,Urban,H7,Diabetes,Diet Control,90049,2025-09-17,2024-12-13,Yes
+P2053,Aaron Colon,12,Male,O+,Urban,H9,Cancer,Diet Control,137093,2024-12-28,2025-07-30,Yes
+P2054,Brian Becker,74,Female,O-,Urban,H8,Flu,Diet Control,99000,2024-11-13,2025-10-12,Yes
+P2055,James Thomas,8,Female,AB+,Rural,H4,Cancer,Insulin,153191,2025-05-20,2025-02-13,Yes
+P2056,Bradley Johnson,24,Male,B-,Rural,H8,Diabetes,Chemotherapy,183611,2025-07-15,2024-11-13,Yes
+P2057,Kenneth Smith,41,Female,O+,Rural,H1,Hypertension,Diet Control,40350,2025-04-07,2025-02-23,No
+P2058,Katie Pruitt,36,Male,B-,Rural,H2,Diabetes,Diet Control,178295,2025-09-08,2025-10-13,No
+P2059,Diana Robinson,85,Male,B+,Rural,H6,Flu,Insulin,26517,2025-09-30,2025-07-20,Yes
+P2060,Thomas Rosales,72,Male,AB+,Urban,H6,COVID,Chemotherapy,154322,2025-08-04,2025-07-02,Yes
+P2061,Benjamin Hicks,55,Male,B-,Urban,H5,Cancer,Antivirals,90132,2025-08-19,2025-07-03,Yes
+P2062,Jaclyn Huber,9,Female,B+,Urban,H5,Hypertension,Insulin,198870,2025-09-11,2025-06-14,No
+P2063,Charles Alvarez II,47,Female,A+,Urban,H1,COVID,Chemotherapy,186271,2025-04-04,2024-11-14,Yes
+P2064,Jill Edwards,15,Female,B-,Urban,H9,Diabetes,Diet Control,60546,2025-01-23,2024-12-01,No
+P2065,Joshua Rocha,48,Male,AB+,Rural,H5,Hypertension,Chemotherapy,106686,2025-08-13,2025-02-18,No
+P2066,Laurie Rocha,82,Female,O+,Rural,H3,COVID,Chemotherapy,89151,2025-06-20,2025-09-30,No
+P2067,Stephanie King,42,Female,B+,Rural,H2,Hypertension,Chemotherapy,4327,2024-12-16,2025-10-03,No
+P2068,Valerie Robinson,60,Male,O+,Rural,H1,Flu,Antivirals,121318,2025-04-03,2025-05-13,No
+P2069,Cassidy Mendoza,84,Male,AB+,Urban,H0,Flu,Chemotherapy,161840,2025-04-29,2025-06-09,Yes
+P2070,Nancy Gonzalez,70,Female,A-,Urban,H4,Cancer,Antivirals,196490,2025-10-02,2025-08-10,Yes
+P2071,Whitney Whitehead,12,Male,B+,Urban,H1,Cancer,Diet Control,174860,2025-01-28,2025-05-02,No
+P2072,Michael Gonzalez,2,Male,B-,Rural,H1,Flu,Antivirals,116945,2024-11-13,2025-05-09,Yes
+P2073,Brianna Foster,7,Male,B+,Urban,H6,Hypertension,Diet Control,47830,2025-10-26,2025-01-20,No
+P2074,Jennifer Rogers,80,Male,O+,Rural,H7,Flu,Diet Control,53446,2025-05-27,2025-10-11,No
+P2075,Micheal Wilson,3,Female,A+,Urban,H9,Cancer,Antivirals,147232,2025-03-06,2025-03-31,Yes
+P2076,Nathan Smith,3,Male,B+,Urban,H7,Flu,Insulin,188655,2025-08-05,2025-09-11,Yes
+P2077,Samuel Acosta,27,Male,B-,Rural,H3,Flu,Rest,166070,2025-01-24,2025-02-28,Yes
+P2078,Robert Ramirez,40,Male,A-,Urban,H0,Hypertension,Chemotherapy,159302,2025-07-18,2025-10-28,Yes
+P2079,Christina Hanson,33,Male,O-,Urban,H6,COVID,Rest,141148,2025-11-07,2025-10-28,Yes
+P2080,Christina Lin,1,Male,A+,Rural,H0,Cancer,Chemotherapy,70341,2025-03-21,2024-12-24,No
+P2081,Angela James,8,Male,A-,Urban,H3,Hypertension,Chemotherapy,32085,2025-02-26,2025-01-10,Yes
+P2082,Jeremy Walker,32,Male,B+,Rural,H7,Flu,Diet Control,56571,2025-04-26,2025-02-19,Yes
+P2083,Sandra Moss,48,Male,O+,Urban,H1,Flu,Chemotherapy,146787,2025-01-04,2024-11-16,Yes
+P2084,Erik Scott,4,Female,AB+,Urban,H5,COVID,Chemotherapy,129308,2025-09-11,2025-06-08,No
+P2085,Alan Adams,70,Male,O+,Urban,H5,Cancer,Antivirals,6750,2025-01-01,2025-07-04,Yes
+P2086,Richard Sutton,19,Female,B-,Urban,H8,Cancer,Rest,114931,2025-01-18,2025-04-20,No
+P2087,Kim Nelson,32,Male,O+,Urban,H4,Diabetes,Antivirals,79768,2025-05-24,2025-01-25,Yes
+P2088,Paul Gardner,9,Male,A+,Urban,H9,Cancer,Chemotherapy,36903,2024-12-05,2025-11-06,Yes
+P2089,Sylvia Thompson,12,Male,O+,Urban,H3,COVID,Diet Control,164165,2024-11-11,2025-07-16,No
+P2090,Crystal Lee,11,Male,B-,Urban,H4,Diabetes,Antivirals,92036,2025-08-09,2025-09-20,Yes
+P2091,William Clark,46,Female,O-,Rural,H9,Diabetes,Antivirals,88954,2025-01-03,2025-08-31,Yes
+P2092,Carl Rowland,16,Male,B+,Rural,H4,Flu,Insulin,166386,2025-07-24,2025-06-10,No
+P2093,Paul Jefferson,1,Male,AB+,Urban,H7,Flu,Chemotherapy,180297,2025-03-16,2025-01-16,Yes
+P2094,Albert Bates II,63,Female,B+,Urban,H9,Cancer,Diet Control,84014,2025-05-27,2025-08-16,No
+P2095,Tammie Dawson,21,Female,O+,Rural,H7,Diabetes,Antivirals,167251,2025-10-28,2025-07-26,No
+P2096,Kathryn Little,30,Male,A-,Urban,H1,Flu,Antivirals,118305,2025-07-26,2025-02-28,No
+P2097,Samantha Martin,13,Female,B+,Urban,H6,COVID,Diet Control,157410,2025-02-15,2025-09-25,No
+P2098,Billy Webster,34,Female,O-,Rural,H7,Flu,Chemotherapy,33101,2025-01-19,2025-04-05,No
+P2099,Hannah Vega,4,Female,O+,Urban,H5,Flu,Insulin,3775,2025-05-17,2025-05-26,Yes
+P2100,Johnathan Davis,28,Male,AB+,Urban,H4,Diabetes,Antivirals,112497,2025-04-15,2025-08-20,Yes
+P2101,Thomas Gordon,59,Male,B-,Rural,H8,Diabetes,Insulin,46619,2024-11-23,2025-02-23,Yes
+P2102,Emily Smith,27,Male,O-,Urban,H2,Hypertension,Rest,177910,2025-03-25,2025-10-24,No
+P2103,Diane Barron,69,Female,O+,Urban,H9,COVID,Chemotherapy,151611,2025-08-26,2025-03-18,No
+P2104,Christopher Wood,25,Male,O-,Rural,H3,Diabetes,Rest,58124,2025-05-11,2025-05-04,No
+P2105,Kelly Perez,3,Female,B+,Urban,H8,Cancer,Rest,66149,2025-07-18,2024-11-26,No
+P2106,Richard Harris,68,Male,AB+,Rural,H5,COVID,Rest,27616,2025-07-14,2025-04-14,Yes
+P2107,Jessica Fields,25,Male,B-,Urban,H7,COVID,Chemotherapy,186639,2025-08-09,2025-05-12,Yes
+P2108,Mr. Greg Murphy DVM,20,Female,O+,Urban,H6,Diabetes,Chemotherapy,169171,2025-01-25,2025-10-27,No
+P2109,John Robinson,34,Male,A+,Rural,H1,COVID,Diet Control,62799,2025-01-05,2025-04-02,No
+P2110,Ryan Schwartz,26,Female,B-,Rural,H2,Diabetes,Insulin,91221,2025-03-18,2025-01-26,Yes
+P2111,Sarah Stafford,5,Female,A+,Urban,H0,Flu,Insulin,115879,2025-05-02,2025-05-24,No
+P2112,Cory Martinez,61,Male,O-,Rural,H8,Hypertension,Diet Control,26479,2025-02-15,2025-10-10,No
+P2113,Kimberly Patrick,9,Female,A-,Rural,H6,Flu,Diet Control,178244,2025-09-18,2024-12-23,No
+P2114,Cathy Lee,50,Male,B-,Urban,H0,Diabetes,Rest,100165,2025-02-18,2025-07-29,Yes
+P2115,Sharon Hanson,6,Male,O-,Urban,H2,Diabetes,Diet Control,56863,2025-06-10,2025-10-14,Yes
+P2116,Laura Jackson,83,Female,A+,Urban,H3,Flu,Antivirals,174115,2025-09-17,2025-05-21,No
+P2117,Mary Mahoney,60,Male,B+,Rural,H3,Cancer,Insulin,83569,2025-05-20,2025-02-07,Yes
+P2118,Mary Porter,44,Female,B+,Rural,H4,Cancer,Diet Control,147480,2025-02-01,2025-07-13,No
+P2119,Debra Gray,11,Male,A-,Rural,H2,Cancer,Antivirals,190052,2025-09-12,2025-09-16,No
+P2120,Maureen Lucas,66,Male,B-,Rural,H2,Diabetes,Antivirals,17351,2024-12-31,2025-05-08,Yes
+P2121,David Moore,47,Male,B-,Urban,H0,COVID,Antivirals,136203,2025-03-08,2025-04-15,No
+P2122,Stacey Gray,73,Male,B-,Rural,H6,Diabetes,Antivirals,45825,2025-06-18,2025-09-27,No
+P2123,Lindsey Jordan,85,Male,O-,Urban,H9,COVID,Rest,12349,2025-09-26,2025-07-10,Yes
+P2124,Jason King,88,Female,AB+,Rural,H0,Flu,Antivirals,193003,2024-11-10,2025-11-06,No
+P2125,Stacy Robbins,86,Female,AB+,Urban,H1,Hypertension,Rest,45254,2025-07-02,2025-07-16,No
+P2126,Alicia Bryant,3,Female,A-,Urban,H3,COVID,Rest,39225,2025-05-09,2025-09-03,No
+P2127,Chad Anderson,76,Female,B-,Urban,H3,Cancer,Antivirals,13453,2025-10-24,2025-01-28,Yes
+P2128,Dustin Berry,30,Female,O-,Rural,H4,Diabetes,Insulin,150886,2025-05-23,2024-12-25,No
+P2129,Zoe Ryan,21,Female,B+,Urban,H1,Flu,Antivirals,150335,2024-12-12,2024-12-24,Yes
+P2130,Michael Harrell,28,Male,A+,Urban,H3,Cancer,Antivirals,78694,2025-09-03,2025-01-24,No
+P2131,Richard Pitts,62,Male,O-,Rural,H0,Flu,Antivirals,16735,2025-07-05,2025-03-29,No
+P2132,Kara Figueroa,33,Female,AB+,Urban,H1,Hypertension,Insulin,147902,2025-07-11,2025-04-27,No
+P2133,Kayla Key,85,Female,AB+,Rural,H0,Diabetes,Chemotherapy,48893,2025-04-11,2025-04-28,No
+P2134,Michael Sweeney,35,Male,B+,Rural,H9,Diabetes,Chemotherapy,176745,2025-09-21,2025-05-22,Yes
+P2135,Gina Meyers,52,Male,B+,Urban,H9,Hypertension,Rest,128006,2025-09-16,2025-05-06,Yes
+P2136,Kyle Sparks,34,Male,A+,Urban,H3,Diabetes,Rest,46066,2025-05-24,2025-09-26,No
+P2137,Jeffrey Villa,41,Female,B+,Rural,H3,COVID,Insulin,135445,2024-11-22,2025-04-11,No
+P2138,Mark Young,51,Female,A-,Urban,H6,Flu,Diet Control,142407,2025-01-27,2025-02-08,No
+P2139,Maria Robinson,47,Female,A+,Rural,H9,Cancer,Chemotherapy,155813,2025-08-02,2025-09-21,No
+P2140,Hannah Cole,82,Male,B+,Rural,H8,Hypertension,Rest,11692,2024-11-13,2025-10-28,No
+P2141,Michelle Fuentes,58,Male,O+,Rural,H8,COVID,Chemotherapy,179367,2024-11-10,2025-05-15,No
+P2142,Sabrina Pineda,75,Female,O-,Urban,H4,Cancer,Insulin,46541,2025-08-07,2025-05-05,No
+P2143,Justin Mcconnell,57,Female,B+,Rural,H9,Cancer,Insulin,166129,2025-06-06,2025-03-29,No
+P2144,Erica Cline,23,Male,A-,Urban,H0,Hypertension,Diet Control,67983,2025-02-06,2025-04-24,Yes
+P2145,Brenda Thomas,48,Male,B-,Urban,H0,COVID,Diet Control,151655,2025-06-13,2025-04-14,Yes
+P2146,Heather Sweeney,22,Male,B+,Urban,H5,Cancer,Insulin,154837,2025-10-04,2025-09-19,Yes
+P2147,Dana Maldonado,17,Male,AB+,Urban,H1,Cancer,Rest,191359,2025-05-31,2025-04-03,No
+P2148,Gary Ramos,69,Female,AB+,Rural,H7,COVID,Chemotherapy,155978,2025-01-21,2024-12-30,No
+P2149,Danielle Rogers,11,Male,AB+,Urban,H8,Diabetes,Antivirals,121747,2025-07-12,2024-11-10,No
+P2150,Charles Martinez,15,Male,B-,Rural,H3,Cancer,Diet Control,86103,2025-02-01,2025-06-11,Yes
+P2151,Megan Bell,35,Male,AB+,Rural,H4,Flu,Antivirals,178597,2025-08-16,2025-03-02,No
+P2152,Jay Harrison,33,Female,O+,Urban,H7,COVID,Rest,170302,2025-01-26,2025-07-07,Yes
+P2153,Jordan Oconnor,84,Female,B+,Rural,H2,Cancer,Diet Control,151592,2025-01-06,2025-04-30,No
+P2154,James Turner,16,Male,AB+,Rural,H4,Hypertension,Antivirals,184006,2025-07-18,2025-03-12,Yes
+P2155,Dr. Benjamin Parks,34,Male,A+,Urban,H2,Flu,Rest,26566,2025-09-26,2025-07-17,Yes
+P2156,Jonathan Poole,66,Male,B-,Rural,H9,Cancer,Chemotherapy,74193,2025-03-11,2025-10-23,Yes
+P2157,Marissa Flynn,40,Female,O+,Rural,H2,Flu,Rest,162206,2025-05-31,2025-01-01,No
+P2158,John Walker,28,Female,A+,Rural,H2,Flu,Diet Control,142417,2025-09-04,2024-12-26,Yes
+P2159,Frank Johnson,47,Female,A+,Rural,H6,Diabetes,Insulin,122015,2025-05-08,2025-01-29,No
+P2160,Erica Martin,39,Male,A+,Urban,H6,Flu,Chemotherapy,173257,2025-07-31,2025-02-18,No
+P2161,Andrew Hansen,70,Female,A+,Rural,H6,Diabetes,Antivirals,131956,2025-06-05,2025-10-09,No
+P2162,Sabrina Baker,73,Male,B+,Rural,H9,COVID,Diet Control,71744,2025-02-22,2025-07-01,No
+P2163,Dustin Mullen,20,Male,AB+,Rural,H7,Diabetes,Insulin,34455,2025-02-16,2025-02-17,No
+P2164,Richard Rivera,1,Male,O-,Rural,H4,Hypertension,Rest,160090,2025-03-11,2025-06-09,Yes
+P2165,Jason Stevens,72,Female,B+,Urban,H4,Cancer,Insulin,55219,2024-11-16,2025-02-17,No
+P2166,Dr. Mallory Robinson,87,Male,B+,Rural,H3,COVID,Diet Control,46991,2025-06-04,2024-12-06,No
+P2167,Thomas Simpson,63,Female,O+,Urban,H6,COVID,Diet Control,74616,2025-09-12,2024-12-19,No
+P2168,Brianna Andrade,67,Female,O+,Rural,H9,Hypertension,Insulin,88438,2025-02-21,2025-01-05,No
+P2169,Erica Yates,4,Male,AB+,Urban,H3,Diabetes,Rest,117841,2025-09-23,2024-12-01,No
+P2170,Michael Young,58,Male,O-,Urban,H1,Cancer,Insulin,141558,2025-08-02,2025-06-10,Yes
+P2171,Natalie Roberts,25,Female,O+,Urban,H3,Diabetes,Diet Control,170934,2025-08-23,2025-10-07,Yes
+P2172,Kelly James,47,Male,AB+,Urban,H7,Flu,Diet Control,59870,2025-01-31,2024-12-24,No
+P2173,Brittany Fuller,38,Female,AB+,Urban,H8,Diabetes,Antivirals,87694,2025-02-08,2025-01-07,Yes
+P2174,Katherine Cervantes,15,Male,A-,Rural,H2,COVID,Antivirals,44856,2024-12-19,2025-03-03,Yes
+P2175,Shawn Andrews,63,Female,O-,Rural,H6,Cancer,Chemotherapy,102407,2025-05-16,2025-07-08,No
+P2176,Margaret Green,21,Female,O+,Rural,H8,Diabetes,Diet Control,32379,2024-11-15,2025-01-04,Yes
+P2177,Brandon Callahan,57,Female,O-,Urban,H3,Cancer,Antivirals,65729,2024-11-26,2025-09-21,No
+P2178,Daniel Mendoza,53,Female,B+,Rural,H9,Cancer,Insulin,160450,2025-02-24,2025-09-17,Yes
+P2179,Mrs. Michelle Hayes,46,Male,B+,Urban,H2,Flu,Rest,55353,2025-08-20,2025-08-11,Yes
+P2180,Shelly Wang,14,Male,O-,Urban,H4,Flu,Insulin,182068,2025-08-29,2025-03-05,Yes
+P2181,Kyle Smith,76,Female,A-,Rural,H0,COVID,Rest,15031,2025-06-05,2025-04-22,No
+P2182,Amanda Grant,17,Female,A-,Rural,H2,Hypertension,Antivirals,66982,2025-07-07,2025-04-15,Yes
+P2183,Elizabeth Roberts,39,Male,O-,Urban,H7,Cancer,Chemotherapy,37683,2024-11-26,2025-03-03,Yes
+P2184,Dawn Holt,9,Male,O+,Urban,H7,Hypertension,Insulin,115091,2025-07-31,2025-01-18,No
+P2185,Miss Alicia Campbell,77,Male,B-,Rural,H3,COVID,Insulin,118797,2025-06-09,2025-05-16,No
+P2186,Carolyn Scott,79,Male,A-,Rural,H1,Cancer,Insulin,149690,2024-12-01,2025-04-29,Yes
+P2187,Maureen Francis,82,Male,A+,Rural,H7,Cancer,Rest,7587,2025-03-31,2025-04-13,No
+P2188,Marie Decker,6,Male,B+,Rural,H7,Hypertension,Antivirals,63790,2025-01-10,2025-05-09,Yes
+P2189,Steven Allen,23,Female,O-,Urban,H9,Diabetes,Insulin,32480,2025-01-12,2024-12-27,Yes
+P2190,Tyler Smith,59,Male,A+,Rural,H3,Flu,Insulin,152599,2025-03-28,2025-08-15,No
+P2191,Jessica Howard,46,Male,O-,Rural,H2,Diabetes,Chemotherapy,24569,2025-02-22,2025-06-24,No
+P2192,Debbie Stark,38,Female,AB+,Rural,H1,Hypertension,Chemotherapy,12151,2025-10-21,2025-04-03,No
+P2193,Bethany Anderson,14,Male,B+,Urban,H8,Flu,Antivirals,191246,2025-02-01,2025-09-03,Yes
+P2194,Theodore Greene,72,Male,B+,Urban,H0,Diabetes,Antivirals,45739,2024-11-22,2024-12-29,No
+P2195,Bryce Montoya,62,Male,A-,Urban,H6,Flu,Diet Control,33954,2025-10-21,2025-10-10,Yes
+P2196,Anne Davis,35,Male,A-,Urban,H4,Cancer,Chemotherapy,110373,2025-01-30,2025-06-28,No
+P2197,Angel Bennett,19,Male,A+,Rural,H7,Diabetes,Diet Control,167375,2025-05-15,2025-07-12,Yes
+P2198,Marcus Jimenez,30,Female,AB+,Urban,H3,Flu,Rest,35700,2025-10-26,2025-10-17,No
+P2199,Jesus Mcguire,78,Male,O-,Rural,H6,Flu,Diet Control,124728,2025-03-02,2025-03-28,Yes
+P2200,Tara Gregory,84,Female,AB+,Rural,H4,Flu,Insulin,199640,2025-08-29,2024-12-24,No
+P2201,Jason Lozano,25,Female,B+,Rural,H4,Diabetes,Diet Control,67788,2025-04-08,2025-02-23,Yes
+P2202,George Hernandez,40,Male,A+,Rural,H8,COVID,Antivirals,72045,2025-05-17,2024-11-29,No
+P2203,Jack Delacruz,88,Female,B-,Urban,H8,Diabetes,Rest,169914,2025-01-07,2025-11-07,No
+P2204,Lauren James,14,Male,A+,Urban,H8,Hypertension,Insulin,145972,2025-04-18,2025-10-06,Yes
+P2205,Elizabeth Williams,26,Female,O+,Urban,H5,Diabetes,Diet Control,128992,2024-12-08,2025-08-15,No
+P2206,Christina Bailey,87,Female,A+,Rural,H5,Flu,Rest,81059,2025-06-11,2024-11-28,Yes
+P2207,Jennifer Snyder,22,Male,AB+,Rural,H4,Cancer,Rest,2881,2025-10-08,2025-09-23,Yes
+P2208,Eric Wang,48,Male,O+,Rural,H8,Diabetes,Insulin,165109,2025-01-19,2025-04-28,No
+P2209,Anthony Barr,83,Male,O+,Rural,H9,Diabetes,Diet Control,133702,2025-09-27,2025-09-25,Yes
+P2210,Brooke Russell,51,Male,O+,Rural,H7,Flu,Rest,21789,2025-07-29,2025-06-16,No
+P2211,Holly Valencia,3,Male,B-,Urban,H6,Cancer,Rest,127083,2025-08-13,2025-11-07,No
+P2212,William Patterson,42,Female,A+,Rural,H6,Cancer,Chemotherapy,89059,2025-07-15,2025-10-29,Yes
+P2213,Kimberly Lewis,19,Female,AB+,Urban,H5,Hypertension,Rest,47151,2024-11-23,2025-01-14,No
+P2214,Samantha Vaughn,73,Female,A+,Rural,H4,Diabetes,Chemotherapy,180992,2025-05-30,2025-06-09,Yes
+P2215,Barry Blanchard,28,Female,B-,Rural,H3,Cancer,Diet Control,110388,2025-02-18,2025-01-02,Yes
+P2216,Sean Bell,84,Female,B+,Urban,H2,Cancer,Diet Control,199303,2025-06-09,2025-05-14,No
+P2217,Robert Duncan,45,Female,A-,Urban,H2,COVID,Diet Control,4262,2024-12-14,2025-05-12,No
+P2218,Tiffany Bernard DDS,71,Female,AB+,Rural,H5,COVID,Antivirals,67981,2025-08-15,2025-09-17,Yes
+P2219,Shannon Morris,78,Male,AB+,Rural,H3,Cancer,Diet Control,121951,2025-02-23,2025-10-11,Yes
+P2220,Misty Crawford,63,Male,A+,Rural,H5,Hypertension,Rest,124099,2025-06-07,2024-12-05,No
+P2221,Richard Hicks,73,Female,A-,Rural,H2,Cancer,Insulin,82972,2024-12-08,2024-11-30,No
+P2222,Thomas White,19,Female,O-,Urban,H3,Flu,Chemotherapy,76485,2025-10-09,2025-07-03,No
+P2223,Harry Jones,47,Male,O-,Rural,H8,Diabetes,Antivirals,55722,2025-08-15,2025-02-09,No
+P2224,Wayne Mccall,14,Male,B-,Urban,H4,Hypertension,Diet Control,90499,2024-11-27,2025-08-14,Yes
+P2225,Kathleen Brown,38,Male,O-,Rural,H6,Flu,Diet Control,182890,2025-03-28,2025-02-17,No
+P2226,Danielle Anderson,53,Male,AB+,Urban,H9,Hypertension,Insulin,162004,2025-08-05,2025-04-09,Yes
+P2227,Belinda Adams,61,Female,O-,Urban,H1,Flu,Insulin,7901,2025-08-12,2024-11-21,Yes
+P2228,Matthew Tanner,36,Male,B+,Rural,H4,Diabetes,Antivirals,118473,2025-02-01,2025-06-24,No
+P2229,Jonathan Gamble,40,Female,B+,Urban,H8,Diabetes,Chemotherapy,9597,2025-04-09,2025-09-17,Yes
+P2230,Jennifer Jacobs,81,Female,B+,Rural,H2,COVID,Diet Control,130631,2025-05-05,2025-04-08,No
+P2231,Kim Powell,30,Female,O-,Urban,H8,Flu,Antivirals,64909,2025-06-16,2025-01-20,Yes
+P2232,Danielle Robles,9,Male,B-,Rural,H5,COVID,Rest,73391,2025-02-25,2025-05-17,No
+P2233,Timothy York,64,Male,O+,Urban,H3,Flu,Rest,140335,2025-06-01,2025-07-13,Yes
+P2234,Daniel Wolf,33,Female,O+,Rural,H6,COVID,Antivirals,64293,2025-07-23,2025-01-02,Yes
+P2235,Brenda Melendez,52,Female,A-,Rural,H7,Diabetes,Diet Control,157877,2025-01-10,2025-03-14,No
+P2236,Destiny Mclaughlin,89,Female,O+,Urban,H5,Hypertension,Antivirals,12874,2025-08-04,2024-12-21,No
+P2237,Timothy Meadows,14,Male,O+,Urban,H4,COVID,Diet Control,87402,2025-04-06,2025-10-04,Yes
+P2238,Kevin Herrera,75,Female,B+,Urban,H5,Flu,Insulin,15079,2025-08-27,2025-03-20,Yes
+P2239,Derrick Schultz,53,Male,B+,Urban,H4,Flu,Antivirals,181922,2024-12-26,2025-04-21,No
+P2240,Joshua Poole,59,Female,O-,Rural,H7,Diabetes,Diet Control,73779,2025-08-27,2025-02-21,Yes
+P2241,Michael Price,78,Female,A-,Urban,H0,Flu,Antivirals,96408,2025-02-26,2025-08-01,No
+P2242,Amber Morrow,41,Female,A+,Rural,H6,Cancer,Antivirals,141090,2025-07-01,2025-02-06,Yes
+P2243,Jorge Sherman,68,Male,AB+,Urban,H9,Hypertension,Diet Control,121606,2025-01-29,2025-08-04,No
+P2244,Arthur Moran,68,Male,A-,Rural,H9,COVID,Diet Control,181572,2025-03-04,2025-08-07,Yes
+P2245,Patrick Hooper,8,Female,A-,Rural,H1,Hypertension,Chemotherapy,121062,2025-03-05,2025-05-22,No
+P2246,Peter Crawford,2,Male,B-,Rural,H8,Diabetes,Antivirals,13100,2025-08-01,2024-12-26,No
+P2247,Dr. Ashley Baldwin,86,Female,O-,Rural,H0,COVID,Rest,58021,2025-05-07,2025-05-10,Yes
+P2248,Mike Young,41,Male,B-,Urban,H9,COVID,Antivirals,151872,2025-01-23,2025-04-28,No
+P2249,Jordan Roth,55,Male,A-,Urban,H5,Cancer,Antivirals,129126,2025-08-02,2024-11-28,Yes
+P2250,Jane Lee,16,Male,A-,Rural,H8,Diabetes,Diet Control,195472,2025-05-23,2025-04-24,No
+P2251,Christopher Johnson,62,Female,A-,Urban,H0,Flu,Antivirals,93446,2025-07-17,2025-10-01,No
+P2252,Melissa Santana,48,Male,O+,Urban,H3,Cancer,Antivirals,30437,2025-06-28,2025-06-11,No
+P2253,Norman Bryan,30,Male,AB+,Rural,H3,Cancer,Rest,178747,2025-08-16,2025-06-28,Yes
+P2254,Phillip Hughes,12,Female,AB+,Urban,H8,Hypertension,Diet Control,152014,2025-02-18,2025-09-14,No
+P2255,Nicholas Jensen,35,Female,B-,Urban,H4,Hypertension,Antivirals,21862,2024-12-29,2025-10-17,Yes
+P2256,Paula Reed,11,Female,A-,Urban,H4,Hypertension,Insulin,12669,2025-09-15,2024-11-10,No
+P2257,Richard Rush,64,Female,AB+,Rural,H5,Cancer,Chemotherapy,122219,2025-08-18,2025-04-09,Yes
+P2258,Tammy Jordan,50,Male,B+,Urban,H0,Flu,Rest,185844,2025-06-09,2025-02-23,Yes
+P2259,Rachel Baker,85,Male,AB+,Rural,H0,COVID,Antivirals,16916,2025-10-31,2025-06-11,Yes
+P2260,Ashley Hall,21,Male,O-,Urban,H8,Hypertension,Insulin,11878,2024-11-22,2025-09-13,No
+P2261,Brandy Hebert,69,Male,O-,Urban,H2,Flu,Antivirals,3985,2025-05-31,2024-12-18,Yes
+P2262,Samantha King,48,Male,AB+,Urban,H3,Diabetes,Antivirals,42235,2025-08-06,2024-12-28,No
+P2263,Lawrence Gross,20,Female,B+,Rural,H0,Hypertension,Diet Control,19931,2025-07-28,2025-05-04,Yes
+P2264,Erica Wong,67,Male,O-,Rural,H8,COVID,Diet Control,93876,2025-02-18,2025-10-09,Yes
+P2265,Joseph Stephens,44,Male,O+,Urban,H7,Diabetes,Diet Control,1336,2025-03-14,2025-05-07,Yes
+P2266,Joseph Blackwell,33,Male,AB+,Rural,H1,Diabetes,Insulin,43933,2025-03-25,2024-11-17,Yes
+P2267,Cameron Soto,73,Female,O+,Urban,H7,COVID,Antivirals,46536,2025-03-06,2025-06-05,No
+P2268,Ms. Diana Pearson DVM,61,Female,AB+,Rural,H6,Hypertension,Chemotherapy,70504,2025-08-18,2024-12-28,Yes
+P2269,Charles Anderson,9,Male,A+,Rural,H5,Cancer,Rest,100214,2025-02-11,2025-07-23,Yes
+P2270,Keith Hurst,68,Female,A+,Urban,H0,COVID,Diet Control,183220,2025-07-13,2025-06-12,No
+P2271,Joy Foster,35,Female,A+,Urban,H6,COVID,Diet Control,114936,2025-08-18,2025-03-05,Yes
+P2272,Sandra Humphrey,81,Female,O-,Urban,H9,COVID,Antivirals,17279,2025-01-07,2025-01-29,Yes
+P2273,Laura Harper,88,Female,O+,Urban,H6,Diabetes,Antivirals,104751,2025-05-11,2025-03-13,Yes
+P2274,Brian Long,65,Female,O+,Rural,H8,Flu,Insulin,105433,2025-03-13,2025-08-30,Yes
+P2275,Cody Stephens,8,Female,O+,Rural,H0,Cancer,Insulin,72386,2025-02-18,2025-10-07,No
+P2276,Curtis Elliott,45,Female,B+,Rural,H1,Hypertension,Diet Control,87124,2025-08-26,2025-09-22,No
+P2277,Holly Collier,87,Male,O+,Urban,H8,Hypertension,Antivirals,106750,2025-08-15,2025-08-03,Yes
+P2278,Russell Cox,47,Male,B+,Urban,H8,Flu,Chemotherapy,78485,2025-02-22,2025-06-12,No
+P2279,William Adams,40,Female,A+,Rural,H5,COVID,Rest,75055,2025-07-14,2025-03-05,No
+P2280,Marisa Robinson DDS,76,Male,A+,Urban,H5,Cancer,Antivirals,92911,2025-09-15,2025-08-31,Yes
+P2281,Adrian Craig,54,Male,O-,Rural,H3,Hypertension,Antivirals,99618,2025-11-02,2025-01-15,No
+P2282,Deborah Ramirez,76,Female,AB+,Rural,H3,Hypertension,Insulin,198742,2025-02-27,2025-06-17,Yes
+P2283,Jamie Logan,46,Male,A+,Rural,H4,COVID,Rest,186100,2025-09-11,2025-09-18,No
+P2284,Lori Jennings,47,Female,AB+,Rural,H2,Flu,Diet Control,114892,2024-11-10,2024-12-27,No
+P2285,Kimberly Yates,15,Female,AB+,Rural,H0,Cancer,Antivirals,72128,2025-08-15,2025-04-02,No
+P2286,Chad Kelley,19,Female,O-,Urban,H0,Flu,Diet Control,150180,2024-12-01,2025-09-21,Yes
+P2287,Taylor Butler,26,Male,A-,Urban,H6,Flu,Antivirals,53495,2024-11-26,2024-11-23,No
+P2288,Roger Howe,52,Male,A-,Urban,H0,Cancer,Diet Control,83806,2025-10-26,2025-08-19,Yes
+P2289,Mary Dunn,22,Male,B-,Rural,H0,Cancer,Rest,94185,2025-04-13,2025-10-31,Yes
+P2290,Pamela Villa,21,Male,O-,Rural,H2,Hypertension,Insulin,188902,2025-02-24,2024-12-05,No
+P2291,David Diaz,51,Female,B-,Rural,H9,Hypertension,Rest,184581,2025-09-10,2025-08-14,Yes
+P2292,Megan Rice,38,Female,B-,Rural,H3,Cancer,Chemotherapy,198478,2025-05-08,2025-01-17,No
+P2293,Gail Allen,20,Male,A-,Urban,H3,Diabetes,Insulin,171591,2025-10-10,2025-05-13,Yes
+P2294,Patrick Goodman,29,Female,O-,Urban,H1,Hypertension,Rest,50649,2025-06-06,2025-01-02,Yes
+P2295,Ruben Cain,51,Female,A-,Rural,H0,Diabetes,Chemotherapy,166596,2025-05-20,2025-04-09,No
+P2296,Ashley Adams,4,Male,B-,Rural,H2,Cancer,Antivirals,165957,2025-02-04,2025-01-29,No
+P2297,Eric Thompson,55,Female,O-,Rural,H3,Hypertension,Antivirals,176441,2025-08-26,2025-10-07,No
+P2298,Kevin Mccarty,71,Male,B-,Urban,H2,Flu,Diet Control,96402,2025-06-13,2025-01-13,No
+P2299,Michael Herrera,28,Female,O+,Urban,H7,Cancer,Insulin,31676,2025-06-07,2025-11-06,Yes
